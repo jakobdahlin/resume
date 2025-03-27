@@ -33,7 +33,7 @@ const uiuxSkills = [
     "Branding & Logotypes",
     "Illustration & Custom Icons",
     "Infograpgics & Data Visualization",
-    "Image Editing % Retouching",
+    "Image Editing & Retouching",
     "Print & Digital Media",
     "Motion Graphics & Animations",
     "Posters / Flyers",

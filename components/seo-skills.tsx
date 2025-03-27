@@ -40,7 +40,7 @@ const skills: SeoProps[] = [
   { name: "Shopify", category: "commerce" },
   { name: "WooCommerce", category: "commerce" },
   { name: "Landing Pages", category: "commerce" },
-  { name: "Mobile Desing", category: "commerce" },
+  { name: "Mobile Design", category: "commerce" },
   { name: "Product Pages", category: "commerce" },
   { name: "Wordpress Elementor", category: "commerce" },
   { name: "Niche Research", category: "commerce" },

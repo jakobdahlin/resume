@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Link from "next/link";
 
 export default function Home() {
+    
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden">
 
@@ -24,7 +25,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            className="text-md md:text-md text-white/80 mb-8 px-10"
+            className="text-md md:text-md text-white/80 mb-8 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}

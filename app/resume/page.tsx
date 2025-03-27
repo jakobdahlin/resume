@@ -10,10 +10,13 @@ import { Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import Footer from "@/components/navigation"
+import { ArrowUp } from "lucide-react"
 
 export default function Home() {
   return (
     <main className="min-h-screen p-4 md:pt-10 sm:pt-10">
+      <div id="top" />
       {/* Hero Section */}
       <section className="mb-8 rounded-xl pt-8">
         <div className="mx-auto max-w-7xl mt-10">
@@ -90,25 +93,42 @@ export default function Home() {
         </section>
 
         {/* Skills Section - Spans 6 columns on desktop */}
-        <section className="col-span-7 mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
+        <section className="col-span-7 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Web Development Skills</h2>
           <SkillsSection />
         </section>
 
         {/* SEO Skills Section - Spans 6 columns on desktop */}
-        <section className="col-span-7 mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
+        <section className="col-span-7 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">SEO Skills</h2>
           <SeoSkills />
         </section>
 
         {/* Graphic Design Section - Full width */}
-        <section className="col-span-5 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        <section className="col-span-5 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Design Skills</h2>
           <GraphicDesignSection />
         </section>
 
+        
+        <motion.button
+  onClick={() => {
+    const topEl = document.getElementById("top")
+    if (topEl) {
+      topEl.scrollIntoView({ behavior: "smooth" })
+    }
+  }}
+  className="col-span-12 w-full text-center justify-center lg:mt-0 md:mt-0 mt-4 mb-20 border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm
+  mx-auto flex items-center gap-2 px-4 py-4  border-white/20 text-white/80 rounded-2xl hover:text-white hover:border-white transition"
+>
+  <ArrowUp size={18} />
+  Back to Top
+</motion.button>
+<Footer />
       </div>
+      <Footer />
     </main>
+    
   )
 }
 
