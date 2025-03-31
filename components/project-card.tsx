@@ -18,7 +18,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
   return (
 <div className="h-full flex flex-col">
   <Card className="flex flex-col h-full overflow-hidden transition-all 
-  hover:shadow-md bg-black/50 border border-neutral-700 grayscale duration-300 hover:grayscale-0">
+  hover:shadow-md bg-black/5 border border-neutral-700 grayscale duration-300 hover:grayscale-0">
     <div className="relative h-48 w-full overflow-hidden">
       <Image
         src={imageUrl || "/placeholder.svg"}
@@ -35,7 +35,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
     <CardContent className="p-4 pt-0 flex-grow">
       <div className="flex flex-wrap gap-1">
         {tags.map((tag) => (
-          <Badge key={tag} className="text-sm bg-black border border-neutral-700 text-white">
+          <Badge key={tag} className="text-sm bg-black/30 border border-neutral-700 text-white">
             {tag}
           </Badge>
         ))}

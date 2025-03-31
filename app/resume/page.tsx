@@ -92,7 +92,7 @@ export default function Home() {
         <section className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 
         backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Demo Projects</h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
   <ProjectCard
     className="grayscale hover:grayscale-0"
     title="Winery"
