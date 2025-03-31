@@ -49,7 +49,7 @@ export default function Home() {
             </motion.a>
 
             <motion.a
-  href="/JakobDahlin_Resume2025.pdf"
+  href="/Resume.pdf"
   target="_blank" // Open in a new tab/window
   className="gap-2 px-6 py-2 rounded-xl bg-transparent border border-neutral-800 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white"
   whileHover={{ scale: 1.0 }}

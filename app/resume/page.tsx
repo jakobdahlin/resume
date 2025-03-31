@@ -65,7 +65,7 @@ export default function Home() {
 
   <Button asChild variant="outline" className="gap-2 text-md rounded-xl bg-black/60 
     border-black hover:border-white hover:text-white hover:bg-black/60">
-    <Link href="/JakobDahlin_Resume2025.pdf" download>
+    <Link href="/Resume.pdf" download>
       <span className="text-md">Download Resume</span>
     </Link>
   </Button>
