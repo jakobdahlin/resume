@@ -29,7 +29,7 @@ export default function RootLayout({
           <div
             className="fixed inset-0 h-screen w-screen bg-cover bg-center bg-no-repeat z-0"
             style={{
-              backgroundImage: "url(/nocal.jpg)",
+              backgroundImage: "url(/nocal.JPG)",
               backgroundPosition: "center",
             }}
           />
