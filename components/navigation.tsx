@@ -4,9 +4,11 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Image from "next/image";
+import { Button } from "@/components/ui/button"
+
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -39,6 +41,7 @@ export default function Navigation() {
 >
   <div className="container mx-auto max-w-7xl px-4 flex justify-between items-center">
     <div className="flex items-center justify-between w-full py-2">
+      {/* Logo */}
       <motion.div
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
@@ -53,6 +56,22 @@ export default function Navigation() {
             height={30}
           />
         </Link>
+      </motion.div>
+
+      {/* Contact Button on the right */}
+      <motion.div
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.0 }}
+        className="text-white ml-auto"
+      >
+        <Button asChild variant="outline" className="gap-2 text-md rounded-xl bg-black/60 
+          border-black hover:border-white hover:text-white hover:bg-black/60">
+          <Link href="mailto:jakob@jakobdahlin.com">
+            <Mail size={18} />
+            Reach Out
+          </Link>
+        </Button>
       </motion.div>
 
       {/* Desktop Navigation */}

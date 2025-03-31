@@ -9,8 +9,8 @@ export function ExperienceTimeline() {
     <div>
         <div className="flex items-center gap-">
             <h3 className="text-xl font-semibold">Architectural Photographer</h3>
-            <span className="inline-block rounded-full p-[1px] bg-gradient-to-r 
-            from-black/0 via-neutral-500/30 to-black/0">
+            <span className="inline-block rounded-full p-[1px] ml-2 bg-gradient-to-r 
+    from-black/0 via-neutral-500/30 to-black/0 animate-pulse">
   <span className="block rounded-full bg-black/30 px-2.5 py-0.5 text-xs 
   font-medium text-primary text-white">
     Current
@@ -47,7 +47,7 @@ export function ExperienceTimeline() {
   <div className="flex items-center gap-2">
     <h3 className="text-xl font-semibold">Web Developer</h3>
     <span className="inline-block rounded-full p-[1px] bg-gradient-to-r 
-    from-black/0 via-neutral-500/30 to-black/0">
+    from-black/0 via-neutral-500/30 to-black/00 animate-pulse">
   <span className="block rounded-full bg-black/30 px-2.5 py-0.5 text-xs 
   font-medium text-primary text-white">
     Current

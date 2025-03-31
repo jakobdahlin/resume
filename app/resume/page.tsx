@@ -10,42 +10,63 @@ import { Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import Footer from "@/components/navigation"
 import { ArrowUp } from "lucide-react"
+
+function customScrollToTop(speed: number) {
+  const topEl = document.getElementById("top");
+  if (!topEl) return;
+
+  const targetPosition = topEl.getBoundingClientRect().top + window.pageYOffset;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const startTime = performance.now();
+
+  function scrollStep(currentTime: number) {
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / speed, 1); // speed controls scroll duration
+
+    window.scrollTo(0, startPosition + distance * progress);
+
+    if (timeElapsed < speed) {
+      requestAnimationFrame(scrollStep);
+    }
+  }
+
+  requestAnimationFrame(scrollStep);
+}
 
 export default function Home() {
   return (
     <main className="min-h-screen p-4 md:pt-10 sm:pt-10">
       <div id="top" />
       {/* Hero Section */}
-      <section className="mb-8 rounded-xl pt-8">
+      <section className="mb-4 rounded-xl pt-8">
         <div className="mx-auto max-w-7xl mt-10">
         <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="flex flex-wrap gap-3">
-  <Button asChild variant="outline" className="gap-2 text-md rounded-xl backdrop-blur-sm bg-black/0 
-  border-neutral-700 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white">
-  <Link href="mailto:jakob@jakobdahlin.com">
-  <Mail size={18} />
-  Contact
-</Link>
-  </Button>
-
-  <Button asChild variant="outline" className="gap-2 text-md rounded-xl backdrop-blur-sm bg-black/0 
-  border-neutral-700 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white">
+        transition={{ duration: 0.5 }}
+        className="flex flex-wrap gap-3 items-center justify-center">
+  <Button asChild variant="outline" className="gap-2 text-md rounded-xl bg-black/60 
+  border-black hover:border-white hover:text-white hover:bg-black/60">
     <Link href="https://github.com/jakobdahlin" target="_blank" rel="noopener noreferrer">
       <Github size={18} />
       GitHub
     </Link>
   </Button>
 
-  <Button asChild variant="outline" className="gap-2 text-md rounded-xl backdrop-blur-sm bg-black/0 
-  border-neutral-700 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white">
+  <Button asChild variant="outline" className="gap-2 text-md rounded-xl bg-black/60 
+  border-black hover:border-white hover:text-white hover:bg-black/60">
     <Link href="https://www.linkedin.com/in/jakobdahlin/" target="_blank" rel="noopener noreferrer">
       <Linkedin size={18} />
       LinkedIn
+    </Link>
+  </Button>
+
+  <Button asChild variant="outline" className="gap-2 text-md rounded-xl bg-black/60 
+    border-black hover:border-white hover:text-white hover:bg-black/60">
+    <Link href="/JakobDahlin_Resume2025.pdf" download>
+      <span className="text-md">Download Resume</span>
     </Link>
   </Button>
 </motion.div>
@@ -68,7 +89,7 @@ export default function Home() {
         </section>
 
         {/* Projects Section - Full width */}
-        <section className="col-span-5 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 
+        <section className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 
         backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Demo Projects</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
@@ -93,40 +114,34 @@ export default function Home() {
         </section>
 
         {/* Skills Section - Spans 6 columns on desktop */}
-        <section className="col-span-7 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        <section className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Web Development Skills</h2>
           <SkillsSection />
         </section>
 
         {/* SEO Skills Section - Spans 6 columns on desktop */}
-        <section className="col-span-7 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        <section className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">SEO Skills</h2>
           <SeoSkills />
         </section>
 
         {/* Graphic Design Section - Full width */}
-        <section className="col-span-5 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        <section className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Design Skills</h2>
           <GraphicDesignSection />
         </section>
 
         
         <motion.button
-  onClick={() => {
-    const topEl = document.getElementById("top")
-    if (topEl) {
-      topEl.scrollIntoView({ behavior: "smooth" })
-    }
-  }}
-  className="col-span-12 w-full text-center justify-center lg:mt-0 md:mt-0 mt-4 mb-20 border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm
-  mx-auto flex items-center gap-2 px-4 py-4  border-white/20 text-white/80 rounded-2xl hover:text-white hover:border-white transition"
->
-  <ArrowUp size={18} />
-  Back to Top
-</motion.button>
-<Footer />
+          onClick={() => {
+            customScrollToTop(2000); // Adjust speed here (2000ms = 2 seconds)
+          }}
+          className="col-span-12 w-full text-center justify-center lg:mt-0 md:mt-0 mb-20 border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm mx-auto flex items-center gap-2 px-4 py-4 border-white/20 text-white/80 rounded-2xl hover:text-white hover:border-white transition"
+        >
+          <ArrowUp size={18} className="animate-bounce" />
+          Back to Top
+        </motion.button>
       </div>
-      <Footer />
     </main>
     
   )

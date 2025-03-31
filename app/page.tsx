@@ -13,7 +13,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center border border-neutral-700 rounded-3xl px-4 p-8 backdrop-blur-sm"
+          className="max-w-3xl mx-auto text-center border border-neutral-700 rounded-3xl px-4 p-8 backdrop-blur-sm"
         >
           <motion.h1
             className="text-4xl md:text-4xl font-bold mb-6"
@@ -41,7 +41,7 @@ export default function Home() {
           >
             <motion.a
               href="/resume"
-              className="gap-2 px-6 py-2 rounded-xl bg-black/50 border border-neutral-700 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white"
+              className="gap-2 px-6 py-2 rounded-xl bg-transparent border border-neutral-800 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white"
               whileHover={{ scale: 1.0 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -49,12 +49,13 @@ export default function Home() {
             </motion.a>
 
             <motion.a
-              href="mailto:jakob@jakobdahlin.com"
-              className="gap-2 px-6 py-2 rounded-xl bg-black/50 border border-neutral-700 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white"
-              whileHover={{ scale: 1.0 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Reach Out
+  href="/JakobDahlin_Resume2025.pdf"
+  target="_blank" // Open in a new tab/window
+  className="gap-2 px-6 py-2 rounded-xl bg-transparent border border-neutral-800 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white"
+  whileHover={{ scale: 1.0 }}
+  whileTap={{ scale: 0.95 }}
+>
+              Download Resume
             </motion.a>
           </motion.div>
         </motion.div>
