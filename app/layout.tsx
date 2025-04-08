@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
 import Head from "next/head";
+import BackgroundSlideshow from "@/components/BackgroundSlideshow";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <>
       <Head>
@@ -24,23 +24,27 @@ export default function RootLayout({
         <meta name="generator" content="v0.dev" />
       </Head>
       <html lang="en">
-        <body className={`${inter.className} text-white bg-black antialiased relative`}>
-          {/* Background container */}
-          <div
-            className="fixed inset-0 h-screen w-screen bg-cover bg-center bg-no-repeat z-0"
-            style={{
-              backgroundImage: "url(/nocal.JPG)",
-              backgroundPosition: "center",
-            }}
-          />
-          {/* Overlay */}
-          <div className="fixed inset-0 bg-gradient-to-b from-black/50 via-black/80 to-black z-10" />
-          {/* Content */}
-          <div className="relative z-20">
-            <Navigation />
-            <main>{children}</main>
-          </div>
-        </body>
+      <body
+  className={`${inter.className} text-white bg-black antialiased relative`}
+  style={{
+    backgroundImage: "url('/ambient1.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+  }}
+>
+    {/* <BackgroundSlideshow /> REMOVE COMMENTING FOR DYNAMIC BACKGROUND */}
+
+  {/* Overlay */}
+  <div className="fixed inset-0 backdrop-blur-xl bg-black/30 z-10" />
+
+  {/* Content */}
+  <div className="relative z-20">
+    <Navigation />
+    <main>{children}</main>
+  </div>
+</body>
       </html>
     </>
   );

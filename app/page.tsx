@@ -13,7 +13,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center border border-neutral-700 rounded-3xl px-4 p-8 backdrop-blur-sm"
+          className="max-w-3xl mx-auto text-center border border-cyan-400/50 rounded-3xl px-4 p-8 backdrop-blur-lg"
         >
           <motion.h1
             className="text-4xl md:text-4xl font-bold mb-6"
@@ -25,7 +25,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            className="text-md md:text-md text-white/80 mb-8 px-4"
+            className="text-md md:text-md text-cyan-200 mb-8 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -41,7 +41,7 @@ export default function Home() {
           >
             <motion.a
               href="/resume"
-              className="gap-2 px-6 py-2 rounded-xl bg-transparent border border-neutral-800 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white"
+              className="gap-2 px-6 py-2 rounded-xl bg-transparent border border-cyan-400/50 hover:border-cyan-300 transition ease-in-out duration-200 hover:bg-transparent hover:text-white"
               whileHover={{ scale: 1.0 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -51,7 +51,7 @@ export default function Home() {
             <motion.a
   href="/Resume.pdf"
   target="_blank" // Open in a new tab/window
-  className="gap-2 px-6 py-2 rounded-xl bg-transparent border border-neutral-800 hover:border-white hover:backdrop-blur-sm hover:bg-transparent hover:text-white"
+  className="gap-2 px-6 py-2 rounded-xl bg-transparent border border-cyan-400/50 hover:border-cyan-300 transition ease-in-out duration-200 hover:bg-transparent hover:text-white"
   whileHover={{ scale: 1.0 }}
   whileTap={{ scale: 0.95 }}
 >

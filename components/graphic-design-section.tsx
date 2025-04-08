@@ -59,7 +59,7 @@ export function GraphicDesignSection() {
             <h3 className="mb-3 text-lg font-medium">UI / UX</h3>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-1">
               {uiuxSkills.map((skill) => (
-                <div key={skill} className="flex items-centergap-2 text-neutral-500 hover:text-white">
+                <div key={skill} className="flex items-centergap-2 text-cyan-400/50 hover:text-white transition duration-200 ease-in-out">
                   <span className="text-md">{skill}</span>
                 </div>
               ))}
@@ -70,9 +70,9 @@ export function GraphicDesignSection() {
             <h3 className="mb-3 text-lg font-medium">Visual & Graphic Design</h3>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-1">
               {graphicSkills.map((skill) => (
-                <div key={skill} className="flex items-centergap-2 text-neutral-500 hover:text-white">
-                  <span className="text-md">{skill}</span>
-                </div>
+                <div key={skill} className="flex items-centergap-2 text-cyan-400/50 hover:text-white transition duration-200 ease-in-out">
+                <span className="text-md">{skill}</span>
+              </div>
               ))}
             </div>
           </div>
@@ -82,9 +82,9 @@ export function GraphicDesignSection() {
             <h3 className="mb-3 text-lg font-medium">Collaboration & Design Handoff</h3>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-1">
               {collaborationSkills.map((skill) => (
-                <div key={skill} className="flex items-centergap-2 text-neutral-500 hover:text-white">
-                  <span className="text-md">{skill}</span>
-                </div>
+                <div key={skill} className="flex items-centergap-2 text-cyan-400/50 hover:text-white transition duration-200 ease-in-out">
+                <span className="text-md">{skill}</span>
+              </div>
               ))}
             </div>
           </div>
@@ -93,9 +93,9 @@ export function GraphicDesignSection() {
             <h3 className="mb-3 text-lg font-medium">Digital & Print</h3>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-1">
               {designSkills.map((skill) => (
-                <div key={skill} className="flex items-centergap-2 text-neutral-500 hover:text-white">
-                  <span className="text-md">{skill}</span>
-                </div>
+                <div key={skill} className="flex items-centergap-2 text-cyan-400/50 hover:text-white transition duration-200 ease-in-out">
+                <span className="text-md">{skill}</span>
+              </div>
               ))}
             </div>
           </div>

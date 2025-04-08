@@ -65,8 +65,9 @@ export default function Navigation() {
         transition={{ duration: 1.0 }}
         className="text-white ml-auto"
       >
-        <Button asChild variant="outline" className="gap-2 text-md rounded-xl bg-black/60 
-          border-black hover:border-white hover:text-white hover:bg-black/60">
+        <Button asChild variant="outline" className="gap-2 px-6 py-2 rounded-xl 
+        bg-transparent border border-cyan-400/50 hover:border-cyan-300 
+        transition ease-in-out duration-200 hover:bg-transparent hover:text-white">
           <Link href="mailto:jakob@jakobdahlin.com">
             <Mail size={18} />
             Reach Out

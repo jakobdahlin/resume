@@ -73,11 +73,10 @@ export function SeoSkills() {
   {contentSkills.map((skill) => (
     <div
       key={skill.name}
-      className="p-[1px] rounded-full bg-gradient-to-r from-black/0 via-neutral-500/30 to-black/0"
+      className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
     >
       <div
-        className="px-4 py-1 rounded-full bg-black/50 text-white/50 hover:text-white 
-        hover:bg-black/0 transition-colors duration-200 "
+        className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
       >
         {skill.name}
       </div>
@@ -91,16 +90,15 @@ export function SeoSkills() {
         <div className="flex flex-wrap gap-3">
   {strategySkills.map((skill) => (
     <div
-      key={skill.name}
-      className="p-[1px] rounded-full bg-gradient-to-r from-black/0 via-neutral-500/30 to-black/0"
+    key={skill.name}
+    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+  >
+    <div
+      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
     >
-      <div
-        className="px-4 py-1 rounded-full bg-black/50 text-white/50 hover:text-white 
-        hover:bg-black/0 transition-colors duration-200 "
-      >
-        {skill.name}
-      </div>
+      {skill.name}
     </div>
+  </div>
   ))}
 </div>
       </div>
@@ -110,16 +108,15 @@ export function SeoSkills() {
         <div className="flex flex-wrap gap-3">
   {inttrackSkills.map((skill) => (
     <div
-      key={skill.name}
-      className="p-[1px] rounded-full bg-gradient-to-r from-black/0 via-neutral-500/30 to-black/0"
+    key={skill.name}
+    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+  >
+    <div
+      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
     >
-      <div
-        className="px-4 py-1 rounded-full bg-black/50 text-white/50 hover:text-white 
-        hover:bg-black/0 transition-colors duration-200 "
-      >
-        {skill.name}
-      </div>
+      {skill.name}
     </div>
+  </div>
   ))}
 </div>
       </div>
@@ -129,16 +126,15 @@ export function SeoSkills() {
         <div className="flex flex-wrap gap-3">
   {commerceSkills.map((skill) => (
     <div
-      key={skill.name}
-      className="p-[1px] rounded-full bg-gradient-to-r from-black/0 via-neutral-500/30 to-black/0"
+    key={skill.name}
+    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+  >
+    <div
+      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
     >
-      <div
-        className="px-4 py-1 rounded-full bg-black/50 text-white/50 hover:text-white 
-        hover:bg-black/0 transition-colors duration-200 "
-      >
-        {skill.name}
-      </div>
+      {skill.name}
     </div>
+  </div>
   ))}
 </div>
       </div>
@@ -148,16 +144,15 @@ export function SeoSkills() {
         <div className="flex flex-wrap gap-3">
   {optimizationSkills.map((skill) => (
     <div
-      key={skill.name}
-      className="p-[1px] rounded-full bg-gradient-to-r from-black/0 via-neutral-500/30 to-black/0"
+    key={skill.name}
+    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+  >
+    <div
+      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
     >
-      <div
-        className="px-4 py-1 rounded-full bg-black/50 text-white/50 hover:text-white 
-        hover:bg-black/0 transition-colors duration-200 "
-      >
-        {skill.name}
-      </div>
+      {skill.name}
     </div>
+  </div>
   ))}
 </div>
       </div>
