@@ -25,7 +25,8 @@ export default function RootLayout({
       </Head>
       <html lang="en">
       <body
-  className={`${inter.className} text-white bg-black antialiased relative`}
+  className={`${inter.className} text-white bg-black antialiased relative
+  selection:bg-black/60 selection:text-cyan-400`}
   style={{
     backgroundImage: "url('/ambient1.jpg')",
     backgroundSize: "cover",
@@ -34,6 +35,8 @@ export default function RootLayout({
     backgroundAttachment: "fixed",
   }}
 >
+
+  
     {/* <BackgroundSlideshow /> REMOVE COMMENTING FOR DYNAMIC BACKGROUND */}
 
   {/* Overlay */}

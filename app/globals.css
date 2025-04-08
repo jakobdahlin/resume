@@ -84,3 +84,12 @@
   z-index: -1;
 }
 
+::selection {
+  background-color: white;
+  color: black;
+}
+
+::-moz-selection {
+  background-color: white;
+  color: black;
+}
