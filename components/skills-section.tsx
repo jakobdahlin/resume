@@ -117,7 +117,7 @@ export function SkillsSection() {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={inView? { opacity: 1, x: 0 } : {}}
-          transition={{ delay: 0.6, duration: 0.8 }}  
+          transition={{ delay: 0.8, duration: 0.8 }}  
           className="flex flex-wrap gap-3">
   {codingSkills.map((skill) => (
     <div
