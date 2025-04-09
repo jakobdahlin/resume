@@ -1,4 +1,7 @@
-import { Progress } from "@/components/ui/progress"
+"use client"
+
+import { useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion"
 
 interface SeoProps {
   name: string
@@ -65,96 +68,119 @@ export function SeoSkills() {
   const commerceSkills = skills.filter((skill) => skill.category === "commerce")
   const optimizationSkills = skills.filter((skill) => skill.category === "optimization")
 
+  const ref = useRef(null);
+  const inView = useInView(ref, { margin: "-100px" });
+
   return (
-    <div className="space-y-6">
+    <div ref={ref} className="space-y-6">
       <div>
         <h3 className="mb-3 text-lg font-medium">Content Creation & Blogging</h3>
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          animate={inView? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="flex flex-wrap gap-3">
   {contentSkills.map((skill) => (
     <div
       key={skill.name}
-      className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+      className="p-[1px] rounded-full border border-gray-400/50 hover:border-gray-400 transform duration-200 ease-in-out"
     >
       <div
-        className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
+        className="px-4 py-1 rounded-full text-gray-400/50 hover:text-white transition-colors duration-200"
       >
         {skill.name}
       </div>
     </div>
   ))}
-</div>
+</motion.div>
     </div>
 
       <div>
         <h3 className="mb-3 text-lg font-medium">SEO & Keyword Strategy</h3>
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          animate={inView? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="flex flex-wrap gap-3">
   {strategySkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+    className="p-[1px] rounded-full border border-gray-400/50 hover:border-gray-400 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
+      className="px-4 py-1 rounded-full text-gray-400/50 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
   </div>
   ))}
-</div>
+</motion.div>
       </div>
 
       <div>
         <h3 className="mb-3 text-lg font-medium">Affiliate Integration & Tracking</h3>
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          animate={inView? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="flex flex-wrap gap-3">
   {inttrackSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+    className="p-[1px] rounded-full border border-gray-400/50 hover:border-gray-400 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
+      className="px-4 py-1 rounded-full text-gray-400/50 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
   </div>
   ))}
-</div>
+</motion.div>
       </div>
 
       <div>
         <h3 className="mb-3 text-lg font-medium">E-Commerce & Website Building</h3>
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          animate={inView? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="flex flex-wrap gap-3">
   {commerceSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+    className="p-[1px] rounded-full border border-gray-400/50 hover:border-gray-400 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
+      className="px-4 py-1 rounded-full text-gray-400/50 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
   </div>
   ))}
-</div>
+</motion.div>
       </div>
 
       <div>
         <h3 className="mb-3 text-lg font-medium">Analytics & Optimization</h3>
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          animate={inView? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 1.0, duration: 0.8 }}
+          className="flex flex-wrap gap-3">
   {optimizationSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+    className="p-[1px] rounded-full border border-gray-400/50 hover:border-gray-400 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
+      className="px-4 py-1 rounded-full text-gray-400/50 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
   </div>
   ))}
-</div>
+</motion.div>
       </div>
 
 </div>

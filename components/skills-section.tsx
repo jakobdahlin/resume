@@ -1,18 +1,12 @@
-import { Progress } from "@/components/ui/progress"
+"use client"
+
+import { useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion"
 
 interface SkillProps {
   name: string
   category: string
 }
-
-const gradients: Record<string, string> = {
-    HTML: "from-black/0 via-orange-400/30 to-black/0",
-    CSS: "from-black/0 via-sky-500/30 to-black/0",
-    JavaScript: "from-black/0 via-amber-300/30 to-black/0",
-    TypeScript: "from-black/0 via-sky-500/30 to-black/0",
-    React: "from-black/0 via-teal-400/30 to-black/0",
-    "Next.js": "from-black/0 via-neutral-500/30 to-black/0",
-  };
 
 const skills: SkillProps[] = [
   // Core Technologies
@@ -46,78 +40,98 @@ export function SkillsSection() {
   const vcdepSkills = skills.filter((skill) => skill.category === "VC & deploy")
   const codingSkills = skills.filter((skill) => skill.category === "code")
 
+
+    const ref = useRef(null);
+    const inView = useInView(ref, { margin: "-100px" });
+
   return (
-    <div className="space-y-6">
+    <div ref={ref} className="space-y-6">
       <div>
         <h3 className="mb-3 text-lg font-medium">Core Technologies</h3>
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          animate={inView? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="flex flex-wrap gap-3">
   {coreSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+    className="p-[1px] rounded-full border border-gray-400/50 hover:border-gray-400 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
+      className="px-4 py-1 rounded-full text-gray-400/50 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
   </div>
   ))}
-</div>
+</motion.div>
       </div>
 
       <div>
         <h3 className="mb-3 text-lg font-medium">Styling & Animation</h3>
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={inView? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="flex flex-wrap gap-3">
   {stylingSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+    className="p-[1px] rounded-full border border-gray-400/50 hover:border-gray-400 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
+      className="px-4 py-1 rounded-full text-gray-400/50 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
   </div>
   ))}
-</div>
+</motion.div>
       </div>
 
       <div>
         <h3 className="mb-3 text-lg font-medium">Version Control & Deployment</h3>
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={inView? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.6, duration: 0.8 }} 
+          className="flex flex-wrap gap-3">
   {vcdepSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+    className="p-[1px] rounded-full border border-gray-400/50 hover:border-gray-400 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
+      className="px-4 py-1 rounded-full text-gray-400/50 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
   </div>
   ))}
-</div>
+</motion.div>
       </div>
 
       <div>
         <h3 className="mb-3 text-lg font-medium">IDE & Development Tools</h3>
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={inView? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.6, duration: 0.8 }}  
+          className="flex flex-wrap gap-3">
   {codingSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-full border border-cyan-400/50 hover:border-cyan-400 transform duration-200 ease-in-out"
+    className="p-[1px] rounded-full border border-gray-400/50 hover:border-gray-400 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-full text-cyan-400/50 hover:text-white transition-colors duration-200"
+      className="px-4 py-1 rounded-full text-gray-400/50 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
   </div>
   ))}
-</div>
+</motion.div>
       </div>
 
 </div>

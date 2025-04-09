@@ -4,10 +4,10 @@ import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "/ambient1.jpg",
-  "/ambient2.jpg",
-  "/ambient3.jpg",
-  "/ambient4.jpg",
+  "/MountShastaSpring.png",
+  "/MountShastaSummer.png",
+  "/MountShastaFall.png",
+  "/MountShastaWinter.png",
 ];
 
 type Slide = {
@@ -48,7 +48,7 @@ export default function BackgroundSlideshow() {
   }, []); // empty array = only run once on mount
 
   return (
-    <div className="fixed inset-0 z-0 h-screen w-screen overflow-hidden">
+    <div className="fixed inset-0 z-0 h-screen w-screen bg-cover overflow-hidden">
       {slides.map((slide) => (
         <motion.div
           key={slide.id}

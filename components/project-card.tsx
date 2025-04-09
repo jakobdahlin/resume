@@ -19,7 +19,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
   return (
 <div className="h-full flex flex-col">
   <Card className="flex flex-col h-full overflow-hidden transition-all 
-  hover:shadow-md bg-white/5 border border-cyan-400/50 duration-300">
+  hover:shadow-md bg-transparent border border-gray-400/50 duration-300">
     <div className="relative h-48 w-full overflow-hidden">
       <Image
         src={imageUrl || "/placeholder.svg"}
@@ -36,7 +36,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
     <CardContent className="p-4 pt-0 flex-grow">
       <div className="flex flex-wrap gap-1">
         {tags.map((tag) => (
-          <Badge key={tag} className="text-sm border bg-transparent hover:bg-transparent border-cyan-400 text-cyan-400/50">
+          <Badge key={tag} className="text-sm border bg-transparent hover:bg-transparent border-gray-400 text-gray-400/50">
             {tag}
           </Badge>
         ))}
@@ -45,7 +45,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
 
     <CardFooter className="flex justify-between gap-2 p-4">
   <Button asChild size="sm" className="w-full gap-1 px-6 py-2 rounded-md 
-  bg-transparent border border-cyan-400/50 hover:border-cyan-300 
+  bg-transparent border border-gray-400/50 hover:border-gray-400 
   transition ease-in-out duration-200 hover:bg-transparent hover:text-white">
     <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
       <Github className="h-5 w-5" />
@@ -53,7 +53,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
     </Link>
   </Button>
 
-  <Button asChild size="sm" className="w-full gap-1 rounded-md bg-transparent border border-cyan-400/50 hover:border-cyan-300 
+  <Button asChild size="sm" className="w-full gap-1 rounded-md bg-transparent border border-gray-400/50 hover:border-gray-400 
   transition ease-in-out duration-200 hover:bg-transparent hover:text-white">
     <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
       <ExternalLink className="h-5 w-5" />

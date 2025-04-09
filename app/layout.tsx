@@ -26,9 +26,9 @@ export default function RootLayout({
       <html lang="en">
       <body
   className={`${inter.className} text-white bg-black antialiased relative
-  selection:bg-black/60 selection:text-cyan-400`}
+  selection:bg-black/0 selection:text-cyan-300`}
   style={{
-    backgroundImage: "url('/ambient1.jpg')",
+    backgroundImage: "url('/111.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -37,10 +37,10 @@ export default function RootLayout({
 >
 
   
-    {/* <BackgroundSlideshow /> REMOVE COMMENTING FOR DYNAMIC BACKGROUND */}
+{/* <BackgroundSlideshow />      REMOVE COMMENTING FOR DYNAMIC BACKGROUND */}
 
   {/* Overlay */}
-  <div className="fixed inset-0 backdrop-blur-xl bg-black/30 z-10" />
+  <div className="fixed inset-0 bg-black/30 z-10" />
 
   {/* Content */}
   <div className="relative z-20">

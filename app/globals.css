@@ -93,3 +93,18 @@
   background-color: white;
   color: black;
 }
+
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: none;
+}
+
+/* This keeps scrolling enabled */
+body {
+  overflow-y: scroll;
+}

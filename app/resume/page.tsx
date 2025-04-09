@@ -48,8 +48,8 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className="flex flex-wrap gap-3 items-center justify-center">
   <Button asChild variant="outline" className="gap-2 px-6 py-2 rounded-xl 
-  bg-transparent border border-cyan-400/50 hover:border-cyan-300 
-  transition ease-in-out duration-200 hover:bg-transparent hover:text-white">
+  bg-transparent border border-gray-400/50 hover:border-slate-300 
+  transition-all ease-in-out duration-500 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
     <Link href="https://github.com/jakobdahlin" target="_blank" rel="noopener noreferrer">
       <Github size={18} />
       GitHub
@@ -57,8 +57,8 @@ export default function Home() {
   </Button>
 
   <Button asChild variant="outline" className="gap-2 px-6 py-2 rounded-xl 
-  bg-transparent border border-cyan-400/50 hover:border-cyan-300 
-  transition ease-in-out duration-200 hover:bg-transparent hover:text-white">
+  bg-transparent border border-gray-400/50 hover:border-slate-300 
+  transition-all ease-in-out duration-500 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
     <Link href="https://www.linkedin.com/in/jakobdahlin/" target="_blank" rel="noopener noreferrer">
       <Linkedin size={18} />
       LinkedIn
@@ -66,8 +66,8 @@ export default function Home() {
   </Button>
 
   <Button asChild variant="outline" className="gap-2 px-6 py-2 rounded-xl 
-  bg-transparent border border-cyan-400/50 hover:border-cyan-300 
-  transition ease-in-out duration-200 hover:bg-transparent hover:text-white">
+  bg-transparent border border-gray-400/50 hover:border-slate-300 
+  transition-all ease-in-out duration-500 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
     <Link href="/Resume.pdf" download>
       <span className="text-md">Download Resume</span>
     </Link>
@@ -79,20 +79,23 @@ export default function Home() {
       {/* Bento Grid Layout */}
       <div className="mx-auto max-w-7xl grid-cols-12 gap-4 md:grid">
         {/* Experience Section - Spans 8 columns on desktop */}
-        <section className="col-span-9 mb-4 rounded-2xl border border-cyan-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
+        <section className="col-span-9 mb-4 rounded-2xl border border-gray-400/50 
+        bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
           <h2 className="mb-4 text-2xl font-bold">Experience</h2>
           <ExperienceTimeline />
         </section>
 
         {/* Education Section - Spans 4 columns on desktop */}
         <section 
-                className="col-span-3 mb-4 rounded-2xl border border-cyan-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
+                className="col-span-3 mb-4 rounded-2xl border border-slate-400/50 
+                bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
           <h2 className="mb-4 text-2xl font-bold">Education</h2>
           <Education />
         </section>
 
         {/* Projects Section - Full width */}
-        <section className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-cyan-400/50 bg-black/0 
+        <section className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border 
+        border-slate-400/50 bg-black/0 
         backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Demo Projects</h2>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
@@ -117,19 +120,19 @@ export default function Home() {
         </section>
 
         {/* Skills Section - Spans 6 columns on desktop */}
-        <section className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-cyan-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        <section className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-gray-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Web Development Skills</h2>
           <SkillsSection />
         </section>
 
         {/* SEO Skills Section - Spans 6 columns on desktop */}
-        <section className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-cyan-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        <section className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-gray-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">SEO Skills</h2>
           <SeoSkills />
         </section>
 
         {/* Graphic Design Section - Full width */}
-        <section className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-cyan-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        <section className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-gray-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Design Skills</h2>
           <GraphicDesignSection />
         </section>
@@ -140,9 +143,9 @@ export default function Home() {
             customScrollToTop(2000); // Adjust speed here (2000ms = 2 seconds)
           }}
           className="col-span-12 w-full text-center justify-center lg:mt-0 md:mt-0 
-          mb-20 border border-cyan-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm 
+          mb-20 border border-gray-400/50 bg-black/0 backdrop-blur-sm p-4 shadow-sm 
           mx-auto flex items-center gap-2 px-4 py-4 text-white/80 
-          rounded-2xl hover:text-white hover:border-white transition"
+          rounded-2xl hover:text-white hover:border-gray-400 transition"
         >
           <ArrowUp size={18} className="animate-bounce" />
           Back to Top
