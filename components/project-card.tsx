@@ -17,53 +17,68 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: ProjectCardProps) {
   return (
-<div className="h-full flex flex-col">
-  <Card className="flex flex-col h-full overflow-hidden transition-all 
-  hover:shadow-md bg-transparent border border-gray-400/50 duration-300">
-    <div className="relative h-48 w-full overflow-hidden">
-      <Image
-        src={imageUrl || "/placeholder.svg"}
-        alt={title}
-        fill
-        className="object-cover transition-transform"
-      />
-    </div>
+    <div className="h-full flex">
+      <Card className="flex flex-row h-full overflow-hidden transition-all 
+      hover:shadow-md bg-transparent border border-gray-400/50 duration-300 w-full">
+        
+        {/* Left side image */}
+        <div className="relative w-1/2 min-h-[200px]">
+          <Image
+            src={imageUrl || "/placeholder.svg"}
+            alt={title}
+            fill
+            className="object-cover transition-transform"
+          />
+        </div>
 
-    <CardHeader className="p-4">
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
-    </CardHeader>
+        {/* Right side content */}
+        <div className="flex flex-col justify-between w-1/2">
+          <CardHeader className="p-4 pb-2">
+            <h3 className="text-lg font-semibold text-white">{title}</h3>
+          </CardHeader>
 
-    <CardContent className="p-4 pt-0 flex-grow">
-      <div className="flex flex-wrap gap-1">
-        {tags.map((tag) => (
-          <Badge key={tag} className="text-sm border bg-transparent hover:bg-transparent border-gray-400 text-gray-400/50">
-            {tag}
-          </Badge>
-        ))}
-      </div>
-    </CardContent>
+          <CardContent className="p-4 pt-0 flex-grow">
+            <div className="flex flex-wrap gap-1">
+              {tags.map((tag) => (
+                <Badge key={tag} className="text-xs border bg-transparent 
+                hover:bg-transparent border-gray-400/50 text-white">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
 
-    <CardFooter className="flex justify-between gap-2 p-4">
-  <Button asChild size="sm" className="w-full gap-1 px-6 py-2 rounded-md 
-  bg-transparent border border-gray-400/50 hover:border-gray-400 
-  transition ease-in-out duration-200 hover:bg-transparent hover:text-white">
+          <CardFooter className="flex flex-col sm:flex-row justify-between gap-2 p-4 pt-0">
+  <Button
+    asChild
+    size="sm"
+    className="w-full sm:w-1/2 gap-1 px-6 py-2 rounded-xl 
+    bg-transparent border border-gray-400/50 hover:border-cyan-300 
+    transition ease-in-out duration-200 hover:bg-transparent hover:text-white"
+  >
     <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
       <Github className="h-5 w-5" />
       Code
     </Link>
   </Button>
 
-  <Button asChild size="sm" className="w-full gap-1 rounded-md bg-transparent border border-gray-400/50 hover:border-gray-400 
-  transition ease-in-out duration-200 hover:bg-transparent hover:text-white">
+  <Button
+    asChild
+    size="sm"
+    className="w-full sm:w-1/2 gap-1 px-6 py-2 rounded-xl
+    bg-transparent border border-gray-400/50 hover:border-cyan-300 
+    transition ease-in-out duration-200 hover:bg-transparent hover:text-white"
+  >
     <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
       <ExternalLink className="h-5 w-5" />
       Demo
     </Link>
   </Button>
 </CardFooter>
-  </Card>
-</div>
 
-  )
+        </div>
+      </Card>
+    </div>
+  );
 }
 

@@ -6,8 +6,7 @@ import Link from "next/link";
 export default function Home() {
     
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
-
+    <div className="relative min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4 z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,29 +39,35 @@ export default function Home() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <motion.a
-              href="/resume"
-              className="gap-2 px-6 py-2 rounded-xl bg-transparent border 
-              border-gray-400/50 hover:border-gray-400 transition ease-in-out duration-200 
-              hover:bg-transparent hover:text-white"
-              whileHover={{ scale: 1.0 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View Resume
-            </motion.a>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+  {/* View Resume Button (uses Link for internal navigation) */}
+  <Link href="/resume" passHref>
+    <motion.div
+      className="px-6 py-2 rounded-xl bg-transparent border 
+      border-gray-400/50 hover:border-cyan-300 transition ease-in-out duration-200 
+      hover:bg-transparent hover:text-white text-center cursor-pointer"
+      whileHover={{ scale: 1.0 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      View Resume
+    </motion.div>
+  </Link>
 
-            <motion.a
-  href="/Resume.pdf"
-  target="_blank" // Open in a new tab/window
-  className="gap-2 px-6 py-2 rounded-xl bg-transparent border 
-  border-gray-400/50 hover:border-gray-400 transition ease-in-out duration-200 
-  hover:bg-transparent hover:text-white"
-  whileHover={{ scale: 1.0 }}
-  whileTap={{ scale: 0.95 }}
->
-              Download Resume
-            </motion.a>
+  {/* Download Resume Button (external PDF) */}
+  <motion.a
+    href="/Resume.pdf"
+    target="_blank"
+    className="px-6 py-2 rounded-xl bg-transparent border 
+    border-gray-400/50 hover:border-cyan-300 transition ease-in-out duration-200 
+    hover:bg-transparent hover:text-white text-center"
+    whileHover={{ scale: 1.0 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    Download Resume
+  </motion.a>
+</div>
           </motion.div>
+          
         </motion.div>
       </div>
     </div>

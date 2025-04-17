@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
 import Head from "next/head";
-import BackgroundSlideshow from "@/components/BackgroundSlideshow";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,30 +23,22 @@ export default function RootLayout({
         <meta name="generator" content="v0.dev" />
       </Head>
       <html lang="en">
-      <body
-  className={`${inter.className} text-white bg-black antialiased relative
-  selection:bg-black/0 selection:text-cyan-300`}
-  style={{
-    backgroundImage: "url('/111.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
-  }}
->
+      <body className={`${inter.className} relative text-white bg-black antialiased selection:bg-black/0 selection:text-cyan-300`}>
 
-  
-{/* <BackgroundSlideshow />      REMOVE COMMENTING FOR DYNAMIC BACKGROUND */}
+{/* Hero background image that stays fixed and only covers the top screen height */}
+<div className="fixed top-0 left-0 w-full h-screen -z-10">
+  <div className="w-full h-full bg-[url('/111.jpg')] bg-cover bg-top bg-no-repeat" />
+  <div className="absolute inset-0 bg-black/30" />
+</div>
 
-  {/* Overlay */}
-  <div className="fixed inset-0 bg-black/30 z-10" />
-
-  {/* Content */}
-  <div className="relative z-20">
-    <Navigation />
-    <main>{children}</main>
-  </div>
+{/* Your content scrolls on top of that one fullscreen image */}
+<div className="relative z-10">
+  <Navigation />
+  <main className="min-h-screen">{children}</main>
+</div>
 </body>
+
+
       </html>
     </>
   );

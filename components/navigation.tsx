@@ -66,7 +66,7 @@ export default function Navigation() {
         className="text-white ml-auto"
       >
         <Button asChild variant="outline" className="gap-2 px-6 py-2 rounded-xl 
-        bg-transparent border border-gray-400/50 hover:border-slate-300 
+        bg-transparent border border-gray-400/50 hover:border-cyan-300
         transition ease-in-out duration-500 hover:bg-transparent hover:text-white 
         hover:backdrop-blur-sm">
           <Link href="mailto:jakob@jakobdahlin.com">
