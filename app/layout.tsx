@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <>
       <Head>
+      <Analytics/>
         <title>Portfolio | Architectural Photography & Web Development</title>
         <meta name="description" content="Portfolio showcasing architectural photography and web development work" />
         <meta name="generator" />
