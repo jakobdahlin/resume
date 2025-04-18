@@ -19,7 +19,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
   return (
     <div className="h-full flex">
       <Card className="flex flex-row h-full overflow-hidden transition-all 
-      hover:shadow-md bg-transparent border border-gray-400/50 duration-300 w-full">
+      hover:shadow-md bg-transparent border border-gray-400/50 duration-200 w-full">
         
         {/* Left side image */}
         <div className="relative w-1/2 min-h-[200px]">
@@ -55,7 +55,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
     size="sm"
     className="w-full sm:w-1/2 gap-1 px-6 py-2 rounded-xl
     bg-transparent border border-neutral-400/60 hover:border-cyan-300 
-    transition ease-in-out hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300 hover:bg-transparent hover:text-white"
+    transition ease-in-out hover:shadow-lg hover:shadow-cyan-600/70 transform duration-200 hover:bg-transparent hover:text-white"
   >
     <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
       <ExternalLink className="h-5 w-5" />
@@ -68,7 +68,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
     size="sm"
     className="w-full sm:w-1/2 gap-1 px-6 py-2 rounded-xl 
     bg-transparent border border-neutral-400/60 hover:border-orange-600 
-    transition ease-in-out hover:shadow-lg hover:shadow-red-700/70 transform duration-300 hover:bg-transparent hover:text-white"
+    transition ease-in-out hover:shadow-lg hover:shadow-red-700/70 transform duration-200 hover:bg-transparent hover:text-white"
   >
     <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
       <Github className="h-5 w-5" />

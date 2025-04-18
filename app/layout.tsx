@@ -3,6 +3,7 @@ import "./globals.css";
 import Navigation from "@/components/navigation";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react"
+import  CircuitGridBackground from "@/components/curcuit-grid-background"
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -53,9 +53,9 @@ export function SkillsSection() {
           {coreSkills.map((skill) => (
             <div
               key={skill.name}
-              className={`p-[1px] rounded-xl hover:shadow-lg border transform duration-300 ease-in-out ${skill.className}`} // Apply custom className
+              className={`p-[1px] rounded-xl hover:shadow-lg border transform duration-200 ease-in-out ${skill.className}`} // Apply custom className
             >
-              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-300">
+              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-200">
                 {skill.name}
               </div>
             </div>
@@ -71,9 +71,9 @@ export function SkillsSection() {
               key={skill.name}
               className={`p-[1px] rounded-xl border border-neutral-400/60 
                 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-600/70 
-                transform duration-300 ease-in-out ${skill.className}`} // Apply custom className
+                transform duration-200 ease-in-out ${skill.className}`} // Apply custom className
             >
-              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-300">
+              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-200">
                 {skill.name}
               </div>
             </div>
@@ -89,9 +89,9 @@ export function SkillsSection() {
               key={skill.name}
               className={`p-[1px] rounded-xl border border-neutral-400/60 
                 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-600/70 
-                transform duration-300 ease-in-out ${skill.className}`} // Apply custom className
+                transform duration-200 ease-in-out ${skill.className}`} // Apply custom className
             >
-              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-300">
+              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-200">
                 {skill.name}
               </div>
             </div>
@@ -107,9 +107,9 @@ export function SkillsSection() {
               key={skill.name}
               className={`p-[1px] rounded-xl border border-neutral-400/60 
                 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-600/70 
-                transform duration-300 ease-in-out ${skill.className}`} // Apply custom className
+                transform duration-200 ease-in-out ${skill.className}`} // Apply custom className
             >
-              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-300">
+              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-200">
                 {skill.name}
               </div>
             </div>

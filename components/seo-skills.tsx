@@ -80,10 +80,10 @@ export function SeoSkills() {
     <div
     key={skill.name}
     className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-cyan-300
-    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300 ease-in-out"
+    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-300"
+      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
     >
         {skill.name}
       </div>
@@ -99,10 +99,10 @@ export function SeoSkills() {
     <div
     key={skill.name}
     className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-cyan-300
-    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300 ease-in-out"
+    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-300"
+      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
@@ -118,10 +118,10 @@ export function SeoSkills() {
     <div
     key={skill.name}
     className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-cyan-300
-    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300 ease-in-out"
+    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-300"
+      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
@@ -137,10 +137,10 @@ export function SeoSkills() {
     <div
     key={skill.name}
     className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-cyan-300
-    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300 ease-in-out"
+    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-300"
+      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
@@ -156,10 +156,10 @@ export function SeoSkills() {
     <div
     key={skill.name}
     className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-cyan-300
-    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300 ease-in-out"
+    hover:shadow-lg hover:shadow-cyan-600/70 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-300"
+      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
