@@ -49,8 +49,9 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className="flex flex-wrap gap-3 items-center justify-center">
   <Button asChild variant="outline" className="gap-2 px-6 py-2 rounded-xl 
-  bg-transparent border border-gray-400/50 hover:border-cyan-300 
-  transition-all ease-in-out duration-500 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
+  bg-transparent border border-neutral-400/60  hover:border-white 
+  hover:shadow-lg hover:shadow-white/50
+  transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
     <Link href="https://github.com/jakobdahlin" target="_blank" rel="noopener noreferrer">
       <Github size={18} />
       GitHub
@@ -58,8 +59,9 @@ export default function Home() {
   </Button>
 
   <Button asChild variant="outline" className="gap-2 px-6 py-2 rounded-xl 
-  bg-transparent border border-gray-400/50 hover:border-cyan-300 
-  transition-all ease-in-out duration-500 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
+  bg-transparent border border-neutral-400/60  hover:border-cyan-300
+  hover:shadow-lg hover:shadow-cyan-600/70
+  transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
     <Link href="https://www.linkedin.com/in/jakobdahlin/" target="_blank" rel="noopener noreferrer">
       <Linkedin size={18} />
       LinkedIn
@@ -67,8 +69,9 @@ export default function Home() {
   </Button>
 
   <Button asChild variant="outline" className="gap-2 px-6 py-2 rounded-xl 
-  bg-transparent border border-gray-400/50 hover:border-cyan-300 
-  transition-all ease-in-out duration-500 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
+  bg-transparent border border-neutral-400/60  hover:border-orange-600
+  hover:shadow-lg hover:shadow-red-700/70
+  transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
     <Link href="/Resume.pdf" download>
     <ArrowDownToLine size={18}  />
     Resume
@@ -85,8 +88,8 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
-        className="col-span-9 mb-4 rounded-2xl border border-gray-400/50 
-        bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
+        className="col-span-9 mb-4 rounded-2xl border border-neutral-400/60
+        bg-black/0 backdrop-blur-xl p-4 shadow-sm md:mb-0">
           <h2 className="mb-4 text-2xl font-bold">Experience</h2>
           <ExperienceTimeline />
         </motion.section>
@@ -96,8 +99,8 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }} 
-                className="col-span-3 mb-4 rounded-2xl border border-slate-400/50 
-                bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
+                className="col-span-3 mb-4 rounded-2xl border border-neutral-400/60  
+                bg-black/0 backdrop-blur-xl p-4 shadow-sm md:mb-0">
           <h2 className="mb-4 text-2xl font-bold">Education</h2>
           <Education />
         </motion.section>
@@ -107,8 +110,8 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }} className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border 
-        border-slate-400/50 bg-black/0 
-        backdrop-blur-md p-4 shadow-sm">
+        border-neutral-400/60  bg-black/0 
+        backdrop-blur-xl p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Demo Projects</h2>
           <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
   <ProjectCard
@@ -135,7 +138,7 @@ export default function Home() {
         <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3 }} className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-gray-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        transition={{ duration: 3 }} className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-400/60 bg-black/0 backdrop-blur-xl p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Web Development Skills</h2>
           <SkillsSection />
         </motion.section>
@@ -144,7 +147,7 @@ export default function Home() {
         <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3 }} className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-gray-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        transition={{ duration: 3 }} className="col-span-7 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-400/60 bg-black/0 backdrop-blur-xl p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">SEO Skills</h2>
           <SeoSkills />
         </motion.section>
@@ -153,7 +156,7 @@ export default function Home() {
         <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3 }} className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-gray-400/50 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        transition={{ duration: 3 }} className="col-span-5 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-400/60 bg-black/0 backdrop-blur-xl p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Design Skills</h2>
           <GraphicDesignSection />
         </motion.section>
@@ -164,9 +167,9 @@ export default function Home() {
             customScrollToTop(2000); // Adjust speed here (2000ms = 2 seconds)
           }}
           className="col-span-12 w-full text-center justify-center lg:mt-0 md:mt-0 
-          mb-20 border border-gray-400/50 bg-black/0 backdrop-blur-sm p-4 shadow-sm 
+          mb-20 border border-neutral-400/60 bg-black/0 backdrop-blur-lg p-4 shadow-sm 
           mx-auto flex items-center gap-2 px-4 py-4 text-white/80 
-          rounded-2xl hover:text-white hover:border-gray-400 transition"
+          rounded-2xl hover:text-white hover:border-cyan-400 transition"
         >
           <ArrowUp size={18} className="animate-bounce" />
           Back to Top

@@ -49,12 +49,26 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
           </CardContent>
 
           <CardFooter className="flex flex-col sm:flex-row justify-between gap-2 p-4 pt-0">
+  
+          <Button
+    asChild
+    size="sm"
+    className="w-full sm:w-1/2 gap-1 px-6 py-2 rounded-xl
+    bg-transparent border border-neutral-400/60 hover:border-cyan-300 
+    transition ease-in-out hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300 hover:bg-transparent hover:text-white"
+  >
+    <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
+      <ExternalLink className="h-5 w-5" />
+      Demo
+    </Link>
+  </Button>
+  
   <Button
     asChild
     size="sm"
     className="w-full sm:w-1/2 gap-1 px-6 py-2 rounded-xl 
-    bg-transparent border border-gray-400/50 hover:border-cyan-300 
-    transition ease-in-out duration-200 hover:bg-transparent hover:text-white"
+    bg-transparent border border-neutral-400/60 hover:border-orange-600 
+    transition ease-in-out hover:shadow-lg hover:shadow-red-700/70 transform duration-300 hover:bg-transparent hover:text-white"
   >
     <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
       <Github className="h-5 w-5" />
@@ -62,18 +76,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
     </Link>
   </Button>
 
-  <Button
-    asChild
-    size="sm"
-    className="w-full sm:w-1/2 gap-1 px-6 py-2 rounded-xl
-    bg-transparent border border-gray-400/50 hover:border-cyan-300 
-    transition ease-in-out duration-200 hover:bg-transparent hover:text-white"
-  >
-    <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
-      <ExternalLink className="h-5 w-5" />
-      Demo
-    </Link>
-  </Button>
+
 </CardFooter>
 
         </div>

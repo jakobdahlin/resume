@@ -68,10 +68,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+          'slow-pulse': {
+            '0%, 100%': { opacity: '1' },
+            '50%': { opacity: '0.2' }, // You can adjust this for the "intensity" of the pulse
+          },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'slow-pulse': 'slow-pulse 4s ease-in-out infinite',
       },
     },
   },

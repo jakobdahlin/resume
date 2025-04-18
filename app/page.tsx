@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link";
+import { ArrowDownToLine } from "lucide-react"
 
 export default function Home() {
     
@@ -12,8 +13,8 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center border border-gray-400/50 rounded-3xl px-4 p-8 
-          backdrop-blur-md shadow-2xl shadow-black/50"
+          className="max-w-3xl mx-auto text-center border border-neutral-400/60 rounded-3xl px-4 p-8 
+          backdrop-blur-md shadow-2xl shadow-black/70"
         >
           <motion.h1
             className="text-4xl md:text-4xl font-bold mb-6"
@@ -25,10 +26,10 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            className="text-md md:text-md text-slate-200 mb-8 px-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-md md:text-md text-neutral-400 mb-8 px-4"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
           >
             15+ years in graphic design and 10 years in web design, creating marketing materials for both digital and print. Specialized in developing user-friendly websites and web applications with focus on single-page experiences and affiliate marketing blogs. Skilled in UI design optimization to enhance SEO and improve UX.
           </motion.p>
@@ -44,7 +45,8 @@ export default function Home() {
   <Link href="/resume" passHref>
     <motion.div
       className="px-6 py-2 rounded-xl bg-transparent border 
-      border-gray-400/50 hover:border-cyan-300 transition ease-in-out duration-200 
+      border-neutral-400/60 hover:border-cyan-300 transition ease-in-out
+      hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300
       hover:bg-transparent hover:text-white text-center cursor-pointer"
       whileHover={{ scale: 1.0 }}
       whileTap={{ scale: 0.95 }}
@@ -58,7 +60,8 @@ export default function Home() {
     href="/Resume.pdf"
     target="_blank"
     className="px-6 py-2 rounded-xl bg-transparent border 
-    border-gray-400/50 hover:border-cyan-300 transition ease-in-out duration-200 
+    border-neutral-400/60 hover:border-orange-600 transition ease-in-out
+    hover:shadow-lg hover:shadow-red-700/70 transform duration-300 
     hover:bg-transparent hover:text-white text-center"
     whileHover={{ scale: 1.0 }}
     whileTap={{ scale: 0.95 }}
