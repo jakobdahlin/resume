@@ -161,7 +161,7 @@ const getRandomizedColor = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       // Configuration for colors - you can adjust these values
-      const backgroundColor = "#000000" // Dark blue background
+      const backgroundColor = "#00000" // Dark blue background
       const gridLineColor = "rgba(0, 210, 255, 0.30)" // Cyan grid lines with low opacity
 
       // Draw background

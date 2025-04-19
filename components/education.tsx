@@ -1,4 +1,4 @@
-import { School, MapPin, CalendarDays, GraduationCap, BookCheck, Check } from "lucide-react"
+import { School, MapPin, CalendarDays, GraduationCap, BookCheck, Check, BookOpen } from "lucide-react"
 
 export function Education() {
   return (
@@ -48,9 +48,10 @@ export function Education() {
                 </div> 
             </div>
             <div>
-                <div className="flex items-center gap-2 mb-4">
+            <div className="border-b border-neutral-500">
+                <div className="flex items-center gap-2 mb-4 mt-4">
                     <School className="h-5 w-5 text-white" />
-                    <h3 className="text-xl font-semibold mt-4">Virginska Skolan</h3>
+                    <h3 className="text-xl font-semibold">Virginska School</h3>
                 </div>
                 <div className="mt-1 text-md text-muted-foreground mb-2">
                     <div className="flex items-center gap-1 mb-2">
@@ -89,7 +90,13 @@ export function Education() {
                 </div> 
             </div>
         </div>
-
+        <div className="flex items-center gap-2 mb-4 mt-4">
+                    <BookOpen className="h-5 w-5 text-white mt-2" />
+                    <h3 className="text-xl font-semibold mt-2">Languages</h3>
+                </div>
+                <p className="text-neutral-400">English - Fluent</p>
+                <p className="text-neutral-400">Swedish - Native</p>
+</div>
 </div>
   )
 }
