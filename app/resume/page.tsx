@@ -116,19 +116,11 @@ export default function Home() {
           <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
   <ProjectCard
     className="grayscale hover:grayscale-0"
-    title="Winery"
-    tags={["TypeScript", "Next.js", "Tailwind CSS", "React"]}
-    imageUrl="/pennybridgecellars.png"
-    demoUrl="https://pennybridgecellars.vercel.app/"
-    githubUrl="https://github.com/jakobdahlin/pennybridgecellars"
-  />
-  <ProjectCard
-    className="grayscale hover:grayscale-0"
-    title="Real Estate Team"
-    tags={["TypeScript", "Next.js", "Tailwind CSS", "React"]}
-    imageUrl="/nycrealestateteam.png"
-    demoUrl="https://nycrealestateteam.vercel.app/"
-    githubUrl="https://github.com/jakobdahlin/brettmichaels"
+    title="Glöd Restaurant"
+    tags={["TypeScript", "Next.js", "Next.js API Routes", "Tailwind CSS", "React"]}
+    imageUrl="/glod.png"
+    demoUrl="https://glod-liard.vercel.app"
+    githubUrl="https://github.com/jakobdahlin/glodrestaurant"
   />
 </div>
 

@@ -14,7 +14,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center border border-neutral-400/60 rounded-3xl px-4 p-8 
-          backdrop-blur-md shadow-2xl shadow-black/70"
+          backdrop-blur-sm shadow-2xl shadow-black/70"
         >
           <motion.h1
             className="text-4xl md:text-4xl font-bold mb-6"
@@ -44,7 +44,7 @@ export default function Home() {
   {/* View Resume Button (uses Link for internal navigation) */}
   <Link href="/resume" passHref>
     <motion.div
-      className="px-6 py-2 rounded-xl bg-transparent border 
+      className="px-6 py-2 rounded-xl bg-transparent backdrop-blur-lg border 
       border-neutral-400/60 hover:border-cyan-300 transition ease-in-out
       hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300
       hover:bg-transparent hover:text-white text-center cursor-pointer"
@@ -59,7 +59,7 @@ export default function Home() {
   <motion.a
     href="/Resume.pdf"
     target="_blank"
-    className="px-6 py-2 rounded-xl bg-transparent border 
+    className="px-6 py-2 rounded-xl bg-transparent backdrop-blur-lg border 
     border-neutral-400/60 hover:border-orange-600 transition ease-in-out
     hover:shadow-lg hover:shadow-red-700/70 transform duration-300 
     hover:bg-transparent hover:text-white text-center"

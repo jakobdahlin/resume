@@ -3,13 +3,13 @@ import "./globals.css";
 import Navigation from "@/components/navigation";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react"
-import  CircuitGridBackground from "@/components/curcuit-grid-background"
+import  DynamicBackground from "@/components/dynamicbackground"
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio | Architectural Photography & Web Development",
-  description: "Portfolio showcasing architectural photography and web development work",
+  title: "Jakob Dahlin Resume",
+  description: "Jakob Dahlin's resume featuring web development skills, SEO experience & UI/UX design",
 };
 
 export default function RootLayout({
@@ -37,7 +37,7 @@ export default function RootLayout({
 {/* Your content scrolls on top of that one fullscreen image */}
 <div className="relative z-10">
   <Navigation />
-  <main className="min-h-screen">{children}</main>
+  <main className="min-h-screen"><DynamicBackground />{children}</main>
 </div>
 </body>
 
