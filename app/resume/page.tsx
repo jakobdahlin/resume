@@ -6,16 +6,8 @@ import { SkillsSection } from "@/components/skills-section"
 import { SeoSkills } from "@/components/seo-skills"
 import { GraphicDesignSection } from "@/components/graphic-design-section"
 import { Education } from "@/components/education"
-import { 
-         Github, 
-         Linkedin,
-         ArrowDownToLine,
-         GalleryVertical,
-         Mail, 
-         Play 
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+
+import Header from "@/components/header"
 import { motion } from "framer-motion"
 import { ArrowUp } from "lucide-react"
 import Footer from "@/components/footer"
@@ -48,38 +40,7 @@ export default function Home() {
     <div className="h-[200vh]">
     <main className="min-h-screen p-4 md:pt-10 sm:pt-10">
       <div id="top" />
-      {/* Hero Section */}
-      <section className="mb-4 rounded-xl pt-8">
-        <div className="mx-auto max-w-7xl mt-10">
-        <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="flex flex-wrap gap-4 items-end justify-end">
-
-<Button asChild variant="outline" className="gap-2 px-4 py-2 rounded-xl 
-  bg-transparent border border-neutral-400/60  hover:border-white 
-  hover:shadow-lg hover:shadow-white/50
-  transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
-    <Link href="/">
-      <Play size={18} />
-      Home
-    </Link>
-  </Button>
-
-  <Button asChild variant="outline" className="gap-2 px-4 py-2 rounded-xl 
-  bg-transparent border border-neutral-400/60  hover:border-white 
-  hover:shadow-lg hover:shadow-white/50
-  transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
-    <Link href="/portfolio">
-      <GalleryVertical size={18} />
-      Design Portfolio
-    </Link>
-  </Button>
-
-</motion.div>
-        </div>
-      </section>
+      <Header />
 
       {/* Bento Grid Layout with card animation */}
       <div className="mx-auto max-w-7xl grid-cols-12 gap-4 md:grid">
