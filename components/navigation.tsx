@@ -65,7 +65,7 @@ export default function Navigation() {
         transition={{ duration: 1.0 }}
         className="text-white ml-auto"
       >
-        <Button asChild variant="outline" className="gap-2 px-6 py-2 rounded-xl 
+        <Button asChild variant="outline" className="gap-2 px-4 py-2 rounded-xl 
         bg-transparent border border-gray-400/50 hover:border-white
         hover:shadow-lg hover:shadow-white/50 hover:scale-95
         transition ease-in-out duration-300 hover:bg-transparent hover:text-white 

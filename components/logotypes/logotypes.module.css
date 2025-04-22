@@ -1,0 +1,27 @@
+.carousel {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .logosslide {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slide 20s linear infinite;
+    width: calc(200%);
+  }
+  
+  .carouselimg {
+    height: 50px;
+    margin: 0 20px;
+    object-fit: contain;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
