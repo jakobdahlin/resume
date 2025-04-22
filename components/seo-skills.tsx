@@ -83,7 +83,7 @@ export function SeoSkills() {
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
+      className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200"
     >
         {skill.name}
       </div>
@@ -102,7 +102,7 @@ export function SeoSkills() {
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
+      className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
@@ -121,7 +121,7 @@ export function SeoSkills() {
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
+      className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
@@ -140,7 +140,7 @@ export function SeoSkills() {
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
+      className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>
@@ -159,7 +159,7 @@ export function SeoSkills() {
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div
-      className="px-4 py-1 rounded-xl text-white transition-colors duration-200"
+      className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200"
     >
       {skill.name}
     </div>

@@ -55,7 +55,7 @@ export function SkillsSection() {
               key={skill.name}
               className={`p-[1px] rounded-xl hover:shadow-lg border transform duration-200 ease-in-out ${skill.className}`} // Apply custom className
             >
-              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-200">
+              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
                 {skill.name}
               </div>
             </div>
@@ -73,7 +73,7 @@ export function SkillsSection() {
                 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-600/70 
                 transform duration-200 ease-in-out ${skill.className}`} // Apply custom className
             >
-              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-200">
+              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
                 {skill.name}
               </div>
             </div>
@@ -91,7 +91,7 @@ export function SkillsSection() {
                 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-600/70 
                 transform duration-200 ease-in-out ${skill.className}`} // Apply custom className
             >
-              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-200">
+              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
                 {skill.name}
               </div>
             </div>
@@ -109,7 +109,7 @@ export function SkillsSection() {
                 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-600/70 
                 transform duration-200 ease-in-out ${skill.className}`} // Apply custom className
             >
-              <div className="px-4 py-1 rounded-xl text-white transition-colors duration-200">
+              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
                 {skill.name}
               </div>
             </div>

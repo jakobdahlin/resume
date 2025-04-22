@@ -6,101 +6,138 @@ interface GraphicDesignProps {
   description: string
 }
 
-const designSkills = [
-  "Adobe Photoshop",
-  "Adobe Illustrator",
-  "Figma",
-  "Canva",
-  "InVision",
-  "Microsoft Office Suite",
-  "Pages",
-  "Numbers",
-  "Keynote"
-]
-
 const uiuxSkills = [
-    "Wireframing & Prototyping",
-    "Responsive & Mobile-First Design",
-    "Color Theory & Accessability",
-    "Typography & Layout Principles",
-    "Usability Testing & User Research",
-    "Interaction & Microinteractions",
-    "Iconography & Visual Hierarchy",
-    "Design Systems & Component Libraries",
+    "Wireframing",
+    "Prototyping",
+    "Color Theory",
+    "Accessability",
+    "Interaction",
+    "Microinteractions",
+    "Iconography",
+    "Visual Hierarchy",
+    "Typography",
+    "Layout Principles",
+    "Responsive",
+    "Mobile-First Design",
+    "Usability Testing",
+    "User Research",
+    "Design Systems",
+    "Component Libraries",
   ]
 
   const graphicSkills = [
-    "Branding & Logotypes",
-    "Illustration & Custom Icons",
-    "Infograpgics & Data Visualization",
-    "Image Editing & Retouching",
-    "Print & Digital Media",
-    "Motion Graphics & Animations",
+    "Infograpgics",
+    "Data Visualization",
+    "Motion Graphics",
+    "Animations",
+    "Socal Media Design",
+    "Image Editing",
+    "Retouching",
+    "Illustration",
+    "Custom Icons",
+    "Branding",
+    "Logotypes",
+    "Print",
+    "Digital Media",
     "Posters / Flyers",
     "Ad Design",
-    "Socal Media Content Design",
+
   ]
   
   const collaborationSkills = [
     "Developer Handoff",
-    "Style Guides & Brand Kits",
     "Annotating Designs",
-    "Version Control & File Management",
     "Team Collaboration",
     "Client Communication",
+    "Style Guides",
+    "Brand Kits",
     "Exporting Assets for Web & Print",
+    "Version Control",
+    "File Management",
+  ]
+
+  const designSkills = [
+    "Microsoft Office Suite",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Numbers",
+    "Keynote",
+    "InVision",
+    "Figma",
+    "Canva",
+    "Pages",
+
   ]
 
 export function GraphicDesignSection() {
   return (
-        <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
+    <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
       
-          <div className="p-4">
-            <h3 className="mb-3 text-lg font-bold">UI / UX</h3>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-1">
-              {uiuxSkills.map((skill) => (
-                <div key={skill} className="flex items-centergap-2 text-white/50 hover:text-white transition duration-200 ease-in-out">
-                  <span className="text-md">{skill}</span>
-                </div>
-              ))}
+  <div className="md:text-left mb-6">
+    <h3 className="mb-4 text-lg font-bold">UI / UX</h3>
+      <div className="flex flex-wrap gap-3">
+        {uiuxSkills.map((skill) => (
+          <div key={skill}
+            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white
+            hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out">
+            <div
+            className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
+            {skill}
             </div>
           </div>
+        ))}
+      </div>
+  </div>
 
-          <div className="p-4">
-            <h3 className="mb-3 text-lg font-bold">Visual & Graphic Design</h3>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-1">
-              {graphicSkills.map((skill) => (
-                <div key={skill} className="flex items-centergap-2 text-white/50 hover:text-white transition duration-200 ease-in-out">
-                <span className="text-md">{skill}</span>
-              </div>
-              ))}
+  <div className="md:text-lef mb-6">
+    <h3 className="mb-3 text-lg font-bold">Visual & Graphic Design</h3>
+      <div className="flex flex-wrap gap-3">
+        {graphicSkills.map((skill) => (
+          <div key={skill}
+            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white
+            hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out">
+            <div
+            className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
+            {skill}
             </div>
           </div>
+        ))}
+      </div>
+  </div>
 
-
-          <div className="p-4">
-            <h3 className="mb-3 text-lg font-bold">Collaboration & Design Handoff</h3>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-1">
-              {collaborationSkills.map((skill) => (
-                <div key={skill} className="flex items-centergap-2 text-white/50 hover:text-white transition duration-200 ease-in-out">
-                <span className="text-md">{skill}</span>
-              </div>
-              ))}
+  <div className="md:text-left mb-6">
+    <h3 className="mb-3 text-lg font-bold">Collaboration & Design Handoff</h3>
+      <div className="flex flex-wrap gap-3">
+        {collaborationSkills.map((skill) => (
+          <div key={skill}
+            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white
+            hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out">
+            <div
+            className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
+            {skill}
             </div>
           </div>
+        ))}
+      </div>
+  </div>
 
-          <div className="p-4">
-            <h3 className="mb-3 text-lg font-bold">Digital & Print</h3>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-1">
-              {designSkills.map((skill) => (
-                <div key={skill} className="flex items-centergap-2 text-white/50 hover:text-white transition duration-200 ease-in-out">
-                <span className="text-md">{skill}</span>
-              </div>
-              ))}
+  <div className="md:text-left mb-1">
+    <h3 className="mb-3 text-lg font-bold">Digital & Print</h3>
+      <div className="flex flex-wrap gap-3">
+        {designSkills.map((skill) => (
+          <div key={skill}
+            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white
+            hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out">
+            <div
+            className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
+            {skill}
             </div>
           </div>
+        ))}
+      </div>
+  </div>
 
-        </div>
-      );
+</div>
+  );
 }
 

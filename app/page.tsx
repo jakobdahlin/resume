@@ -45,8 +45,8 @@ export default function Home() {
   <Link href="/resume" passHref>
     <motion.div
       className="px-6 py-2 rounded-xl bg-transparent backdrop-blur-lg border 
-      border-neutral-400/60 hover:border-cyan-300 transition ease-in-out
-      hover:shadow-lg hover:shadow-cyan-600/70 transform duration-300
+      border-neutral-400/60 hover:border-white transition ease-in-out
+      hover:shadow-lg hover:shadow-white/50 transform duration-300
       hover:bg-transparent hover:text-white text-center cursor-pointer"
       whileHover={{ scale: 1.0 }}
       whileTap={{ scale: 0.95 }}
@@ -60,8 +60,8 @@ export default function Home() {
     href="/Resume.pdf"
     target="_blank"
     className="px-6 py-2 rounded-xl bg-transparent backdrop-blur-lg border 
-    border-neutral-400/60 hover:border-orange-600 transition ease-in-out
-    hover:shadow-lg hover:shadow-red-700/70 transform duration-300 
+    border-neutral-400/60 hover:border-white transition ease-in-out
+    hover:shadow-lg hover:shadow-white/50 transform duration-300 
     hover:bg-transparent hover:text-white text-center"
     whileHover={{ scale: 1.0 }}
     whileTap={{ scale: 0.95 }}
