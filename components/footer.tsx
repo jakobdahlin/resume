@@ -19,7 +19,7 @@ export default function Footer() {
         <Button asChild variant="outline" className="gap-2 w-full px-6 py-2 rounded-xl 
           bg-transparent border border-neutral-400/60 hover:border-white 
           hover:shadow-lg hover:shadow-white/50 backdrop-blur-sm
-          transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
+          transition-all ease-in-out duration-300 hover:bg-white/20 hover:text-white hover:backdrop-blur-sm">
           <Link href="https://github.com/jakobdahlin" target="_blank" rel="noopener noreferrer">
             <Github size={18} />
             GitHub
@@ -29,7 +29,7 @@ export default function Footer() {
         <Button asChild variant="outline" className="gap-2 w-full px-6 py-2 rounded-xl 
           bg-transparent border border-neutral-400/60 hover:border-white
           hover:shadow-lg hover:shadow-white/50 backdrop-blur-sm
-          transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
+          transition-all ease-in-out duration-300 hover:bg-white/20 hover:text-white hover:backdrop-blur-sm">
           <Link href="https://www.linkedin.com/in/jakobdahlin/" target="_blank" rel="noopener noreferrer">
             <Linkedin size={18} />
             LinkedIn
@@ -40,7 +40,7 @@ export default function Footer() {
       <Button asChild variant="outline" className="gap-2 mt-4 w-full px-6 py-2 rounded-xl 
         bg-transparent border border-neutral-400/60 hover:border-white
         hover:shadow-lg hover:shadow-white/50 backdrop-blur-sm
-        transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white hover:backdrop-blur-sm">
+        transition-all ease-in-out duration-300 hover:bg-white/20 hover:text-white hover:backdrop-blur-sm">
         <Link href="mailto:jakob@jakobdahlin.com">
           <Mail size={18} />
           Reach Out

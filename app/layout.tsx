@@ -30,7 +30,7 @@ export default function RootLayout({
 
 {/* Hero background image that stays fixed and only covers the top screen height */}
 <div className="fixed top-0 left-0 w-full h-screen">
-  <div className="w-full h-full bg-[url('/offgrid2.jpg')] bg-cover bg-top bg-no-repeat z-0" />
+  <div className="w-full h-full bg-black bg-cover bg-top bg-no-repeat z-0" />
   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black z-10" />
 </div>
 

@@ -125,9 +125,9 @@ export default function Home() {
 onClick={() => {
 customScrollToTop(2000); 
 }}
-className="w-full text-center justify-center mt-4
+className="w-full text-center justify-center mt-4 hover:bg-white/20
 mb-20 border border-neutral-400/60 bg-black/0 backdrop-blur-md p-4 shadow-sm 
-mx-auto flex items-center gap-2 px-4 py-4 text-white/80 
+mx-auto flex items-center gap-2 px-4 py-4 text-white/80
 rounded-2xl hover:text-white hover:border-white transition"
 >
 <ArrowUp size={18} className="animate-bounce" />

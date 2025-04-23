@@ -22,7 +22,7 @@ export default function Header() {
             <Button asChild variant="outline" className="gap-2 px-2 py-2 rounded-xl 
               bg-transparent border border-neutral-400/60 hover:border-white 
               hover:shadow-lg hover:shadow-white/50
-              transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white 
+              transition-all ease-in-out duration-300  hover:bg-white/20 hover:text-white 
               hover:backdrop-blur-sm"
             >
               <Link href="/">
@@ -35,7 +35,7 @@ export default function Header() {
               <Button asChild variant="outline" className="gap-2 px-2 py-2 rounded-xl 
                 bg-transparent border border-neutral-400/60 hover:border-white 
                 hover:shadow-lg hover:shadow-white/50
-                transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white 
+                transition-all ease-in-out duration-300  hover:bg-white/20 hover:text-white 
                 hover:backdrop-blur-sm"
               >
                 <Link href="/portfolio">
@@ -48,8 +48,8 @@ export default function Header() {
             {pathname !== "/resume" && (
               <Button asChild variant="outline" className="gap-2 px-2 py-2 rounded-xl 
                 bg-transparent border border-neutral-400/60 hover:border-white 
-                hover:shadow-lg hover:shadow-white/50
-                transition-all ease-in-out duration-300 hover:bg-transparent hover:text-white 
+                hover:shadow-lg hover:shadow-white/50 hover:bg-white/20
+                transition-all ease-in-out duration-300 hover:text-white 
                 hover:backdrop-blur-sm"
               >
                 <Link href="/resume">

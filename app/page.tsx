@@ -56,7 +56,7 @@ export default function Home() {
       className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
       border-neutral-400/60 hover:border-white transition ease-in-out
       hover:shadow-lg hover:shadow-white/50 transform duration-300
-      hover:bg-transparent hover:text-white text-center cursor-pointer"
+      hover:bg-white/20 hover:text-white text-center cursor-pointer"
       whileHover={{ scale: 1.0 }}
       whileTap={{ scale: 0.95 }}
     ><div className="flex mx-auto gap-2 justify-center items-center">
@@ -71,7 +71,7 @@ export default function Home() {
       className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
       border-neutral-400/60 hover:border-white transition ease-in-out
       hover:shadow-lg hover:shadow-white/50 transform duration-300
-      hover:bg-transparent hover:text-white text-center cursor-pointer"
+      hover:bg-white/20 hover:text-white text-center cursor-pointer"
       whileHover={{ scale: 1.0 }}
       whileTap={{ scale: 0.95 }}
     ><div className="flex mx-auto gap-2 justify-center items-center">
@@ -87,7 +87,7 @@ export default function Home() {
     className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
     border-neutral-400/60 hover:border-white transition ease-in-out
     hover:shadow-lg hover:shadow-white/50 transform duration-300 
-    hover:bg-transparent hover:text-white text-center"
+   hover:bg-white/20 hover:text-white text-center"
     whileHover={{ scale: 1.0 }}
     whileTap={{ scale: 0.95 }}
   ><div className="flex mx-auto gap-2 justify-center items-center">

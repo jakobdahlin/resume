@@ -12,28 +12,28 @@ interface SkillProps {
 
 const skills: SkillProps[] = [
   // Core Technologies
-  { name: "HTML", category: "core", className: "border-neutral-400/60 hover:border-orange-400 hover:shadow-orange-700/70" },
-  { name: "CSS", category: "core", className: "border-neutral-400/60 hover:border-sky-400 hover:shadow-sky-700/70" },
-  { name: "JavaScript", category: "core", className: "border-neutral-400/60 hover:border-amber-400 hover:shadow-amber-700/70" },
-  { name: "TypeScript", category: "core", className: "border-neutral-400/60 hover:border-blue-500 hover:shadow-blue-700/70" },
-  { name: "React", category: "core", className: "border-neutral-400/60 hover:border-cyan-400 hover:shadow-cyan-700/70" },
-  { name: "Next.js", category: "core", className: "border-neutral-400/60 hover:border-neutral-100 hover:shadow-neutral-400/70" },
+  { name: "HTML", category: "core", className: "border-neutral-400/60 hover:bg-orange-400/20 hover:border-orange-400 hover:shadow-orange-700/70" },
+  { name: "CSS", category: "core", className: "border-neutral-400/60 hover:bg-sky-400/20 hover:border-sky-400 hover:shadow-sky-700/70" },
+  { name: "JavaScript", category: "core", className: "border-neutral-400/60 hover:bg-amber-400/20 hover:border-amber-400 hover:shadow-amber-700/70" },
+  { name: "TypeScript", category: "core", className: "border-neutral-400/60 hover:bg-blue-500/20 hover:border-blue-500 hover:shadow-blue-700/70" },
+  { name: "React", category: "core", className: "border-neutral-400/60 hover:bg-cyan-400/20 hover:border-cyan-400 hover:shadow-cyan-700/70" },
+  { name: "Next.js", category: "core", className: "border-neutral-400/60 hover:bg-white/20 hover:border-white hover:shadow-white/70" },
 
   // Styling & Animation
-  { name: "Tailwind CSS", category: "styling", className: "border-neutral-400/60 hover:border-teal-300 hover:shadow-teal-400/70" },
-  { name: "CSS Modules", category: "styling", className: "border-neutral-400/60 hover:border-sky-400 hover:shadow-sky-700/70" },
-  { name: "Framer Motion", category: "styling", className: "border-neutral-400/60 hover:border-blue-400 hover:shadow-purple-700/70" },
+  { name: "Tailwind CSS", category: "styling", className: "border-neutral-400/60 hover:bg-teal-300/20 hover:border-teal-300 hover:shadow-teal-400/70" },
+  { name: "CSS Modules", category: "styling", className: "border-neutral-400/60 hover:bg-sky-400/20 hover:border-sky-400 hover:shadow-sky-700/70" },
+  { name: "Framer Motion", category: "styling", className: "border-neutral-400/60 hover:bg-blue-400/20 hover:border-blue-400 hover:shadow-purple-700/70" },
 
   // Version Control & Deployment
-  { name: "GitHub", category: "VC & deploy", className: "border-neutral-400/60 hover:border-white hover:shadow-white/40" },
-  { name: "Vercel", category: "VC & deploy", className: "border-neutral-400/60 hover:border-white hover:shadow-white/40" },
+  { name: "GitHub", category: "VC & deploy", className: "border-neutral-400/60 hover:bg-white/20 hover:border-white hover:shadow-white/40" },
+  { name: "Vercel", category: "VC & deploy", className: "border-neutral-400/60 hover:bg-white/20 hover:border-white hover:shadow-white/40" },
 
   // Coding & Deployment Tools
-  { name: "Visual Studio Code", category: "code", className: "border-neutral-400/60 hover:border-sky-300 hover:shadow-blue-600/70" },
-  { name: "Adobe Dreamweaver", category: "code", className: "border-neutral-400/60 hover:border-fuchsia-400 hover:shadow-fuchsia-800/70" },
-  { name: "Rapidweaver", category: "code", className: "border-neutral-400/60 hover:border-violet-300 hover:shadow-indigo-600/70" },
-  { name: "CodePen", category: "code", className: "border-neutral-400/60 hover:border-white hover:shadow-white/40" },
-  { name: "Wordpress", category: "code", className: "border-neutral-400/60 hover:border-cyan-100/70 hover:shadow-cyan-700/70" },
+  { name: "Visual Studio Code", category: "code", className: "border-neutral-400/60 hover:bg-sky-300/20 hover:border-sky-300 hover:shadow-blue-600/70" },
+  { name: "Adobe Dreamweaver", category: "code", className: "border-neutral-400/60 hover:bg-fuchsia-400/20 hover:border-fuchsia-400 hover:shadow-fuchsia-800/70" },
+  { name: "Rapidweaver", category: "code", className: "border-neutral-400/60 hover:bg-violet-300/20 hover:border-violet-300 hover:shadow-indigo-600/70" },
+  { name: "CodePen", category: "code", className: "border-neutral-400/60 hover:bg-white/20 hover:border-white hover:shadow-white/70" },
+  { name: "Wordpress", category: "code", className: "border-neutral-400/60 hover:bg-cyan-100/20 hover:border-cyan-100/70 hover:shadow-cyan-700/70" },
 ];
 
 export function SkillsSection() {

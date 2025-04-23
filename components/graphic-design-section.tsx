@@ -78,7 +78,7 @@ export function GraphicDesignSection() {
       <div className="flex flex-wrap gap-3">
         {uiuxSkills.map((skill) => (
           <div key={skill}
-            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white
+            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
             hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out">
             <div
             className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
@@ -94,7 +94,7 @@ export function GraphicDesignSection() {
       <div className="flex flex-wrap gap-3">
         {graphicSkills.map((skill) => (
           <div key={skill}
-            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white
+            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
             hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out">
             <div
             className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
@@ -110,7 +110,7 @@ export function GraphicDesignSection() {
       <div className="flex flex-wrap gap-3">
         {collaborationSkills.map((skill) => (
           <div key={skill}
-            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white
+            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
             hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out">
             <div
             className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
@@ -126,7 +126,7 @@ export function GraphicDesignSection() {
       <div className="flex flex-wrap gap-3">
         {designSkills.map((skill) => (
           <div key={skill}
-            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white
+            className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
             hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out">
             <div
             className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">

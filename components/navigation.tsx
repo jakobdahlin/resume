@@ -68,7 +68,7 @@ export default function Navigation() {
         <Button asChild variant="outline" className="gap-2 px-4 py-2 rounded-xl 
         bg-transparent border border-gray-400/50 hover:border-white
         hover:shadow-lg hover:shadow-white/50 hover:scale-95
-        transition ease-in-out duration-300 hover:bg-transparent hover:text-white 
+        transition ease-in-out duration-300 hover:bg-white/20 hover:text-white 
         hover:backdrop-blur-sm">
           <Link href="mailto:jakob@jakobdahlin.com">
             <Mail size={18} />
