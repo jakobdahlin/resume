@@ -116,9 +116,8 @@ export default function Home() {
       </div>
 
 {/* FOOTER */}
-<section className="my-4">
+<section className="my-4 mx-auto max-w-7xl">
     <Footer />
-</section>
 
 {/* BACK TO TOP BUTTON */}
 <div className="col-span-12 w-full">
@@ -126,7 +125,7 @@ export default function Home() {
 onClick={() => {
 customScrollToTop(2000); 
 }}
-className="w-full text-center justify-center 
+className="w-full text-center justify-center mt-4
 mb-20 border border-neutral-400/60 bg-black/0 backdrop-blur-md p-4 shadow-sm 
 mx-auto flex items-center gap-2 px-4 py-4 text-white/80 
 rounded-2xl hover:text-white hover:border-white transition"
@@ -136,6 +135,7 @@ Back to Top
 </motion.button>
 
       </div>
+      </section>
     </main>
     </div>
     

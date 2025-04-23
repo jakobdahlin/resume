@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { GalaxyBackground } from "@/components/galaxy"
 import { File, GalleryVertical, ArrowDownToLine } from "lucide-react"
 import Link from "next/link";
 
@@ -14,8 +15,9 @@ export default function Home() {
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
   className="max-w-3xl mx-auto text-center border border-neutral-400/60 rounded-3xl px-4 p-8 
-  backdrop-blur-sm shadow-2xl shadow-black/70 
-  bg-[radial-gradient(ellipse,_rgba(150,150,150,0.3)_20%,_transparent_80%)]"
+  backdrop-blur-md shadow-2xl shadow-black/70 
+  bg-[radial-gradient(ellipse,_rgba(130,130,130,0.2)_20%,_transparent_100%)]
+"
 >
 
           <motion.h1
@@ -51,7 +53,7 @@ export default function Home() {
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
   <Link href="/resume">
     <motion.div
-      className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent backdrop-blur-lg border 
+      className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
       border-neutral-400/60 hover:border-white transition ease-in-out
       hover:shadow-lg hover:shadow-white/50 transform duration-300
       hover:bg-transparent hover:text-white text-center cursor-pointer"
@@ -64,10 +66,25 @@ export default function Home() {
     </motion.div>
   </Link>
 
+  <Link href="/portfolio">
+    <motion.div
+      className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
+      border-neutral-400/60 hover:border-white transition ease-in-out
+      hover:shadow-lg hover:shadow-white/50 transform duration-300
+      hover:bg-transparent hover:text-white text-center cursor-pointer"
+      whileHover={{ scale: 1.0 }}
+      whileTap={{ scale: 0.95 }}
+    ><div className="flex mx-auto gap-2 justify-center items-center">
+      <GalleryVertical size={18} />
+      Design Portfolio
+      </div>
+    </motion.div>
+  </Link>
+
   <motion.a
     href="/Resume.pdf"
     target="_blank"
-    className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent backdrop-blur-lg border 
+    className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
     border-neutral-400/60 hover:border-white transition ease-in-out
     hover:shadow-lg hover:shadow-white/50 transform duration-300 
     hover:bg-transparent hover:text-white text-center"
