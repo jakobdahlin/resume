@@ -1,6 +1,8 @@
 "use client";
 
 import React, { ReactNode } from 'react';
+import { Loader } from "lucide-react"
+
 
 interface CardProps {
     className?: string;

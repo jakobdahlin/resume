@@ -12,7 +12,7 @@ export function ExperienceTimeline() {
             <span className="inline-block rounded-full ml-2 p-[1px]
             bg-transparent">
   <span className="block rounded-full px-2.5 py-0.5 text-xs 
-  font-medium text-primary text-white border border-white shadow-lg shadow-white/50 animate-slow-pulse">
+  font-medium text-primary text-white border border-white shadow-lg shadow-white/50 animate-pulse-slow">
     Current
   </span>
 </span>
@@ -47,7 +47,7 @@ export function ExperienceTimeline() {
   <div className="flex items-center gap-2">
     <h3 className="text-xl font-semibold">Web Developer</h3>
     <span className="inline-block rounded-full p-[1px] 
-    text-white border border-white animate-slow-pulse shadow-lg shadow-white/50">
+    text-white border border-white animate-pulse-slow shadow-lg shadow-white/50">
   <span className="block rounded-full px-2.5 py-0.5 text-xs 
   font-medium text-primary text-white">
     Current

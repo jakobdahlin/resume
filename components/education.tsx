@@ -5,7 +5,7 @@ export function Education() {
 <div className="space-y-6">
 
         <div className="space-y-2">
-            <div className="border-b border-neutral-500">
+            <div className="border-b border-neutral-400/50">
                 <div className="flex items-center gap-2 mb-4">
                     <School className="h-5 w-5 text-white" />
                     <h3 className="text-xl font-semibold">Swedish Armed Forces</h3>
@@ -48,7 +48,7 @@ export function Education() {
                 </div> 
             </div>
             <div>
-            <div className="border-b border-neutral-500">
+            <div className="border-b border-neutral-400/50">
                 <div className="flex items-center gap-2 mb-4 mt-4">
                     <School className="h-5 w-5 text-white" />
                     <h3 className="text-xl font-semibold">Virginska School</h3>

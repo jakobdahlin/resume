@@ -64,7 +64,7 @@ export default function Home() {
     bg-white/10 backdrop-blur-md p-4 shadow-sm md:mb-0"
   >
     <h2 className="mb-4 text-2xl font-bold">Button Design</h2>
-    <p className="mb-6">This dynamic button was designed for a dark-mode gaming login.</p>
+    <p className="mb-6">This button was designed for a dark-mode gaming login.</p>
     <div className="flex mx-auto justify-center">
   <ButtonDesign />
 
@@ -102,8 +102,8 @@ export default function Home() {
     className="col-span-12 md:col-span-6 mb-4 rounded-2xl border border-neutral-400/60  
     bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0"
   >
-    <h2 className="mb-4 text-2xl font-bold">Button Design</h2>
-    <ButtonDesign />
+    <h2 className="mb-4 text-2xl font-bold">Title</h2>
+
   </motion.section>
 
   <motion.section
@@ -113,12 +113,50 @@ export default function Home() {
     className="col-span-12 md:col-span-3 mb-4 rounded-2xl border border-neutral-400/60  
     bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0"
   >
-    <h2 className="mb-4 text-2xl font-bold">Button Design</h2>
-    <ButtonDesign />
+    <h2 className="mb-4 text-2xl font-bold">Title</h2>
+
   </motion.section>
 </section>
 
 {/* NEXT GRID --------------------------------------------------- */}
+<section className="grid grid-cols-12 gap-4 mt-4">
+<motion.section
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 3 }}
+    className="col-span-12 md:col-span-8 mb-20 rounded-2xl border border-neutral-400/60  
+    bg-black/0 p-4 shadow-sm md:mb-0"
+  >
+    <h2 className="mb-4 text-2xl font-bold">Title</h2>
+
+  </motion.section>
+
+  <motion.section
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 3 }}
+    className="col-span-12 md:col-span-4 mb-4 rounded-2xl border border-neutral-400/60  
+    bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0"
+  >
+    <h2 className="mb-4 text-2xl font-bold">Title</h2>
+
+  </motion.section>
+</section>
+
+{/* NEXT GRID --------------------------------------------------- */}
+
+<section className="grid grid-cols-12 gap-4 mt-4">
+<motion.section
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 3 }}
+    className="col-span-12 md:col-span-12 mb-20 rounded-2xl border border-neutral-400/60  
+    bg-black/0 p-4 shadow-sm md:mb-0"
+  >
+    <h2 className="mb-4 text-2xl font-bold">Title</h2>
+
+  </motion.section>
+</section>
 
 {/* FOOTER */}
 <section className="my-4">

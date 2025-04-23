@@ -19,7 +19,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
   return (
     <div className="h-full flex">
       <Card className="flex flex-row h-full overflow-hidden transition-all 
-      hover:shadow-md bg-transparent border border-gray-400/50 duration-200 w-full">
+      hover:shadow-md bg-transparent border border-neutral-400/50 duration-200 w-full">
         
         {/* Left side image */}
         <div className="relative w-1/2 min-h-[200px]">
@@ -41,7 +41,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
             <div className="flex flex-wrap gap-1">
               {tags.map((tag) => (
                 <Badge key={tag} className="text-xs border bg-transparent 
-                hover:bg-transparent border-gray-400/50 text-white">
+                hover:bg-transparent border-neutral-400/50 text-white">
                   {tag}
                 </Badge>
               ))}
