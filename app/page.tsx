@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { GalaxyBackground } from "@/components/galaxy"
 import { File, GalleryVertical, ArrowDownToLine } from "lucide-react"
 import Link from "next/link";
 

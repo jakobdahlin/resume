@@ -9,6 +9,7 @@ import Header from "@/components/header"
 
 import Logotypes from "@/components/logotypes/logotypes"
 import ButtonDesign from "@/components/buttondesign"
+import StyleGuide from "@/components/style-guide"
 import Footer from "@/components/footer"
 
 function customScrollToTop(speed: number) {
@@ -151,10 +152,9 @@ export default function Home() {
     animate={{ opacity: 1 }}
     transition={{ duration: 3 }}
     className="col-span-12 md:col-span-12 mb-20 rounded-2xl border border-neutral-400/60  
-    bg-black/0 p-4 shadow-sm md:mb-0"
+    bg-black/0 shadow-sm md:mb-0"
   >
-    <h2 className="mb-4 text-2xl font-bold">Title</h2>
-
+<StyleGuide />
   </motion.section>
 </section>
 
