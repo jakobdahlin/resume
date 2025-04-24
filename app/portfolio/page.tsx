@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Code, Github, Image } from "lucide-react"
+import { Code, Github, Image as ImageIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowUp } from "lucide-react"
@@ -39,7 +40,15 @@ function customScrollToTop(speed: number) {
 
 export default function Home() {
 
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(true);
+  const [bgIndex, setBgIndex] = useState(0);
+  const bgImages = [
+    "video",
+    "/BG10.jpg",
+    "/SF.JPG",
+    "/CP1.JPG",
+    "/UES.jpg"
+  ];
 
   return (
 <div className="bg-black z-[1]">
@@ -119,18 +128,26 @@ export default function Home() {
         bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0 flex flex-col items-center"
     >
 
-      <video className="absolute rounded-2xl inset-0 h-full w-full object-cover opacity-70 z-0" autoPlay loop muted playsInline>
-        <source src="https://res.cloudinary.com/dj10sb6gx/video/upload/v1739302067/lights_vlpply.mp4" type="video/mp4" />
-      </video>
-
-
-      {showOverlay && (
-        <div className="absolute inset-0 z-10 rounded-2xl bg-cover bg-center opacity-100"
-          style={{
-            backgroundImage: `url('/BG6.jpg')`
-          }} />
-      )}
-
+{showOverlay && (
+  bgImages[bgIndex] === "video" ? (
+    <video
+      className="absolute rounded-2xl inset-0 h-full w-full object-cover opacity-70 z-0"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src="https://res.cloudinary.com/dj10sb6gx/video/upload/v1739302067/lights_vlpply.mp4" type="video/mp4" />
+    </video>
+  ) : (
+    <div
+      className="absolute inset-0 z-10 rounded-2xl bg-cover bg-center opacity-100"
+      style={{
+        backgroundImage: `url('${bgImages[bgIndex]}')`,
+      }}
+    />
+  )
+)}
 
       <div className="relative z-20 w-full">
         <LoginCard />
@@ -138,13 +155,16 @@ export default function Home() {
 
 
       <button
-        onClick={() => setShowOverlay(!showOverlay)}
+onClick={() => {
+  setShowOverlay(true);
+  setBgIndex((prev) => (prev + 1) % bgImages.length);
+}}
         className="relative z-20 mt-4 w-full max-w-md text-white bg-white/10 border border-white/20 rounded-xl 
         hover:border-white hover:bg-white/20 
         hover:shadow-lg hover:shadow-white/50 transition duration-300 py-2 flex items-center justify-center gap-2"
       >
-        <Image size={18} />
-        Different Background
+        <ImageIcon size={18} />
+        Change Background
       </button>
     </motion.section>
 
@@ -182,6 +202,84 @@ export default function Home() {
 </section>
 
 {/* NEXT GRID --------------------------------------------------- */}
+
+<section className="grid grid-cols-12 gap-4 mt-4">
+<motion.section
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 3 }}
+    className="col-span-12 md:col-span-12 rounded-2xl border border-white/40   
+    bg-black/0 backdrop-blur-md p-4 shadow-sm "
+  >
+    <h2 className="mb-4 text-2xl font-bold">Color Palettes</h2>
+    <p className="text-sm text-neutral-400 mb-4 max-w-[700px]">
+    Each palette was created from real-world photos to keep the mood grounded in natural, believable color.
+Used with color theory, these swatches support contrast, accessibility, and consistency across layouts.
+    </p>
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+  {/* Column 1 */}
+  <div>
+    <Image
+      src="/pal1.png"
+      alt="palette1"
+      width={0}
+      height={0}
+      className="rounded-lg w-full h-auto object-cover"
+    />
+    <h2 className="font-bold text-md mt-2">Visual Style</h2>
+    <p className="text-sm text-neutral-400">
+    Colors are extracted directly from imagery to create depth, warmth, and balance in UI themes.
+    </p>
+  </div>
+
+  {/* Column 2 */}
+  <div>
+    <Image
+      src="/pal2.png"
+      alt="palette2"
+      width={0}
+      height={0}
+      className="rounded-lg w-full h-auto object-cover"
+    />
+    <h2 className="font-bold text-md mt-2">Design System Use</h2>
+    <p className="text-sm text-neutral-400">
+    Each set is ready to drop into a Tailwind-based design system for components, backgrounds, text, and states.
+    </p>
+  </div>
+
+  {/* Column 3 */}
+  <div>
+    <Image
+      src="/pal3.png"
+      alt="palette3"
+      width={0}
+      height={0}
+      className="rounded-lg w-full h-auto object-cover"
+    />
+    <h2 className="font-bold text-md mt-2">Accessibility</h2>
+    <p className="text-sm text-neutral-400">
+    Palettes are tested for contrast clarity and can support light or dark interfaces with minimal adjustments.
+    </p>
+  </div>
+
+  {/* Column 4 */}
+  <div>
+    <Image
+      src="/pal4.png"
+      alt="palette4"
+      width={0}
+      height={0}
+      className="rounded-lg w-full h-auto object-cover"
+    />
+  </div>
+
+</div>
+  </motion.section>
+</section>
+
+
+{/* NEXT GRID --------------------------------------------------- */}
+{/*
 <section className="grid grid-cols-12 gap-4 mt-4">
 <motion.section
     initial={{ opacity: 0 }}
@@ -205,21 +303,7 @@ export default function Home() {
 
   </motion.section>
 </section>
-
-{/* NEXT GRID --------------------------------------------------- */}
-
-<section className="grid grid-cols-12 gap-4 mt-4">
-<motion.section
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 3 }}
-    className="col-span-12 md:col-span-12 rounded-2xl border border-white/40   
-    bg-black/0 backdrop-blur-md p-4 shadow-sm "
-  >
-    <h2 className="mb-4 text-2xl font-bold">Title</h2>
-
-  </motion.section>
-</section>
+*/}
 
 {/* FOOTER  --------------------------------------------------- */}
 
