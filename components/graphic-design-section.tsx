@@ -17,7 +17,6 @@ const uiuxSkills = [
     "Visual Hierarchy",
     "Typography",
     "Layout Principles",
-    "Responsive",
     "Mobile-First Design",
     "Usability Testing",
     "User Research",

@@ -81,7 +81,7 @@ export default function Home() {
   </Link>
 
   <motion.a
-    href="/Resume.pdf"
+    href="/JDResume.pdf"
     target="_blank"
     className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
     border-neutral-400/60 hover:border-white transition ease-in-out

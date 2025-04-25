@@ -83,6 +83,14 @@ export default function Home() {
     demoUrl="https://glod-liard.vercel.app"
     githubUrl="https://github.com/jakobdahlin/glodrestaurant"
   />
+    <ProjectCard
+    className="grayscale hover:grayscale-0"
+    title="Örebrohus44"
+    tags={["TypeScript", "Next.js", "Tailwind CSS", "React"]}
+    imageUrl="/orebrohus44.png"
+    demoUrl="https://www.orebrohus44.se"
+    githubUrl="https://github.com/jakobdahlin/orebrohus44"
+  />
 </div>
 
         </motion.section>

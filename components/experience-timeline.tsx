@@ -32,11 +32,12 @@ export function ExperienceTimeline() {
             </div>
         </div>
         <p className="w-full text-neutral-400 text-md">
-        Work includes collaborations with some of the most well-known real estate brokerages, 
-        marketing agencies, and property owners in the industry. Projects cover both residential 
-        and commercial real estate, as well as retail spaces and event venues. Features include 
-        appearances by IKEA and Million Dollar Listing: New York, along with ongoing work in 
-        online art sales and social media campaigns.</p>
+        Clients include major real estate firms, global brands, and landmarks like the 
+        Empire State Building and Four Seasons Private Residences. 
+        The work spans architectural, residential, commercial, retail, and event 
+        photography in both New York and Sweden. Highlights include a photo sold at IKEA, 
+        a feature on Million Dollar Listing: New York, and ongoing projects in online 
+        rt sales and social media campaigns.</p>
         </div>
     </div>
 
