@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Jakob Dahlin Resume",
   description: "Jakob Dahlin's resume featuring web development skills, SEO experience & UI/UX design",
+  icons: '/JD_ID.png',
 };
 
 export default function RootLayout({

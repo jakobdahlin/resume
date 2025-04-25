@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { File, GalleryVertical, ArrowDownToLine } from "lucide-react"
 import Link from "next/link";
 
@@ -21,11 +22,18 @@ export default function Home() {
 
           <motion.h1
             className="text-4xl md:text-4xl font-bold mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.5, duration: 2 }}
           >
-            Jakob Dahlin
+            <div className="flex items-center justify-center mx-auto">
+          <Image
+            src="/JAKOBDW.png"
+            alt="Jakob Dahlin Logo"
+            width={250}
+            height={50}
+          />
+          </div>
           </motion.h1>
 
           <motion.p

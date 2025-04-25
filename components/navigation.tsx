@@ -48,12 +48,12 @@ export default function Navigation() {
         transition={{ duration: 1.0 }}
         className="text-white"
       >
-        <Link href="/" className="inline-block my-2">
+        <Link href="/" className="inline-block my-2 transform duration-200 hover:rotate-12">
           <Image
-            src="/JAKOBDW.png"
+            src="/JD_ID.png"
             alt="Jakob Dahlin Logo"
-            width={150}
-            height={30}
+            width={50}
+            height={50}
           />
         </Link>
       </motion.div>
