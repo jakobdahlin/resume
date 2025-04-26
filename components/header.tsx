@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
-import { Play, GalleryVertical, File } from "lucide-react"
+import { House, GalleryVertical, File } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Header() {
@@ -20,20 +20,20 @@ export default function Header() {
             className="flex flex-wrap gap-4 items-end justify-end"
           >
             <Button asChild variant="outline" className="gap-2 px-2 py-2 rounded-xl 
-              bg-transparent border border-neutral-400/60 hover:border-white 
+              bg-transparent border border-neutral-400/30 hover:border-white 
               hover:shadow-lg hover:shadow-white/50
               transition-all ease-in-out duration-300  hover:bg-white/20 hover:text-white 
               hover:backdrop-blur-sm"
             >
               <Link href="/">
-                <Play size={18} />
+                <House size={18} />
                 Home
               </Link>
             </Button>
 
             {pathname !== "/portfolio" && (
               <Button asChild variant="outline" className="gap-2 px-2 py-2 rounded-xl 
-                bg-transparent border border-neutral-400/60 hover:border-white 
+                bg-transparent border border-neutral-400/30 hover:border-white 
                 hover:shadow-lg hover:shadow-white/50
                 transition-all ease-in-out duration-300  hover:bg-white/20 hover:text-white 
                 hover:backdrop-blur-sm"
@@ -47,7 +47,7 @@ export default function Header() {
 
             {pathname !== "/resume" && (
               <Button asChild variant="outline" className="gap-2 px-2 py-2 rounded-xl 
-                bg-transparent border border-neutral-400/60 hover:border-white 
+                bg-transparent border border-neutral-400/30 hover:border-white 
                 hover:shadow-lg hover:shadow-white/50 hover:bg-white/20
                 transition-all ease-in-out duration-300 hover:text-white 
                 hover:backdrop-blur-sm"

@@ -56,7 +56,19 @@ export default function Navigation() {
             height={50}
           />
         </Link>
+        
       </motion.div>
+
+          <div className="gap-2 pl-4 py-2 font-light text-3xl">
+            <p>
+              Jakob
+            </p>
+          </div>
+          <div className="pl-2 py-4 font-extrabold text-3xl">
+            <p>
+              Dahlin
+            </p>
+          </div>
 
       {/* Contact Button on the right */}
       <motion.div
@@ -66,8 +78,8 @@ export default function Navigation() {
         className="text-white ml-auto"
       >
         <Button asChild variant="outline" className="gap-2 px-4 py-2 rounded-xl 
-        bg-transparent border border-gray-400/50 hover:border-white
-        hover:shadow-lg hover:shadow-white/50 hover:scale-95
+        bg-transparent border border-neutral-400/30 hover:border-white
+        hover:shadow-lg hover:shadow-white/50
         transition ease-in-out duration-300 hover:bg-white/20 hover:text-white 
         hover:backdrop-blur-sm">
           <Link href="mailto:jakob@jakobdahlin.com">
