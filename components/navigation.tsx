@@ -41,33 +41,21 @@ export default function Navigation() {
 >
   <div className="container mx-auto max-w-7xl px-4 flex justify-between items-center">
     <div className="flex items-center justify-between w-full py-2">
-      {/* Logo */}
-      <motion.div
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.0 }}
-        className="text-white"
-      >
-        <Link href="/" className="inline-block my-2 transform duration-200 hover:rotate-12">
-          <Image
-            src="/JD_ID.png"
-            alt="Jakob Dahlin Logo"
-            width={50}
-            height={50}
-          />
-        </Link>
-        
-      </motion.div>
 
-          <div className="gap-2 pl-4 py-2 font-light text-3xl">
+
+          <div className="gap-2 pl-2 py-2 font-light text-3xl">
+          <Link href="/">
             <p>
               Jakob
             </p>
+            </Link>
           </div>
           <div className="pl-2 py-4 font-extrabold text-3xl">
+          <Link href="/">
             <p>
               Dahlin
             </p>
+            </Link>
           </div>
 
       {/* Contact Button on the right */}

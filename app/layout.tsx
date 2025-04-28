@@ -4,14 +4,20 @@ import Navigation from "@/components/navigation";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react"
 import  DynamicBackground from "@/components/dynamicbackground"
+import { Kumbh_Sans } from 'next/font/google';
 
-const inter = Inter({ subsets: ["latin"] });
+const kumbhSans = Kumbh_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: "Jakob Dahlin Resume",
-  description: "Jakob Dahlin's resume featuring web development skills, SEO experience & UI/UX design",
+  description: "Jakob Dahlin's resume featuring web development skills, UI/UX design & SEO experience",
   icons: '/JD_ID.png',
 };
+
+
 
 export default function RootLayout({
   children,
@@ -22,12 +28,12 @@ export default function RootLayout({
     <>
       <Head>
       <Analytics/>
-        <title>Portfolio | Architectural Photography & Web Development</title>
+        <title>"Jakob Dahlin Resume | Web Development, UI/UX & SEO Experience</title>
         <meta name="description" content="Portfolio showcasing architectural photography and web development work" />
         <meta name="generator" />
       </Head>
       <html lang="en">
-      <body className={`${inter.className} relative text-white bg-black antialiased selection:bg-black/0 selection:text-cyan-300`}>
+      <body className={`${kumbhSans.className} relative text-white bg-black antialiased selection:bg-black/0 selection:text-cyan-300`}>
 
 {/* Hero background image that stays fixed and only covers the top screen height */}
 <div className="fixed top-0 left-0 w-full h-screen">

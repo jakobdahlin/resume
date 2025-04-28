@@ -46,7 +46,7 @@ export default function Home() {
     "video",
     "/BG10.jpg",
     "/SF.JPG",
-    "/CP1.JPG",
+    "/CP1.jpg",
     "/UES.jpg"
   ];
 
