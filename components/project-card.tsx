@@ -17,12 +17,12 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: ProjectCardProps) {
   return (
-    <div className="h-full flex">
-      <Card className="flex flex-row h-full overflow-hidden transition-all 
+    <div className="h-full">
+      <Card className="flex flex-col h-full overflow-hidden transition-all 
       hover:shadow-md bg-transparent border border-neutral-400/50 duration-200 w-full">
         
-        {/* Left side image */}
-        <div className="relative w-1/2 min-h-[200px]">
+        {/* Top image */}
+        <div className="relative w-full h-64">
           <Image
             src={imageUrl || "/placeholder.svg"}
             alt={title}
@@ -31,8 +31,8 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
           />
         </div>
 
-        {/* Right side content */}
-        <div className="flex flex-col justify-between w-1/2">
+        {/* Bottom content */}
+        <div className="flex flex-col justify-between flex-grow">
           <CardHeader className="p-4 pb-2">
             <h3 className="text-lg font-semibold text-white">{title}</h3>
           </CardHeader>
@@ -48,36 +48,33 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
             </div>
           </CardContent>
 
-          <CardFooter className="flex flex-col sm:flex-row justify-between gap-2 p-4 pt-0">
-  
-          <Button
-    asChild
-    size="sm"
-    className="w-full sm:w-1/2 gap-1 px-6 py-2 rounded-xl
-    bg-transparent border border-neutral-400/60 hover:border-white 
-    transition ease-in-out hover:shadow-lg hover:shadow-white/50 transform duration-200  hover:bg-white/20 hover:text-white"
-  >
-    <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
-      <ExternalLink className="h-5 w-5" />
-      Demo
-    </Link>
-  </Button>
-  
-  <Button
-    asChild
-    size="sm"
-    className="w-full sm:w-1/2 gap-1 px-6 py-2 rounded-xl 
-    bg-transparent border border-neutral-400/60 hover:border-white
-    transition ease-in-out hover:shadow-lg hover:shadow-white/50 transform duration-200  hover:bg-white/20 hover:text-white"
-  >
-    <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
-      <Github className="h-5 w-5" />
-      Code
-    </Link>
-  </Button>
+          <CardFooter className="flex flex-wrap sm:flex-row justify-between gap-2 p-4 pt-0">
+            <Button
+              asChild
+              size="sm"
+              className="w-full gap-1 px-6 py-2 rounded-xl
+              bg-transparent border border-neutral-400/60 hover:border-white 
+              transition ease-in-out hover:shadow-lg hover:shadow-white/50 transform duration-200 hover:bg-white/20 hover:text-white"
+            >
+              <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="h-5 w-5" />
+                Demo
+              </Link>
+            </Button>
 
-
-</CardFooter>
+            <Button
+              asChild
+              size="sm"
+              className="w-full gap-1 px-6 py-2 rounded-xl 
+              bg-transparent border border-neutral-400/60 hover:border-white
+              transition ease-in-out hover:shadow-lg hover:shadow-white/50 transform duration-200 hover:bg-white/20 hover:text-white"
+            >
+              <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5" />
+                Code
+              </Link>
+            </Button>
+          </CardFooter>
 
         </div>
       </Card>

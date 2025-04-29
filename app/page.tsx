@@ -15,7 +15,7 @@ export default function Home() {
   animate={{ opacity: 1 }}
   transition={{ duration: 2 }}
   className="max-w-3xl mx-auto text-center border border-neutral-400/20 
-  rounded-3xl px-4 p-8 backdrop-blur-md
+  rounded-3xl px-4 p-8
   bg-[radial-gradient(ellipse,_rgba(130,130,130,0.2)_10%,_transparent_100%)]
 "
 >
