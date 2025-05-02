@@ -39,7 +39,6 @@ function customScrollToTop(speed: number) {
 export default function Home() {
   return (
     <div className="bg-black z-[1]">
-    <div className="h-[200vh]">
     <main className="min-h-screen p-4 md:pt-10 sm:pt-10">
       <div id="top" />
       <Header />
@@ -206,7 +205,6 @@ Back to Top
       </div>
       </section>
     </main>
-    </div>
     </div>
   )
 }

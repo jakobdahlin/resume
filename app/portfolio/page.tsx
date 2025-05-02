@@ -12,6 +12,7 @@ import LoginCard from "@/components/logincard"
 
 import Logotypes from "@/components/logotypes/logotypes"
 import ButtonDesign from "@/components/buttondesign"
+import Calculator  from "@/components/calculator"
 
 import Footer from "@/components/footer"
 
@@ -201,36 +202,38 @@ onClick={() => {
   </motion.section>
 </section>
 
-{/* NEXT GRID --------------------------------------------------- */}
+{/* LEFT CONTAINER --------------------------------------------------- */}
 
 <section className="grid grid-cols-12 gap-4 mt-4">
 <motion.section
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 3 }}
-    className="col-span-12 md:col-span-12 rounded-2xl border border-white/40   
-    bg-black/0 backdrop-blur-md p-4 shadow-sm "
+    className="col-span-8 md:col-span-8 rounded-2xl border border-white/40   
+    bg-white/10 backdrop-blur-md p-4 shadow-sm "
   >
+
+    <div className="mb-4">
     <h2 className="mb-4 text-2xl font-bold">Color Palettes</h2>
     <p className="text-sm text-neutral-400 mb-4 max-w-[700px]">
     Each palette was created from real-world photos to keep the mood grounded in natural, believable color.
 Used with color theory, these swatches support contrast, accessibility, and consistency across layouts.
     </p>
-    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
-  {/* Column 1 */}
-  <div>
-    <Image
-      src="/pal1.png"
-      alt="palette1"
-      width={0}
-      height={0}
-      className="rounded-lg w-full h-auto object-cover"
-    />
     <h2 className="font-bold text-md mt-2">Visual Style</h2>
     <p className="text-sm text-neutral-400">
     Colors are extracted directly from imagery to create depth, warmth, and balance in UI themes.
     </p>
-  </div>
+    <h2 className="font-bold text-md mt-2">Design System Use</h2>
+    <p className="text-sm text-neutral-400">
+    Each set is ready to drop into a Tailwind-based design system for components, backgrounds, text, and states.
+    </p>
+    <h2 className="font-bold text-md mt-2">Accessibility</h2>
+    <p className="text-sm text-neutral-400">
+    Palettes are tested for contrast clarity and can support light or dark interfaces with minimal adjustments.
+    </p>
+    </div>
+
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full">
 
   {/* Column 2 */}
   <div>
@@ -241,10 +244,7 @@ Used with color theory, these swatches support contrast, accessibility, and cons
       height={0}
       className="rounded-lg w-full h-auto object-cover"
     />
-    <h2 className="font-bold text-md mt-2">Design System Use</h2>
-    <p className="text-sm text-neutral-400">
-    Each set is ready to drop into a Tailwind-based design system for components, backgrounds, text, and states.
-    </p>
+
   </div>
 
   {/* Column 3 */}
@@ -256,29 +256,34 @@ Used with color theory, these swatches support contrast, accessibility, and cons
       height={0}
       className="rounded-lg w-full h-auto object-cover"
     />
-    <h2 className="font-bold text-md mt-2">Accessibility</h2>
-    <p className="text-sm text-neutral-400">
-    Palettes are tested for contrast clarity and can support light or dark interfaces with minimal adjustments.
-    </p>
+
   </div>
 
-  {/* Column 4 */}
-  <div>
-    <Image
-      src="/pal4.png"
-      alt="palette4"
-      width={0}
-      height={0}
-      className="rounded-lg w-full h-auto object-cover"
-    />
-  </div>
 
 </div>
   </motion.section>
-</section>
+
+{/* RIGHT CONTAINER --------------------------------------------------- */}
 
 
-{/* NEXT GRID --------------------------------------------------- */}
+<motion.section
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 3 }}
+    className="col-span-4 md:col-span-4 rounded-2xl border border-white/40   
+    bg-white/10 backdrop-blur-md p-4 shadow-sm "
+  >
+    <h2 className="mb-4 text-2xl font-bold">Calculator</h2>
+    <p className="text-sm text-neutral-400 mb-4 max-w-[700px]">
+    A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface.
+    </p>
+    <div className="w-full items-center flex justify-center">
+      <Calculator />
+</div>
+  </motion.section>
+  </section>
+
+
 {/*
 <section className="grid grid-cols-12 gap-4 mt-4">
 <motion.section

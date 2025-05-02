@@ -17,7 +17,7 @@ const skills: SeoProps[] = [
   { name: "Affiliate Linking", category: "content" },
   { name: "Content Structure", category: "content" },
   { name: "Article Updates", category: "content" },
-  { name: "Headling Writing", category: "content" },
+  { name: "Headline Writing", category: "content" },
 
     // SEO & Keyword Strategy
     { name: "Keyword Research", category: "strategy" },

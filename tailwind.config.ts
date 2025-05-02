@@ -72,11 +72,16 @@ const config = {
             '0%, 100%': { opacity: '1' },
             '50%': { opacity: '0.2' }, // You can adjust this for the "intensity" of the pulse
           },
+          'fade-in': {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+        'fade-in': 'fade-in 2s ease-in-out forwards',
       },
     },
   },
