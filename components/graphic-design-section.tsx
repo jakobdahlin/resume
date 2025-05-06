@@ -38,7 +38,6 @@ const uiuxSkills = [
     "Digital Media",
     "Posters / Flyers",
     "Ad Design",
-
   ]
   
   const collaborationSkills = [

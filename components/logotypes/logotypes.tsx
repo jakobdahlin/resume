@@ -3,15 +3,13 @@ import React, { useEffect, useRef } from "react";
 const Logotypes: React.FC = () => {
   const items = [
     "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302076/Nexel_oojnd2.png",
+    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1746545034/VRG2c_yfxfrd.png",
+    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302071/Flareon_jjzfo7.png",
     "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302073/JAKOBD_W_mlibeo.png",
+    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1746545286/SWEETZ_favicon_cj4wa1.png",
+    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302070/Codera_x62wps.png",
     "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302079/Pixl_obeirb.png",
     "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302079/Orion_nhytlx.png",
-    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302070/CodeProbe_spzysc.png",
-    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302070/Arqitect_s9rwpd.png",
-    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302071/Flareon_jjzfo7.png",
-    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302070/Codera_x62wps.png",
-    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302080/Syncra_rcqh9l.png",
-
   ];
 
   const scrollingItems = [...items, ...items];
@@ -60,7 +58,7 @@ const Logotypes: React.FC = () => {
             
             <div
               key={index}
-              className="flex-shrink-0 flex justify-center items-center px-[10px]"
+              className="flex-shrink-0 flex justify-center items-center px-[30px]"
               style={{ minWidth: "150px" }}
             >
               <img
