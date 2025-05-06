@@ -10,54 +10,51 @@ interface SeoProps {
 
 const skills: SeoProps[] = [
   // Content Creation & Blogging
-  { name: "SEO Writing", category: "content" },
-  { name: "Wordpress", category: "content" },
-  { name: "Product Reviews", category: "content" },
-  { name: "Buying Guides", category: "content" },
-  { name: "Affiliate Linking", category: "content" },
-  { name: "Content Structure", category: "content" },
-  { name: "Article Updates", category: "content" },
-  { name: "Headline Writing", category: "content" },
+  { name: "SEO Writing", category: "content" },            // Writing content a certain way that improves SEO
+  { name: "Wordpress", category: "content" },              // Website manager - good for SEO 
+  { name: "Product Reviews", category: "content" },        // Inform readers about a product's pros/cons to move to purchase
+  { name: "Buying Guides", category: "content" },          // A detailed article that compares multiple products  
+  { name: "Affiliate Linking", category: "content" },      // Organizing articles with proper headings, sections, and hierarchy
+  { name: "Article Updates", category: "content" },        // Refreshing content with new information, keywords, or formatting
+  { name: "Headline Writing", category: "content" },       // Writing titles that grab attention and include keywords to boost SEO and click-through rates.
 
     // SEO & Keyword Strategy
-    { name: "Keyword Research", category: "strategy" },
-    { name: "On-Page SEO", category: "strategy" },
-    { name: "Off-Page SEO", category: "strategy" },
-    { name: "Site Speed", category: "strategy" },
-    { name: "Search Console", category: "strategy" },
-    { name: "Content Strategy", category: "strategy" },
-    { name: "SEO Tools", category: "strategy" },
-    { name: "Competitor Analysis", category: "strategy" },
+    { name: "Keyword Research", category: "strategy" },    // Identifying the search terms people use to increase search visibility
+    { name: "On-Page SEO", category: "strategy" },         // Optimize things on page such as titles, headings, meta des, content and image alt text
+    { name: "Site Speed", category: "strategy" },          // Knowing what makes a site fast and what to avoid
+    { name: "Search Console", category: "strategy" },      // Monitor a site's presence on Google, tran perfoemance and indexing
+    { name: "Content Strategy", category: "strategy" },    // Prior planning of content creation, goals, targeted audience
+    { name: "SEO Tools", category: "strategy" },           // Includes keyword reserach, analytics and content optimization
+    { name: "Competitor Analysis", category: "strategy" }, // Studying other sites in same niche to learn what keywords etc. they use so I can outperform
 
   // Affiliate Integration & Tracking
-  { name: "Link Management", category: "inttrack" },
-  { name: "Affiliate Platforms", category: "inttrack" },
-  { name: "CTA Design", category: "inttrack" },
-  { name: "Tracking Codes", category: "inttrack" },
-  { name: "Link Cloaking", category: "inttrack" },
-  { name: "A/B Testing", category: "inttrack" },
-  { name: "FTC Compliance", category: "inttrack" },
-  { name: "UTM Tags", category: "inttrack" },
+  { name: "Link Management", category: "inttrack" },       // Organizing, monitoring, and optimizing affiliate links to ensure proper tracking, clean URLs, and working redirects
+  { name: "Affiliate Platforms", category: "inttrack" },   // Connects publishers with brands, generate affiliate links, track performance, and receive commissions
+  { name: "CTA Design", category: "inttrack" },            // Focuses on creating buttons or links with persuasive text and visual style that encourage users to take a specific action
+  { name: "Tracking Codes", category: "inttrack" },        // Snippets in URLs or scripts that monitor user behavior and track conversions
+  { name: "Link Cloaking", category: "inttrack" },         // Hides long or messy URLs
+  { name: "A/B Testing", category: "inttrack" },           // Comparing two versions of something to see which performs better in terms of clicks/conversions
+  { name: "FTC Compliance", category: "inttrack" },        // Means disclosing affiliate relationships so users know you may earn a commission from links, as required by law
 
   // E-Commerce & Website Building
-  { name: "Shopify", category: "commerce" },
-  { name: "WooCommerce", category: "commerce" },
-  { name: "Landing Pages", category: "commerce" },
-  { name: "Mobile Design", category: "commerce" },
-  { name: "Product Pages", category: "commerce" },
-  { name: "Wordpress Elementor", category: "commerce" },
-  { name: "Niche Research", category: "commerce" },
-  { name: "Payment Setup", category: "commerce" },
+  { name: "Shopify", category: "commerce" },               // An e-commerce platform that lets you build and manage an online store
+  { name: "WooCommerce", category: "commerce" },           // A WordPress plugin that turns your site into an online store, with full control over products, payments, and shipping
+  { name: "Landing Pages", category: "commerce" },         // Single page to make a user take an action
+  { name: "Mobile Design", category: "commerce" },         // Creating layouts, text sizes, and elements that work well on smaller screens
+  { name: "Product Pages", category: "commerce" },         // Includes key details about an item—like images, price, description, reviews
+  { name: "Wordpress Elementor", category: "commerce" },   // A drag-and-drop page builder plugin that lets you create custom layouts and designs in WordPress
+  { name: "Niche Research", category: "commerce" },        // Finding a specific, profitable topic or market to target, based on demand, competition, and monetization potential
+  { name: "Payment Setup", category: "commerce" },         // Integrating secure checkout options like credit cards, PayPal, or Stripe
 
   // Analytics & Optimization
-  { name: "Google Analytics", category: "optimization" },
-  { name: "Link Clicks", category: "optimization" },
-  { name: "Conversion Rates", category: "optimization" },
-  { name: "Traffic Sources", category: "optimization" },
-  { name: "CTR Boosting", category: "optimization" },
-  { name: "Heatmaps", category: "optimization" },
-  { name: "Session Tracking", category: "optimization" },
-  { name: "Keyword Tracking", category: "optimization" },
+  { name: "Google Analytics", category: "optimization" },  // Helps track how users interact with your site—like page views, traffic sources, and conversions
+  { name: "Link Clicks", category: "optimization" },       // Shows how many times users clikced specific links or buttons
+  { name: "Conversion Rates", category: "optimization" },  // The percentage of users who complete a desired action (sign-up, purchase etc.)
+  { name: "Traffic Sources", category: "optimization" },   // Shows where users come from (Google Search Console have this)
+  { name: "CTR Boosting", category: "optimization" },      // Improve Click-Through-Rate by using good headlines, meta desc, CTAs and viauals
+  { name: "Heatmaps", category: "optimization" },          // They visually show where users click, scroll, or hover on a page, helping you understand how they interact with your site
+  { name: "Session Tracking", category: "optimization" },  // Is a recorded session where I can view what a user did on the site
+  { name: "Keyword Tracking", category: "optimization" },  // Monitors how specific keywords rank in search results over time so you can measure SEO performance
 ]
 
 export function SeoSkills() {

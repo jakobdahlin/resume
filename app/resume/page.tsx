@@ -75,7 +75,7 @@ export default function Home() {
   transition={{ duration: 3 }}
   className="col-span-4 rounded-2xl border 
   border-neutral-400/60 bg-black/0 
-  backdrop-blur-md p-4 shadow-sm"
+  backdrop-blur-md p-4 shadow-sm mb-4 lg:mb-0 md:mb-0"
 >
   <h2 className="mb-4 text-2xl font-bold">Languages</h2>
 

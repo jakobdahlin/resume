@@ -76,7 +76,7 @@ export default function Home() {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 3 }}
-    className="col-span-12 md:col-span-5 rounded-2xl border border-white/40  
+    className="col-span-12 lg:col-span-4 rounded-2xl border border-white/40  
     bg-white/10 backdrop-blur-md p-4 shadow-sm md:mb-0"
   >
     <h2 className="mb-4 text-2xl font-bold">Button Design</h2>
@@ -125,7 +125,7 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 3 }}
-      className="relative col-span-12 md:col-span-4 rounded-2xl border border-white/40  
+      className="col-span-12 md:col-span-6 lg:col-span-4 rounded-2xl border border-white/40  
         bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0 flex flex-col items-center"
     >
 
@@ -174,7 +174,7 @@ onClick={() => {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 3 }}
-    className="col-span-12 md:col-span-3 rounded-2xl border border-white/40   
+    className="col-span-12 md:col-span-6 lg:col-span-4 rounded-2xl border border-white/40   
     bg-black/0 backdrop-blur-md p-4 shadow-sm"
   >
     
@@ -209,7 +209,7 @@ onClick={() => {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 3 }}
-    className="col-span-8 md:col-span-8 rounded-2xl border border-white/40   
+    className="col-span-12 lg:col-span-6 rounded-2xl border border-white/40   
     bg-white/10 backdrop-blur-md p-4 shadow-sm "
   >
 
@@ -270,15 +270,17 @@ Used with color theory, these swatches support contrast, accessibility, and cons
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 3 }}
-    className="col-span-4 md:col-span-4 rounded-2xl border border-white/40   
+    className="col-span-12 lg:col-span-6 rounded-2xl border border-white/40   
     bg-white/10 backdrop-blur-md p-4 shadow-sm "
   >
     <h2 className="mb-4 text-2xl font-bold">Calculator</h2>
     <p className="text-sm text-neutral-400 mb-4 max-w-[700px]">
     A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface.
     </p>
-    <div className="w-full items-center flex justify-center">
+    <div className="w-full flex justify-center">
+    <div className="w-full max-w-[400px] px-4">
       <Calculator />
+</div>
 </div>
   </motion.section>
   </section>

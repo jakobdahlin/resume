@@ -73,8 +73,8 @@ interface CalculatorProps {
 
   return (
 
-    <div className={`text-white ${className}`}>
-      <div className="rounded-lg w-full sm:w-76 md:w-96 p-2">
+<div className={`text-white ${className}`}>
+      <div className="rounded-lg w-full max-w-[500px] mx-auto p-2">
         <div
   className="relative rounded-full p-4 h-[72px] text-right mb-4 text-lg bg-neutral-800 overflow-hidden group transition-transform duration-100 transform shadow-[0px_10px_15px_rgba(0,0,0,0.2)] col-span-2"
   onClick={() => ("0")}
