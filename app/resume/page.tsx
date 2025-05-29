@@ -151,11 +151,11 @@ export default function Home() {
   />
     <ProjectCard
     className="grayscale hover:grayscale-0"
-    title="Örebrohus44"
+    title="Bento Box Generator"
     tags={["TypeScript", "Next.js", "Tailwind CSS", "React"]}
-    imageUrl="/orebrohus44.png"
-    demoUrl="https://www.orebrohus44.se"
-    githubUrl="https://github.com/jakobdahlin/orebrohus44"
+    imageUrl="/bentoboxgenerator.png"
+    demoUrl="https://bentoboxgenerator.vercel.app"
+    githubUrl="https://github.com/jakobdahlin/bentoboxgenerator"
   />
 </div>
 
