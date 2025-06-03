@@ -91,7 +91,7 @@ I combine technical skill and design insight to build user-friendly, high-perfor
   </Link>
 
   <motion.a
-    href="/JDResume2025.pdf"
+    href="/JakobDahlin_2025.pdf"
     target="_blank"
     className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
     border-neutral-400/20 hover:border-white transition ease-in-out
