@@ -1,0 +1,304 @@
+"use client"
+
+import { useState } from "react"
+import { Code, Github, Image as ImageIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { ArrowUp } from "lucide-react"
+import Header from "@/components/header"
+import LoginCard from "@/components/logincard"
+import Navbar from "@/components/navbar"
+import { AppSidebar } from "@/components/sidebar"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import { Separator } from "@/components/ui/separator"
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import Logotypes from "@/components/logotypes/logotypes"
+import ButtonDesign from "@/components/buttondesign"
+import Calculator  from "@/components/calculator"
+
+import Footer from "@/components/footer"
+
+function customScrollToTop(speed: number) {
+  const topEl = document.getElementById("top");
+  if (!topEl) return;
+
+  const targetPosition = topEl.getBoundingClientRect().top + window.pageYOffset;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const startTime = performance.now();
+
+  function scrollStep(currentTime: number) {
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / speed, 1); // speed controls scroll duration
+
+    window.scrollTo(0, startPosition + distance * progress);
+
+    if (timeElapsed < speed) {
+      requestAnimationFrame(scrollStep);
+    }
+  }
+
+  requestAnimationFrame(scrollStep);
+}
+
+export default function Home() {
+
+  const [showOverlay, setShowOverlay] = useState(true);
+  const [bgIndex, setBgIndex] = useState(0);
+  const bgImages = [
+    "video",
+    "/BG10.jpg",
+    "/SF.JPG",
+    "/CP1.jpg",
+    "/UES.jpg"
+  ];
+
+  return (
+<div className="bg-black z-[1]">
+  
+ <main className="mx-auto max-w-7xl min-h-screen p-4 md:pt-10 sm:pt-10">
+<Header/>
+<section className="w-full max-w-7xl mx-auto">
+<div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 md:row-span-4 relative p-[1px] rounded-2xl">
+      <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+      <div className="relative z-10 h-full w-full bg-black rounded-2xl p-4 flex flex-col text-white space-y-4">
+      <div className="mb-4 grid-cols-12 gap-4 md:grid">
+        <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}
+        className="col-span-12
+        bg-black/0 backdrop-blur-mdshadow-sm">
+          <h2 className="mb-4 text-2xl font-bold">Logotypes</h2>
+         <Logotypes />
+        </motion.section>
+</div>
+      </div>
+    </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4 py-4">
+    
+    <div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 md:row-span-4 relative p-[1px] rounded-2xl">
+      <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+      <div className="relative z-10 h-full w-full bg-neutral-900 rounded-2xl p-4 flex flex-col text-white space-y-4">
+      <h2 className="mb-4 text-2xl font-bold">Button Design</h2>
+    <p className="mb-6">This button was designed for a dark-mode game.</p>
+    <div className="flex mx-auto justify-center">
+  <ButtonDesign />
+
+</div>
+<div className="flex-wrap">
+  <h2 className="font-bold text-md">Visual Style</h2>
+  <p className="text-sm mb-2 text-neutral-400">Soft shadow, subtle animated gradient, 
+    and rounded edges give it a modern, elevated look.</p>
+
+  <h2 className="font-bold text-md">Interaction</h2>
+  <p className="text-sm mb-2 text-neutral-400">Hover shrinks the button slightly. On click, 
+    the shadow disappears to create a pressed-in effect.</p>
+
+  <h2 className="font-bold text-md">Content & Flow</h2>
+  <p className="text-sm mb-2 text-neutral-400">Clear label, centered alignment, 
+    and spacing that makes it easy to tap or click.</p>
+
+  <h2 className="font-bold text-md">Adaptability</h2>
+  <p className="text-sm mb-2 text-neutral-400">Designed to hold up across different 
+    dark layouts and backgrounds without losing clarity.</p>
+</div>
+      </div>
+    </div>
+
+    <div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 md:row-span-4 relative p-[1px] rounded-2xl">
+      <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+      <div className="relative z-10 h-full w-full bg-black rounded-2xl p-4 text-white">
+
+      {showOverlay && (
+  bgImages[bgIndex] === "video" ? (
+    <video
+      className="absolute rounded-2xl inset-0 h-full w-full object-cover opacity-70 z-0"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src="https://res.cloudinary.com/dj10sb6gx/video/upload/v1739302067/lights_vlpply.mp4" type="video/mp4" />
+    </video>
+  ) : (
+    <div
+      className="absolute inset-0 z-10 rounded-2xl bg-cover bg-center opacity-100"
+      style={{
+        backgroundImage: `url('${bgImages[bgIndex]}')`,
+      }}
+    />
+  )
+)}
+
+      <div className="relative z-20 w-full">
+        <LoginCard />
+      </div>
+
+<div className="flex items-center justify-center">
+      <button
+onClick={() => {
+  setShowOverlay(true);
+  setBgIndex((prev) => (prev + 1) % bgImages.length);
+}}
+        className="relative z-20 mt-4 w-full max-w-md text-white bg-white/10 border border-white/20 rounded-xl 
+        hover:border-white hover:bg-white/20 
+        hover:shadow-lg hover:shadow-white/50 transition duration-300 py-2 flex items-center justify-center gap-2"
+      >
+        <ImageIcon size={18} />
+        Change Background
+      </button>
+      </div>
+      </div>
+    </div>
+
+    <div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 md:row-span-4 relative p-[1px] rounded-2xl">
+      <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+      <div className="relative z-10 h-full w-full bg-black rounded-2xl p-4 flex flex-col text-white space-y-4">
+      <h2 className="mb-4 text-2xl font-bold">Login Component</h2>
+    <p className="text-sm text-neutral-400">A soft-glow login form made for dark interfaces, 
+      placed over a looping aurora video background.</p>
+    <div className="flex-wrap mt-4">
+  <h2 className="font-bold text-md">Visual Style</h2>
+  <p className="text-sm mb-2 text-neutral-400">Frosted glass effect using bg-white/5 and 
+    text-white/80 keeps the content readable without blocking the background. Tailwind's 
+    opacity classes let it blend cleanly over video, textures, or images.</p>
+
+  <h2 className="font-bold text-md">Interaction</h2>
+  <p className="text-sm mb-2 text-neutral-400">Hover and focus states give subtle feedback. 
+    Button includes animated loading state when clicked.</p>
+
+  <h2 className="font-bold text-md">Content & Flow</h2>
+  <p className="text-sm mb-2 text-neutral-400">Clear spacing, strong CTA, and helpful links 
+    like "Forgot password" and "Register" in expected spots.</p>
+
+  <h2 className="font-bold text-md">Adaptability</h2>
+  <p className="text-sm mb-2 text-neutral-400">Responsive layout. Background-aware color 
+    choices keep it readable over textures, photos, and video.</p>
+</div>
+      </div>
+    </div>
+
+
+<div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-8 row-span-1 md:row-span-2 relative p-[1px] rounded-2xl">
+  <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+  <div className="relative z-10 h-full w-full bg-[url('/Galaxy.png')] bg-cover bg-center rounded-2xl p-4 flex flex-col text-white space-y-4">
+  <h2 className="mb-4 text-2xl font-bold">Navbar</h2>
+  <Navbar />
+  </div>
+</div>
+
+
+<div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 md:row-span-4 relative p-[1px] rounded-2xl">
+  <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+  <div className="relative z-10 h-full w-full bg-neutral-900 rounded-2xl p-4 flex flex-col text-white space-y-4">
+  <h2 className="mb-4 text-2xl font-bold">Calculator</h2>
+    <p className="text-sm text-neutral-400 mb-4 max-w-[700px]">
+    A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface.
+    </p>
+    <div className="w-full flex justify-center">
+    <div className="w-full max-w-[400px] px-4">
+      <Calculator />
+</div>
+</div>
+  </div>
+</div>
+
+
+<div className="col-span-1 sm:col-span-2 md:col-span-2 lg:col-span-3 row-span-1 md:row-span-6 relative p-[1px] rounded-2xl">
+  <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+  <div className="relative z-10 h-full w-full bg-[url('/BG6.jpg')] bg-cover bg-center rounded-2xl p-4 flex flex-col text-white space-y-4">
+  <h2 className="mb-4 text-2xl font-bold">Sidebar</h2>
+
+  <div className="relative">
+  <SidebarProvider>
+  <AppSidebar />
+  </SidebarProvider>
+  </div>
+  </div>
+</div>
+
+
+<div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-5 row-span-1 md:row-span-4 relative p-[1px] rounded-2xl">
+  <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+  <div className="relative z-10 h-full w-full bg-black rounded-2xl p-4 flex flex-col text-white space-y-4">
+  <h2 className="mb-4 text-2xl font-bold">Something else</h2>
+  </div>
+</div>
+
+
+<div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 md:row-span-4 relative p-[1px] rounded-2xl">
+  <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+  <div className="relative z-10 h-full w-full bg-black rounded-2xl p-4 flex flex-col text-white space-y-4">
+  <h2 className="mb-4 text-2xl font-bold">Color Palettes</h2>
+    <p className="text-sm text-neutral-400 mb-4 max-w-[700px]">
+    Each palette was created from real-world photos to keep the mood grounded in natural, believable color.
+Used with color theory, these swatches support contrast, accessibility, and consistency across layouts.
+    </p>
+    <h2 className="font-bold text-md mt-2">Visual Style</h2>
+    <p className="text-sm text-neutral-400">
+    Colors are extracted directly from imagery to create depth, warmth, and balance in UI themes.
+    </p>
+    <h2 className="font-bold text-md mt-2">Design System Use</h2>
+    <p className="text-sm text-neutral-400">
+    Each set is ready to drop into a Tailwind-based design system for components, backgrounds, text, and states.
+    </p>
+    <h2 className="font-bold text-md mt-2">Accessibility</h2>
+    <p className="text-sm text-neutral-400">
+    Palettes are tested for contrast clarity and can support light or dark interfaces with minimal adjustments.
+    </p>
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full">
+
+  {/* Column 2 */}
+  <div>
+    <Image
+      src="/pal2.png"
+      alt="palette2"
+      width={0}
+      height={0}
+      className="rounded-lg w-full h-auto object-cover"
+    />
+
+  </div>
+
+  {/* Column 3 */}
+  <div>
+    <Image
+      src="/pal3.png"
+      alt="palette3"
+      width={0}
+      height={0}
+      className="rounded-lg w-full h-auto object-cover"
+    />
+
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<div className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-5 row-span-1 md:row-span-2 relative p-[1px] rounded-2xl">
+  <div className="absolute inset-0 z-0 rounded-2xl bg-gradient-to-b from-white/40 to-white/10 pointer-events-none" />
+    <div className="relative z-10 h-full w-full bg-neutral-900 rounded-2xl p-4 flex flex-col text-white space-y-4">
+      <h2 className="mb-4 text-2xl font-bold">Color Palettes</h2>
+
+    </div>
+  </div>
+</div>
+
+</section>
+  </main>
+</div>
+    
+  )
+}
+

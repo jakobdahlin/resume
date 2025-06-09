@@ -53,8 +53,10 @@ export default function Home() {
 
   return (
 <div className="bg-black z-[1]">
+  
  <main className="mx-auto max-w-7xl min-h-screen p-4 md:pt-10 sm:pt-10">
       <div id="top" />
+      
       <Header />
 
 {/* LOGOTYPES --------------------------------------------------- */}
@@ -67,6 +69,20 @@ export default function Home() {
         bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Logotypes</h2>
          <Logotypes />
+        </motion.section>
+</div>
+
+
+{/* LOGOTYPES --------------------------------------------------- */}
+<div className="mb-4 grid-cols-12 gap-4 md:grid">
+        <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}
+        className="col-span-12 rounded-2xl border border-white/40 
+        bg-black/0 backdrop-blur-md p-4 shadow-sm">
+          <h2 className="mb-4 text-2xl font-bold">Navbar</h2>
+
         </motion.section>
 </div>
 
