@@ -1,20 +1,20 @@
 "use client"
 
 import { useState } from "react"
-import { Code, Github, Image as ImageIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Image as ImageIcon } from "lucide-react"
+import { Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowUp } from "lucide-react"
 import Header from "@/components/header"
 import LoginCard from "@/components/logincard"
-
+import Navbar from "@/components/navbar"
+import { AppSidebar } from "@/components/sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar"
 import Logotypes from "@/components/logotypes/logotypes"
 import ButtonDesign from "@/components/buttondesign"
 import Calculator  from "@/components/calculator"
 
-import Footer from "@/components/footer"
 
 function customScrollToTop(speed: number) {
   const topEl = document.getElementById("top");
@@ -55,107 +55,54 @@ export default function Home() {
 <div className="bg-black z-[1]">
   
  <main className="mx-auto max-w-7xl min-h-screen p-4 md:pt-10 sm:pt-10">
-      <div id="top" />
-      
-      <Header />
+<Header/>
 
 {/* LOGOTYPES --------------------------------------------------- */}
-<div className="mb-4 grid-cols-12 gap-4 md:grid">
-        <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
-        className="col-span-12 rounded-2xl border border-white/40 
-        bg-black/0 backdrop-blur-md p-4 shadow-sm">
-          <h2 className="mb-4 text-2xl font-bold">Logotypes</h2>
-         <Logotypes />
-        </motion.section>
-</div>
-
-
-{/* LOGOTYPES --------------------------------------------------- */}
-<div className="mb-4 grid-cols-12 gap-4 md:grid">
-        <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
-        className="col-span-12 rounded-2xl border border-white/40 
-        bg-black/0 backdrop-blur-md p-4 shadow-sm">
-          <h2 className="mb-4 text-2xl font-bold">Navbar</h2>
-
-        </motion.section>
-</div>
-
-{/* BUTTON DESIGNS --------------------------------------------------- */}
-<section className="grid grid-cols-12 gap-4">
-  <motion.section
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 3 }}
-    className="col-span-12 lg:col-span-4 rounded-2xl border border-white/40  
-    bg-white/10 backdrop-blur-md p-4 shadow-sm md:mb-0"
-  >
-    <h2 className="mb-4 text-2xl font-bold">Button Design</h2>
-    <p className="mb-6">This button was designed for a dark-mode game.</p>
-    <div className="flex mx-auto justify-center">
-  <ButtonDesign />
-
-</div>
-<div className="flex-wrap">
-  <h2 className="font-bold text-md">Visual Style</h2>
-  <p className="text-sm mb-2 text-neutral-400">Soft shadow, subtle animated gradient, 
-    and rounded edges give it a modern, elevated look.</p>
-
-  <h2 className="font-bold text-md">Interaction</h2>
-  <p className="text-sm mb-2 text-neutral-400">Hover shrinks the button slightly. On click, 
-    the shadow disappears to create a pressed-in effect.</p>
-
-  <h2 className="font-bold text-md">Content & Flow</h2>
-  <p className="text-sm mb-2 text-neutral-400">Clear label, centered alignment, 
-    and spacing that makes it easy to tap or click.</p>
-
-  <h2 className="font-bold text-md">Adaptability</h2>
-  <p className="text-sm mb-2 text-neutral-400">Designed to hold up across different 
-    dark layouts and backgrounds without losing clarity.</p>
-</div>
-
-<Link target="_blank" rel="noopener noreferrer" href="https://github.com/jakobdahlin/resume/blob/main/components/buttondesign.tsx">
-  <motion.div
-    className="flex items-center justify-center gap-2 py-2 px-14 mt-4 rounded-xl bg-transparent border 
-    border-neutral-400/60 hover:border-white transition ease-in-out
-    hover:shadow-lg hover:shadow-white/50 transform duration-300
-    hover:bg-white/20 hover:text-white text-center cursor-pointer"
-    whileHover={{ scale: 1.0 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    <div className="flex mx-auto gap-2 justify-center items-center">
-    <Github size={18} />Code
+<section className="w-full max-w-7xl mx-auto pb-4">
+  <div className="grid grid-cols-1 gap-4">
+    <div className="col-span-1 sm:col-span- md:col-span-4 lg:col-span-12 
+       row-span-1 rounded-xl overflow-hidden border border-neutral-400/20">
+          <div className="h-full w-full p-4 flex items-center justify-center">
+            <Logotypes/>
+          </div>
     </div>
-  </motion.div>
-</Link>
-  </motion.section>
+  </div>
+</section>
 
-{/* Login Component --------------------------------------------------- */}
+{/* BUTTON --------------------------------------------------- */}
+<section className="w-full max-w-7xl mx-auto pb-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
+    <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 
+      row-span-1 rounded-xl overflow-hidden border border-neutral-400/20">
+             <h2 className="p-4 text-2xl font-bold">Button Design</h2>
+          <div className="w-full p-4 flex items-center justify-center">
+            
+            <div>
+            <ButtonDesign/>
+            </div>
+          </div>
+          
+    </div>
 
-<motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 3 }}
-      className="col-span-12 md:col-span-6 lg:col-span-4 rounded-2xl border border-white/40  
-        bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0 flex flex-col items-center"
+{/* LOGIN --------------------------------------------------- */}
+  <div 
+      className="relative col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 rounded-2xl border border-neutral-400/20  
+        bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0 flex flex-col items-center justify-center"
     >
 
 {showOverlay && (
   bgImages[bgIndex] === "video" ? (
-    <video
-      className="absolute rounded-2xl inset-0 h-full w-full object-cover opacity-70 z-0"
-      autoPlay
-      loop
-      muted
-      playsInline
-    >
-      <source src="https://res.cloudinary.com/dj10sb6gx/video/upload/v1739302067/lights_vlpply.mp4" type="video/mp4" />
-    </video>
+<div className="absolute inset-0 z-0 rounded-2xl overflow-hidden will-change-transform isolation-isolate">
+  <video
+    className="h-full w-full object-cover opacity-70"
+    autoPlay
+    loop
+    muted
+    playsInline
+  >
+    <source src="https://res.cloudinary.com/dj10sb6gx/video/upload/v1739302067/lights_vlpply.mp4" type="video/mp4" />
+  </video>
+</div>
   ) : (
     <div
       className="absolute inset-0 z-10 rounded-2xl bg-cover bg-center opacity-100"
@@ -170,30 +117,13 @@ export default function Home() {
         <LoginCard />
       </div>
 
+  </div>
 
-      <button
-onClick={() => {
-  setShowOverlay(true);
-  setBgIndex((prev) => (prev + 1) % bgImages.length);
-}}
-        className="relative z-20 mt-4 w-full max-w-md text-white bg-white/10 border border-white/20 rounded-xl 
-        hover:border-white hover:bg-white/20 
-        hover:shadow-lg hover:shadow-white/50 transition duration-300 py-2 flex items-center justify-center gap-2"
-      >
-        <ImageIcon size={18} />
-        Change Background
-      </button>
-    </motion.section>
-
-{/* Login Component INFO --------------------------------------------------- */}
-  <motion.section
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 3 }}
-    className="col-span-12 md:col-span-6 lg:col-span-4 rounded-2xl border border-white/40   
-    bg-black/0 backdrop-blur-md p-4 shadow-sm"
-  >
-    
+{/* LOGIN INFO --------------------------------------------------- */}
+    <div 
+          className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 
+          rounded-xl overflow-hidden border border-neutral-400/20"
+        ><div className="p-4">
     <h2 className="mb-4 text-2xl font-bold">Login Component</h2>
     <p className="text-sm text-neutral-400">A soft-glow login form made for dark interfaces, 
       placed over a looping aurora video background.</p>
@@ -215,18 +145,98 @@ onClick={() => {
   <p className="text-sm mb-2 text-neutral-400">Responsive layout. Background-aware color 
     choices keep it readable over textures, photos, and video.</p>
 </div>
-  </motion.section>
+<button
+onClick={() => {
+  setShowOverlay(true);
+  setBgIndex((prev) => (prev + 1) % bgImages.length);
+}}
+        className="relative z-20 mt-4 w-full mx-auto max-w-md text-white bg-white/10 border border-white/20 rounded-xl 
+        hover:border-white hover:bg-white/20 
+        hover:shadow-lg hover:shadow-white/50 transition duration-300 py-2 flex items-center justify-center gap-2"
+      >
+        <ImageIcon size={18} />
+        Change Background
+      </button>
+      <div className="relative w-full h-full flex flex-col items-center justify-center">
+
+<Link
+  target="_blank"
+  rel="noopener noreferrer"
+  href="https://github.com/jakobdahlin/resume/blob/3caf6cea255b524d466abd3d828ec35dfdba9bad/components/logincard.tsx"
+  className="mt-4 w-full max-w-md"
+>
+  <motion.div
+    className="flex items-center w-full justify-center gap-2 py-2 rounded-xl 
+    bg-white/10 border
+    border-white/20 hover:border-white transition ease-in-out z-800
+    hover:shadow-lg hover:shadow-white/50 transform duration-300
+    hover:bg-white/20 hover:text-white text-center cursor-pointer"
+    whileHover={{ scale: 1.0 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <div className="flex mx-auto gap-2 justify-center items-center">
+      <Github size={18} />Code
+    </div>
+  </motion.div>
+</Link>
+</div>
+        </div>
+        </div>
+  </div>
 </section>
 
-{/* LEFT CONTAINER --------------------------------------------------- */}
+{/* NAVBAR --------------------------------------------------- */}
+<section className="w-full max-w-7xl mx-auto pb-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
+    <div 
+          className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-12 row-span-1 
+          rounded-xl overflow-hidden border border-neutral-400/20 bg-cover bg-center 
+          bg-[url('/Galaxy.png')]"
+        >             <h2 className="p-4 text-2xl font-bold">Navbar</h2>
+          <div className="mx-auto p-4 flex items-center justify-center">
+          <Navbar/>
+          </div>
+        </div>
+  </div>
+</section>
 
-<section className="grid grid-cols-12 gap-4 mt-4">
-<motion.section
+
+{/* COLOR PALETTESs --------------------------------------------------- */}
+<section className="w-full max-w-7xl mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4">
+    
+    {/* Block 1 */}
+    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-xl 
+  overflow-hidden border border-neutral-400/20">
+<h2 className="p-4 text-2xl font-bold">Ad Design</h2>
+  <div className="relative aspect-[1/1] w-full flex items-center justify-center">
+    <Image
+      src="/orbitualAd.png"
+      alt="Hero"
+      fill
+      className="object-contain p-4"
+      priority
+    />
+  </div>
+</div>
+
+    {/* Block 2 */}
+    <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-2 rounded-xl overflow-hidden border border-neutral-400/20">
+    <h2 className="p-4 text-2xl font-bold">Calculator</h2>
+    <div className="px-4">
+      <p className="pb-4">A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface.</p>
+    <Calculator/>
+    </div>
+    </div>
+
+    {/* Block 3 */}
+    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3 md:row-span-2 rounded-xl overflow-hidden border border-neutral-400/20">
+    <motion.section
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 3 }}
     className="col-span-12 lg:col-span-6 rounded-2xl border border-white/40   
-    bg-white/10 backdrop-blur-md p-4 shadow-sm "
+    backdrop-blur-md p-4 shadow-sm "
   >
 
     <div className="mb-4">
@@ -278,83 +288,21 @@ Used with color theory, these swatches support contrast, accessibility, and cons
 
 </div>
   </motion.section>
-
-{/* RIGHT CONTAINER --------------------------------------------------- */}
-
-
-<motion.section
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 3 }}
-    className="col-span-12 lg:col-span-6 rounded-2xl border border-white/40   
-    bg-white/10 backdrop-blur-md p-4 shadow-sm "
-  >
-    <h2 className="mb-4 text-2xl font-bold">Calculator</h2>
-    <p className="text-sm text-neutral-400 mb-4 max-w-[700px]">
-    A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface.
-    </p>
-    <div className="w-full flex justify-center">
-    <div className="w-full max-w-[400px] px-4">
-      <Calculator />
-</div>
-</div>
-  </motion.section>
-  </section>
-
-
-{/*
-<section className="grid grid-cols-12 gap-4 mt-4">
-<motion.section
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 3 }}
-    className="col-span-12 md:col-span-8 rounded-2xl border border-white/40   
-    bg-black/0 p-4 shadow-sm"
-  >
-    <h2 className="mb-4 text-2xl font-bold">Title</h2>
-
-  </motion.section>
-
-  <motion.section
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 3 }}
-    className="col-span-12 md:col-span-4 rounded-2xl border border-white/40   
-    bg-black/0 backdrop-blur-md p-4 shadow-sm "
-  >
-    <h2 className="mb-4 text-2xl font-bold">Title</h2>
-
-  </motion.section>
-</section>
-*/}
-
-{/* FOOTER  --------------------------------------------------- */}
-
-<section className="my-4">
-    <Footer />
-</section>
-
-{/* BACK TO TOP BUTTON */}
-<div className="col-span-12 w-full">
-<motion.button
-onClick={() => {
-customScrollToTop(2000); 
-}}
-className="w-full text-center justify-center hover:bg-white/20
-border border-white/40  bg-black/0 backdrop-blur-md p-4 shadow-sm 
-mx-auto flex items-center gap-2 px-4 py-4 text-white/80 
-rounded-2xl hover:text-white hover:border-white transition"
->
-<ArrowUp size={18} className="animate-bounce" />
-Back to Top
-</motion.button>
-
-
-
     </div>
+
+    {/* Block 4 */}
+    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-xl overflow-hidden border border-neutral-400/20">
+      <div className="h-full w-full p-4 flex items-center justify-center">
+        Block 4
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
   </main>
 </div>
     
   )
 }
-

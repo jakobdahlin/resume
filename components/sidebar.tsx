@@ -207,7 +207,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const [activeTeam, setActiveTeam] = React.useState(data.teams[0])
 
   return (
-    <div className="bg-black/30 backdrop-blur-md h-[700px] border border-white/50 rounded-xl justify-center items-center mx-auto p-2">
+    <div className="bg-black/30 backdrop-blur-md h-[700px] w-full border border-white/50 rounded-xl justify-center items-center mx-auto p-2">
 <SidebarHeader>
         <SidebarMenu>
         <SidebarMenuItem className="!mt-0 !pt-0 !mb-2">
