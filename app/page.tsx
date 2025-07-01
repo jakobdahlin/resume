@@ -41,9 +41,7 @@ export default function Home() {
   animate={{ opacity: 1 }}
   transition={{ delay: 3, duration: 2 }}
 >
-I have 10+ years of experience in web development and 15+ years in graphic design. 
-I create web experiences focused on SEO, UI/UX, mobile-first design, and Conversion Rate Optimization. 
-I combine technical skill and design insight to build user-friendly, high-performing websites.
+I design and build responsive websites and digital products with a focus on UI/UX, SEO, performance, and accessibility. With 10+ years of web development experience and a background in visual design, I create functional, user-friendly interfaces that balance clean design with real-world usability.
 
 </motion.p>
 
