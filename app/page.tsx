@@ -89,7 +89,7 @@ I design and build responsive websites and digital products with a focus on UI/U
   </Link>
 
   <motion.a
-    href="/JakobDahlin_2025.pdf"
+    href="/jdresume.pdf"
     target="_blank"
     className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
     border-neutral-400/20 hover:border-white transition ease-in-out
