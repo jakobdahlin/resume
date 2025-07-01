@@ -10,6 +10,7 @@ const Logotypes: React.FC = () => {
     "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302070/Codera_x62wps.png",
     "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302079/Pixl_obeirb.png",
     "https://res.cloudinary.com/dj10sb6gx/image/upload/v1739302079/Orion_nhytlx.png",
+    "https://res.cloudinary.com/dj10sb6gx/image/upload/v1749601407/ORBIT_fgmrtx.jpg",
   ];
 
   const scrollingItems = [...items, ...items];

@@ -208,7 +208,7 @@ onClick={() => {
     {/* Block 1 */}
     <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-xl 
   overflow-hidden border border-neutral-400/20">
-<h2 className="p-4 text-2xl font-bold">Ad Design</h2>
+<h2 className="p-4 text-2xl font-bold">Ad Design Concept</h2>
   <div className="relative aspect-[1/1] w-full flex items-center justify-center">
     <Image
       src="/orbitualAd.png"
@@ -224,7 +224,7 @@ onClick={() => {
     <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-2 rounded-xl overflow-hidden border border-neutral-400/20">
     <h2 className="p-4 text-2xl font-bold">Calculator</h2>
     <div className="px-4">
-      <p className="pb-4">A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface.</p>
+      <p className="pb-4 text-neutral-400 text-sm">A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface. When active, the AC button turns into a backspace button until result is given.</p>
     <Calculator/>
     </div>
     </div>
@@ -236,7 +236,7 @@ onClick={() => {
     animate={{ opacity: 1 }}
     transition={{ duration: 3 }}
     className="col-span-12 lg:col-span-6 rounded-2xl border border-white/40   
-    backdrop-blur-md p-4 shadow-sm "
+    backdrop-blur-md p-4 shadow-sm h-full"
   >
 
     <div className="mb-4">
@@ -293,7 +293,7 @@ Used with color theory, these swatches support contrast, accessibility, and cons
     {/* Block 4 */}
     <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-xl overflow-hidden border border-neutral-400/20">
       <div className="h-full w-full p-4 flex items-center justify-center">
-        Block 4
+      <p className="text-neutral-400 text-sm">The ad design above was created as a demo concept to showcase UI kit marketing visuals. The goal was to explore clean layouts, contrast, and conversion-focused design within a dark theme. The project focused on practicing pricing layouts, CTA hierarchy, and modern promotional components.</p>
       </div>
     </div>
 

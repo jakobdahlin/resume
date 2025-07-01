@@ -6,18 +6,18 @@ interface GraphicDesignProps {
   description: string
 }
 
-const uiuxSkills = [
+const coreSkills = [
     "Wireframing",
     "Prototyping",
     "Color Theory",
     "Accessability",
-    "Interaction",
+    "Interaction Design",
     "Microinteractions",
     "Iconography",
     "Visual Hierarchy",
     "Typography",
     "Layout Principles",
-    "Mobile-First Design",
+    "Responsive Mobile-First Design",
     "User Research",
     "Design Systems",
     "Component Libraries",
@@ -70,9 +70,9 @@ export function GraphicDesignSection() {
     <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
       
   <div className="md:text-left mb-6">
-    <h3 className="mb-4 text-lg font-bold">UI / UX</h3>
+    <h3 className="mb-4 text-lg font-bold">Product Design & UX Engineering</h3>
       <div className="flex flex-wrap gap-3">
-        {uiuxSkills.map((skill) => (
+        {coreSkills.map((skill) => (
           <div key={skill}
             className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
             hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out">
