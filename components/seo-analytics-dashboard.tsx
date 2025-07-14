@@ -409,7 +409,7 @@ function getWeekNumber(date: Date): number {
             </TabsTrigger>
             <TabsTrigger
               value="devices"
-              className="data-[state=active]:bg-bg-neutral-800 data-[state=active]:text-white text-white"
+              className="data-[state=active]:bg-neutral-800 data-[state=active]:text-white text-white"
             >
               Devices
             </TabsTrigger>
@@ -635,7 +635,7 @@ function getWeekNumber(date: Date): number {
                             </div>
                             <div className="text-right">
                               <p className="text-white font-semibold">{item.clicks} clicks</p>
-                              <p className="text-gray-400 text-sm">{item.impressions} impressions</p>
+                              <p className="text-white/50 text-sm">{item.impressions} impressions</p>
                             </div>
                           </motion.div>
                         ))}

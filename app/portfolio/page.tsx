@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Image as ImageIcon } from "lucide-react"
 import { Github, ChevronDown, ChevronUp } from "lucide-react"
 import Image from "next/image"
@@ -18,6 +18,7 @@ import Toggle  from "@/components/toggle"
 import FinancialDashboard from "@/components/financialdasboard"
 import { SeoAnalyticsDashboard } from "@/components/seo-analytics-dashboard"
 import SkeletonCard from "@/components/skeletoncard";
+
 
 function customScrollToTop(speed: number) {
   const topEl = document.getElementById("top");
@@ -43,6 +44,11 @@ function customScrollToTop(speed: number) {
 }
 
 export default function Home() {
+
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
   const [showOverlay, setShowOverlay] = useState(true);
   const [bgIndex, setBgIndex] = useState(0);
@@ -91,7 +97,7 @@ export default function Home() {
              <h2 className="p-4 text-2xl font-bold">Button Design</h2>
           <div className="w-full p-4 flex items-center justify-center">
             
-            <div>
+            <div className=" animate-fade-in">
             <ButtonDesign/>
             </div>
           </div>
@@ -137,7 +143,7 @@ export default function Home() {
     <div 
           className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 
           rounded-2xl overflow-hidden border border-neutral-400/20"
-        ><div className="p-4">
+        ><div className="p-4 animate-fade-in">
     <h2 className="mb-4 text-2xl font-bold">Login Component</h2>
     <p className="text-sm text-neutral-400">A soft-glow login form made for dark interfaces, 
       placed over a looping aurora video background.</p>
@@ -207,7 +213,7 @@ onClick={() => {
           rounded-2xl overflow-hidden border border-neutral-400/20 bg-cover bg-center 
           bg-[url('/Galaxy.png')]"
         >             <h2 className="p-4 text-2xl font-bold">Navbar</h2>
-          <div className="mx-auto p-4 flex items-center justify-center">
+          <div className="mx-auto p-4 flex items-center justify-center animate-fade-in">
           <Navbar/>
           </div>
         </div>
@@ -221,7 +227,7 @@ onClick={() => {
     {/* Block 0 */}
     <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-2xl 
     overflow-hidden border border-neutral-400/20
-    bg-cover bg-center bg-[url('/Nebula.png')]">
+    bg-cover bg-center bg-[url('/Nebula.png')] animate-fade-in">
   {/* Title */}
   <h2 className="text-2xl font-bold text-left p-4">
     Custom Frosted Glass (Figma)
@@ -257,9 +263,11 @@ onClick={() => {
     <div className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-3 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
 
           <div className="h-full w-full p-4 flex">
-            <div>
+          <div>
           <h2 className="mb-4 text-2xl font-bold text-left">Toggles</h2>
+          <div className="animate-fade-in">
         <Toggle />
+          </div>
           </div>
           </div>
         </div>
@@ -315,13 +323,13 @@ onClick={() => {
     <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-2xl
   overflow-hidden border border-neutral-400/20">
 <h2 className="p-4 text-2xl font-bold">Ad Design Concept</h2>
-<div className="">
+<div className="animate-fade-in">
   <div className="relative aspect-[1/1] w-full flex items-center justify-center max-h-[600px]">
     <Image
       src="/orbitualAd.png"
       alt="Hero"
       fill
-      className="object-contain p-4"
+      className="object-contain p-4c"
       priority
     />
   </div>
@@ -334,7 +342,7 @@ onClick={() => {
     {/* Block 2 */}
     <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
     <h2 className="p-4 text-2xl font-bold">Calculator</h2>
-    <div className="px-4 my-4">
+    <div className="px-4 my-4 animate-fade-in">
       <p className="pb-4 text-neutral-400 text-sm">A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface. When active, the AC button turns into a backspace button until result is given.</p>
     <Calculator/>
     </div>
@@ -453,7 +461,7 @@ Used with color theory, these swatches support contrast, accessibility, and cons
           </div>
 
           {activeSection === "seo" && (
-            <div className="mx-auto flex items-center justify-center">
+            <div className="mx-auto flex items-center justify-center pb-4">
               <SeoAnalyticsDashboard />
             </div>
           )}
