@@ -46,6 +46,7 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 
+
 // Sample data for the sidebar
 const data = {
   user: {

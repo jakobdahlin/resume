@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss"
+import type { PluginAPI } from "tailwindcss/types/config"
+import plugin from "tailwindcss/plugin"
 
 const config = {
   darkMode: ["class"],
@@ -16,6 +18,10 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        sm: "640px",
+        md: "900px",
+        lg: "1200px",
+        xl: "1400px",
       },
     },
     extend: {
@@ -68,26 +74,46 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-          'pulse-slow': {
-            '0%, 100%': { opacity: '1' },
-            '50%': { opacity: '0.2' }, // You can adjust this for the "intensity" of the pulse
-          },
-          'fade-in': {
-            '0%': { opacity: '0' },
-            '100%': { opacity: '1' },
-          },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.2" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
-        'fade-in': 'fade-in 2s ease-in-out forwards',
+        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "fade-in": "fade-in 2s ease-in-out forwards",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-  
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".bg-grayscale": {
+          position: "relative",
+          overflow: "hidden",
+        },
+        ".bg-grayscale::before": {
+          content: "''",
+          position: "absolute",
+          inset: "0",
+          background: "inherit",
+          filter: "grayscale(100%)",
+          zIndex: "-1",
+        },
+        ".bg-grayscale > *": {
+          position: "relative",
+          zIndex: "10",
+        },
+      })
+    }),
+  ],
 } satisfies Config
 
 export default config
-

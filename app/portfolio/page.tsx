@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Image as ImageIcon } from "lucide-react"
-import { Github } from "lucide-react"
+import { Github, ChevronDown, ChevronUp } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -14,7 +14,10 @@ import { SidebarProvider } from "@/components/ui/sidebar"
 import Logotypes from "@/components/logotypes/logotypes"
 import ButtonDesign from "@/components/buttondesign"
 import Calculator  from "@/components/calculator"
-
+import Toggle  from "@/components/toggle"
+import FinancialDashboard from "@/components/financialdasboard"
+import { SeoAnalyticsDashboard } from "@/components/seo-analytics-dashboard"
+import SkeletonCard from "@/components/skeletoncard";
 
 function customScrollToTop(speed: number) {
   const topEl = document.getElementById("top");
@@ -43,6 +46,13 @@ export default function Home() {
 
   const [showOverlay, setShowOverlay] = useState(true);
   const [bgIndex, setBgIndex] = useState(0);
+    const [activeSection, setActiveSection] = useState<string | null>(null)
+
+  const toggleSection = (sectionName: string) => {
+    setActiveSection((prev) => (prev === sectionName ? null : sectionName))
+  }
+
+
   const bgImages = [
     "video",
     "/BG10.jpg",
@@ -50,6 +60,10 @@ export default function Home() {
     "/CP1.jpg",
     "/UES.jpg"
   ];
+
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleOpen = () => setIsOpen(!isOpen)
 
   return (
 <div className="bg-black z-[1]">
@@ -61,7 +75,7 @@ export default function Home() {
 <section className="w-full max-w-7xl mx-auto pb-4">
   <div className="grid grid-cols-1 gap-4">
     <div className="col-span-1 sm:col-span- md:col-span-4 lg:col-span-12 
-       row-span-1 rounded-xl overflow-hidden border border-neutral-400/20">
+       row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
           <div className="h-full w-full p-4 flex items-center justify-center">
             <Logotypes/>
           </div>
@@ -73,7 +87,7 @@ export default function Home() {
 <section className="w-full max-w-7xl mx-auto pb-4">
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
     <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 
-      row-span-1 rounded-xl overflow-hidden border border-neutral-400/20">
+      row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
              <h2 className="p-4 text-2xl font-bold">Button Design</h2>
           <div className="w-full p-4 flex items-center justify-center">
             
@@ -122,7 +136,7 @@ export default function Home() {
 {/* LOGIN INFO --------------------------------------------------- */}
     <div 
           className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 
-          rounded-xl overflow-hidden border border-neutral-400/20"
+          rounded-2xl overflow-hidden border border-neutral-400/20"
         ><div className="p-4">
     <h2 className="mb-4 text-2xl font-bold">Login Component</h2>
     <p className="text-sm text-neutral-400">A soft-glow login form made for dark interfaces, 
@@ -190,7 +204,7 @@ onClick={() => {
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
     <div 
           className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-12 row-span-1 
-          rounded-xl overflow-hidden border border-neutral-400/20 bg-cover bg-center 
+          rounded-2xl overflow-hidden border border-neutral-400/20 bg-cover bg-center 
           bg-[url('/Galaxy.png')]"
         >             <h2 className="p-4 text-2xl font-bold">Navbar</h2>
           <div className="mx-auto p-4 flex items-center justify-center">
@@ -200,16 +214,109 @@ onClick={() => {
   </div>
 </section>
 
+    {/* SECTION UNDER NAVBAR */}
+<section className="w-full max-w-7xl mx-auto mb-4">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4">
+    
+    {/* Block 0 */}
+    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-2xl 
+    overflow-hidden border border-neutral-400/20
+    bg-cover bg-center bg-[url('/Nebula.png')]">
+  {/* Title */}
+  <h2 className="text-2xl font-bold text-left p-4">
+    Custom Frosted Glass (Figma)
+  </h2>
+
+  {/* Image with overlay text */}
+  <div className="relative p-4">
+    {/* Image */}
+    <Image
+      src="/card3.png"
+      alt="palette2"
+      width={0}
+      height={0}
+      className="rounded-xl w-full h-auto object-cover backdrop-blur-md"
+    />
+
+    {/* Text overlay (inside image) */}
+    <div className="absolute inset-0 flex items-center justify-center">
+      <h3 className="text-white text-xl font-semibold drop-shadow-lg">
+        Frosted Glass UI
+      </h3>
+    </div>
+  </div>
+
+  {/* Explainer below image */}
+  <p className="text-white text-sm px-6 pb-4 drop-shadow-[0_0_5px_white]">
+    The frame and light effect was designed in Figma. The frosted glass effect
+    is applied using the Tailwind class <code>backdrop-blur-md</code>. I also used the React <code>&lt;Image&gt;</code> component, which makes it easier to apply Tailwind classes and effects like overlays while keeping the image responsive and optimized.
+  </p>
+</div>
+
+    {/* Block 1 */}
+    <div className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-3 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
+
+          <div className="h-full w-full p-4 flex">
+            <div>
+          <h2 className="mb-4 text-2xl font-bold text-left">Toggles</h2>
+        <Toggle />
+          </div>
+          </div>
+        </div>
+
+
+    {/* Block 3 */}
+    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
+    <div className="h-full w-full p-4 flex">
+    <div className="h-full w-full flex flex-col">
+  <h2 className="mb-4 text-2xl font-bold text-left">Loading States</h2>
+  <SkeletonCard />
+</div>
+    </div>
+    </div>
+
+    {/* Block 4 */}
+  <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-2xl overflow-hidden border border-neutral-400/20">
+  <div className="h-full w-full p-4 flex flex-col items-left">
+        <div>
+          <h2 className="mb-4 text-2xl font-bold text-left">Microinteraction</h2>
+        </div>
+        <p className="pb-6 text-neutral-400 text-sm">I designed this microinteraction with a smooth hover and press animation to give users instant feedback and make the button feel more responsive. By using Framer Motion, I created fluid transitions that feel modern and polished, showing my focus on details and creating small moments of delight in the experience.</p>
+
+        <motion.button
+          whileHover={{
+            scale: 1.00,
+            backgroundColor: "#ffffff20",
+            color: "#ffffff",
+            transition: { duration: 0.15, ease: "easeOut" },
+          }}
+          whileTap={{
+            scale: 0.95,
+            borderRadius: "30px",
+          }}
+          className="px-10 py-3 w-1/2 rounded-xl border border-white/20 hover:border-white/20 text-white 
+          font-medium transition-colors"
+        >
+          Preview
+        </motion.button>
+        
+      </div>
+  </div>
+
+  </div>
+</section>
+
 
 {/* COLOR PALETTESs --------------------------------------------------- */}
-<section className="w-full max-w-7xl mx-auto">
+<section className="w-full max-w-7xl mx-auto mb-4">
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4">
     
     {/* Block 1 */}
-    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-xl 
+    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-2xl
   overflow-hidden border border-neutral-400/20">
 <h2 className="p-4 text-2xl font-bold">Ad Design Concept</h2>
-  <div className="relative aspect-[1/1] w-full flex items-center justify-center">
+<div className="">
+  <div className="relative aspect-[1/1] w-full flex items-center justify-center max-h-[600px]">
     <Image
       src="/orbitualAd.png"
       alt="Hero"
@@ -218,19 +325,23 @@ onClick={() => {
       priority
     />
   </div>
+  <div className="h-full w-full p-4 flex items-center justify-center">
+      <p className="text-neutral-400 text-sm">The ad design above was created as a demo concept to showcase UI kit marketing visuals. The goal was to explore clean layouts, contrast, and conversion-focused design within a dark theme. The project focused on practicing pricing layouts, CTA hierarchy, and modern promotional components.</p>
+      </div>
+          </div>
 </div>
 
     {/* Block 2 */}
-    <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-2 rounded-xl overflow-hidden border border-neutral-400/20">
+    <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
     <h2 className="p-4 text-2xl font-bold">Calculator</h2>
-    <div className="px-4">
+    <div className="px-4 my-4">
       <p className="pb-4 text-neutral-400 text-sm">A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface. When active, the AC button turns into a backspace button until result is given.</p>
     <Calculator/>
     </div>
     </div>
 
     {/* Block 3 */}
-    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3 md:row-span-2 rounded-xl overflow-hidden border border-neutral-400/20">
+    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3 md:row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
     <motion.section
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -290,16 +401,64 @@ Used with color theory, these swatches support contrast, accessibility, and cons
   </motion.section>
     </div>
 
-    {/* Block 4 */}
-    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-xl overflow-hidden border border-neutral-400/20">
-      <div className="h-full w-full p-4 flex items-center justify-center">
-      <p className="text-neutral-400 text-sm">The ad design above was created as a demo concept to showcase UI kit marketing visuals. The goal was to explore clean layouts, contrast, and conversion-focused design within a dark theme. The project focused on practicing pricing layouts, CTA hierarchy, and modern promotional components.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
+
+{/* FINANCIAL DASHBOARD DEMO --------------------------------------------------- */}
+      <section className="pb-4">
+        <div
+          className="rounded-2xl overflow-hidden border border-neutral-800
+          bg-cover bg-center bg-[url('/ambient.jpg')]"
+        >
+          <div className="flex justify-between items-center p-4">
+            <h1 className="text-2xl font-bold">Financial Dashboard</h1>
+            <button
+              onClick={() => toggleSection("financial")}
+              className="text-white hover:text-gray-300 transition animate-bounce"
+            >
+              {activeSection === "financial" ? (
+                <ChevronUp className="w-8 h-8" />
+              ) : (
+                <ChevronDown className="w-8 h-8" />
+              )}
+            </button>
+          </div>
+
+          {activeSection === "financial" && (
+            <div className="mx-auto flex items-center justify-center">
+              <FinancialDashboard />
+            </div>
+          )}
+        </div>
+      </section>
+
+{/* SEO ANALYTICS DASHBOARD  --------------------------------------------------- */}
+<section className="pb-4">
+        <div
+          className="rounded-2xl overflow-hidden border border-neutral-400/20"
+        >
+          <div className="flex justify-between items-center p-4">
+            <h1 className="text-2xl font-bold">SEO Analytics Dashboard</h1>
+            <button
+              onClick={() => toggleSection("seo")}
+              className="text-white hover:text-gray-300 transition animate-bounce"
+            >
+              {activeSection === "seo" ? (
+                <ChevronUp className="w-8 h-8" />
+              ) : (
+                <ChevronDown className="w-8 h-8" />
+              )}
+            </button>
+          </div>
+
+          {activeSection === "seo" && (
+            <div className="mx-auto flex items-center justify-center">
+              <SeoAnalyticsDashboard />
+            </div>
+          )}
+        </div>
+      </section>
 
   </main>
 </div>

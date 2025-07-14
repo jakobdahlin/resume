@@ -4,11 +4,12 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { File, GalleryVertical, ArrowDownToLine } from "lucide-react"
 import Link from "next/link";
+import DynamicBackground from "@/components/dynamicbackground";
 
 export default function Home() {
     
   return (
-    <div className="relative min-h-screen flex items-center justify-center">
+    <div className="relative min-h-screen flex items-center justify-center"><DynamicBackground />
       <div className="container mx-auto px-4 z-10">
       <motion.div
   initial={{ opacity: 0 }}

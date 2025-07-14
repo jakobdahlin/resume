@@ -3,12 +3,13 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import Header from "@/components/header"
+import DynamicBackground from "@/components/dynamicbackground";
 
 
 export default function Certificate() {
     return (
     <div className="h-[200vh]">
-    <main className="min-h-screen p-4 md:pt-10 sm:pt-10">
+    <main className="min-h-screen p-4 md:pt-10 sm:pt-10"><DynamicBackground />
       <div id="top"/>
       <Header />
 

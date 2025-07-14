@@ -17,7 +17,7 @@ export default function Header() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.5 }}
-            className="flex flex-wrap gap-4 items-end justify-end"
+            className="flex flex-wrap gap-4 mx-4 items-end justify-end"
           >
             <Button asChild variant="outline" className="gap-2 px-2 py-2 rounded-xl 
               bg-transparent border border-neutral-400/30 hover:border-white 

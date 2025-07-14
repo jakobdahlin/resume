@@ -44,7 +44,7 @@ export default function RootLayout({
 {/* Your content scrolls on top of that one fullscreen image */}
 <div className="relative z-10">
   <Navigation />
-  <main className="min-h-screen"><DynamicBackground />{children}</main>
+  <main className="min-h-screen">{children}</main>
 </div>
 </body>
 
