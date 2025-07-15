@@ -4,8 +4,8 @@ import { User, Lock, Github } from 'lucide-react';
 const LoginCard: React.FC = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center rounded-3xl">
-      <div className="relative z-10 w-full max-w-md border-2 border-white/20 backdrop-blur-2xl
-  rounded-3xl shadow-xl shadow-black/30 p-6 bg-white/10 sm:p-8">
+      <div className="relative z-10 w-full max-w-md border-2 border-white/20 backdrop-blur-md
+                  rounded-3xl shadow-xl shadow-black/30 p-6 bg-white/10 sm:p-8">
         <h2 className="text-2xl font-bold text-center text-white mb-6">Login</h2>
         
 

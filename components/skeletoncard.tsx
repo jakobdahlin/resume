@@ -16,7 +16,7 @@ export default function SkeletonCard() {
   }, []);
 
   return (
-    <div className="w-full max-w-sm mx-auto p-4 border border-white/20 rounded-2xl bg-neutral-900 text-white shadow-lg h-[500px]">
+    <div className="my-auto w-full max-w-sm mx-auto p-4 border border-white/20 rounded-2xl bg-neutral-900 text-white shadow-lg h-[500px]">
       <div className="w-full h-full flex flex-col">
         {loading ? (
           <div className="animate-pulse flex flex-col h-full">
@@ -42,8 +42,8 @@ export default function SkeletonCard() {
               />
               <h3 className="text-xl font-bold">useState & useEffect</h3>
               <p className="text-sm text-white/50">
-              By using Tailwind CSS's animate-pulse class instead of a skeleton loading 
-              library, the build stays lightweight and fully customizable.
+              This card is built using Tailwind's <code>animate-pulse</code> class instead of 
+              a skeleton loading library which keeps it customizable and lightweight.
               </p>
               <p className="text-sm text-white/50">
                 By clicking the button below, you can simulate an API call and 

@@ -1,115 +1,141 @@
-import React, { useState, useEffect } from "react";
+"use client"
 
-const Toggle = () => {
-  const [isOn1, setIsOn1] = useState(false);
-  const [isOn2, setIsOn2] = useState(false);
-  const [isOn3, setIsOn3] = useState(false);
+import { useState } from "react"
+import { Bell, Moon, Shield, Wifi, Zap } from "lucide-react"
 
-  const handleToggle1 = () => {
-    setIsOn1(!isOn1);
-  };
+export default function Component() {
+  const [toggles, setToggles] = useState({
+    notifications: false,
+    darkMode: true,
+    security: false,
+    wifi: true,
+    performance: false,
+  })
 
-  const handleToggle2 = () => {
-    setIsOn2(!isOn2);
-  };
-
-  const handleToggle3 = () => {
-    setIsOn3(!isOn3);
-  };
-
-  useEffect(() => {
-    const interval1 = setInterval(() => {
-      setIsOn1((prev) => !prev);
-    }, 3500); // ⬅️ Made this slightly longer to fit animations
-
-    const interval2 = setInterval(() => {
-      setIsOn2((prev) => !prev);
-    }, 4000);
-
-    const interval3 = setInterval(() => {
-      setIsOn3((prev) => !prev);
-    }, 5000);
-
-    return () => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-      clearInterval(interval3);
-    };
-  }, []);
+  const handleToggle = (key: keyof typeof toggles) => {
+    setToggles((prev) => ({ ...prev, [key]: !prev[key] }))
+  }
 
   return (
-    <div className="h-full w-24 flex flex-col justify-center">
-      {/* Toggle 1 - with overlay text */}
-      <div
-  onClick={handleToggle1}
-  className={`max-w-40 h-12 relative flex items-center rounded-full p-1 my-2 cursor-pointer transition-colors duration-500 ${
-    isOn1
-      ? "bg-gradient-to-b from-neutral-100 to-neutral-400 border border-black"
-      : "bg-gradient-to-br from-green-400 to-green-600/50 border border-black"
-  }`}
->
-  {/* Active sliding circle */}
-  <div
-    className={`h-9 w-9 flex items-center rounded-full shadow-md bg-gradient-to-b from-white to-neutral-300 shadow-black/40
-      transform transition-transform duration-300 ${
-        isOn1 ? "translate-x-0" : "translate-x-12"
-      }`}
-  ></div>
+    <div className="bg-black w-full">
+      <div className="max-w-md space-y-4">
 
-  {/* Text labels */}
-  <div className="absolute w-full flex justify-between text-md pr-2 pl-4 right-1 mx-auto z-10">
-    <span
-      className={`transition-colors duration-400 ${
-        !isOn1 ? "text-black/20 font-bold text-md" : "text-neutral-400/0 font-bold text-md"
-      }`}
-    >
-      ON
-    </span>
-    <span
-      className={`transition-colors duration-400 ${
-        isOn1 ? "text-black/20 font-bold text-md" : "text-neutral-400/0 font-bold text-md"
-      }`}
-    >
-      OFF
-    </span>
-  </div>
-</div>
+        {/* Toggle 1: Basic Slide Toggle - Notifications */}
+        <div className="flex items-center justify-between p-4 bg-neutral-950 md:hover:bg-neutral-900 transition-colors duration-200 rounded-lg border border-neutral-900">
+          <div className="flex items-center space-x-3">
+            <div>
+              <h3 className="text-white font-medium">Notifications</h3>
+              <p className="text-neutral-400 text-sm">Receive push notifications</p>
+            </div>
+          </div>
+          <button
+            onClick={() => handleToggle("notifications")}
+            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+              toggles.notifications ? "bg-gradient-to-r from-blue-800 via-sky-400 to-sky-400" : "bg-neutral-700"
+            }`}
+          >
+            <span
+              className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                toggles.notifications ? "translate-x-6" : "translate-x-1"
+              }`}
+            />
+          </button>
+        </div>
 
+        {/* Toggle 2: iOS Style Toggle - Dark Mode */}
+        <div className="flex items-center justify-between p-4 bg-neutral-950 md:hover:bg-neutral-900 transition-colors duration-200 rounded-lg border border-neutral-900">
+          <div className="flex items-center space-x-3">         <div>
+              <h3 className="text-white font-medium">Dark Mode</h3>
+              <p className="text-neutral-400 text-sm">Use dark theme</p>
+            </div>
+          </div>
+          <button
+            onClick={() => handleToggle("darkMode")}
+            className={`relative inline-flex h-8 w-14 items-center rounded-full transition-colors duration-300 ${
+              toggles.darkMode ? "bg-neutral-300" : "bg-neutral-900 border border-white/20"
+            }`}
+          >
+            <span
+              className={`inline-block h-6 w-6 transform rounded-full transition-transform duration-300 shadow-lg ${
+                toggles.darkMode ? "translate-x-7 bg-neutral-700 shadow-md shadow-black/70" : "translate-x-1 bg-white"
+              }`}
+            />
+          </button>
+        </div>
 
+        {/* Toggle 3: Checkbox Style Toggle - Security */}
+        <div className="flex items-center justify-between p-4 bg-neutral-950 md:hover:bg-neutral-900 transition-colors duration-200 rounded-lg border border-neutral-900">
+          <div className="flex items-center space-x-3">
+            <div>
+              <h3 className="text-white font-medium">Enhanced Security</h3>
+              <p className="text-neutral-400 text-sm">Enable two-factor authentication</p>
+            </div>
+          </div>
+          <button
+            onClick={() => handleToggle("security")}
+            className={`w-7 h-7 rounded border transition-all duration-200 flex items-center justify-center ${
+              toggles.security
+                ? "bg-green-600 border-green-400 shadow-lg shadow-lime-700/70"
+                : "bg-transparent border-neutral-700 hover:border-neutral-500"
+            }`}
+          >
+            {toggles.security && (
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
 
-      {/* Toggle 2 */}
-      <div
-        onClick={handleToggle2}
-        className={`w-16 h-8 flex items-center rounded-full p-1 my-2 cursor-pointer transition-colors duration-300 ${
-          isOn2
-            ? "bg-green-500/50 border border-teal-400/80 shadow-md shadow-green-400/50"
-            : "bg-red-500/20 border border-red-500/50"
-        }`}
-      >
-        <div
-          className={`w-8 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
-            isOn2 ? "translate-x-6" : "translate-x-0"
-          }`}
-        ></div>
-      </div>
+        {/* Toggle 4: Pill Style Toggle - WiFi */}
+        <div className="flex items-center justify-between p-4 bg-neutral-950 md:hover:bg-neutral-900 transition-colors duration-200 rounded-lg border border-neutral-900">
+          <div className="flex items-center space-x-3 w-full">
+            <div>
+              <h3 className="text-white font-medium">WiFi</h3>
+              <p className="text-neutral-400 w-26 mr-8 text-sm">Connect to wireless networks</p>
+            </div>
+          </div>
+          <button
+            onClick={() => handleToggle("wifi")}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all w-20 duration-200 ${
+              toggles.wifi
+                ? "bg-violet-300/20 border border-violet-300 shadow-lg shadow-indigo-600/70"
+                : "bg-neutral-800 text-white hover:bg-neutral-700 border border-transparent"
+            }`}
+          >
+            {toggles.wifi ? "ON" : "OFF"}
+          </button>
+        </div>
 
-      {/* Toggle 3 */}
-      <div
-        onClick={handleToggle3}
-        className={`w-12 h-6 flex items-center rounded-full p-1 my-2 cursor-pointer transition-colors duration-300 ${
-          isOn3
-            ? "bg-gradient-to-r from-red-800/50 to-orange-300/50 border border-red-400/80"
-            : "bg-gradient-to-r from-sky-400/50 to-blue-800/50 border border-blue-400/80"
-        }`}
-      >
-        <div
-          className={`w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${
-            isOn3 ? "translate-x-6 bg-orange-300/50 border shadow-xl shadow-white/50" : "translate-x-0 bg-sky-400/50 border shadow-lg shadow-white/50"
-          }`}
-        ></div>
+        {/* Toggle 5: Modern Animated Toggle - Performance Mode */}
+        <div className="flex items-center justify-between p-4 bg-neutral-950 md:hover:bg-neutral-900 transition-colors duration-200 rounded-lg border border-neutral-900">
+          <div className="flex items-center space-x-3">
+            <div>
+              <h3 className="text-white font-medium">Performance Mode</h3>
+              <p className="text-neutral-400 text-sm">Optimize for speed and efficiency</p>
+            </div>
+          </div>
+          <button
+            onClick={() => handleToggle("performance")}
+            className={`relative inline-flex h-7 w-12 items-center bg-transparent rounded-full transition-all duration-300 ${
+              toggles.performance
+                ? "bg-gradient-to-r from-amber-600 via-amber-300 to-amber-400 shadow-lg shadow-amber-700/70"
+                : "bg-amber-400/10 border border-amber-500/50"
+            }`}
+          >
+            <span
+              className={`inline-block h-5 w-5 transform rounded-full transition-all duration-200 ${
+                toggles.performance ? "translate-x-6 bg-white shadow-lg" : "translate-x-1 bg-white"
+              }`}
+            />
+            
+          </button>
+        </div>
       </div>
     </div>
-  );
-};
-
-export default Toggle;
+  )
+}

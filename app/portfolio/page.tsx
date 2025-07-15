@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Image as ImageIcon } from "lucide-react"
-import { Github, ChevronDown, ChevronUp } from "lucide-react"
+import { Github, ChevronDown, ChevronUp, Figma } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -225,14 +225,16 @@ onClick={() => {
 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4">
     
     {/* Block 0 */}
-    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-2xl 
+    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-4 rounded-2xl 
     overflow-hidden border border-neutral-400/20
     bg-cover bg-center bg-[url('/Nebula.png')] animate-fade-in">
   {/* Title */}
+  <div className="flex">
   <h2 className="text-2xl font-bold text-left p-4">
-    Custom Frosted Glass (Figma)
+    Custom Made Card
   </h2>
-
+  <Figma size={32} color="#fff" className="mt-4" />
+  </div>
   {/* Image with overlay text */}
   <div className="relative p-4">
     {/* Image */}
@@ -241,7 +243,7 @@ onClick={() => {
       alt="palette2"
       width={0}
       height={0}
-      className="rounded-xl w-full h-auto object-cover backdrop-blur-md"
+      className="rounded-xl w-full h-auto object-cover backdrop-blur-md animate-pulse"
     />
 
     {/* Text overlay (inside image) */}
@@ -254,23 +256,21 @@ onClick={() => {
 
   {/* Explainer below image */}
   <p className="text-white text-sm px-6 pb-4 drop-shadow-[0_0_5px_white]">
-    The frame and light effect was designed in Figma. The frosted glass effect
-    is applied using the Tailwind class <code>backdrop-blur-md</code>. I also used the React <code>&lt;Image&gt;</code> component, which makes it easier to apply Tailwind classes and effects like overlays while keeping the image responsive and optimized.
+    The card and spotlight effect was designed in Figma. The frosted glass effect
+    is applied using the Tailwind's <code>backdrop-blur-md</code>. 
+    I also used the React <code>&lt;Image&gt;</code> component, which makes it 
+    easier to apply Tailwind classes and effects like overlays while keeping the 
+    image responsive and optimized. 
   </p>
 </div>
 
     {/* Block 1 */}
-    <div className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-3 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
-
-          <div className="h-full w-full p-4 flex">
-          <div>
-          <h2 className="mb-4 text-2xl font-bold text-left">Toggles</h2>
-          <div className="animate-fade-in">
+    <div className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-4 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
+    <h2 className="mb-4 text-2xl font-bold text-left p-4">Toggles</h2>
+          <div className="w-full p-4 flex items-center justify-center animate-fade-in">
         <Toggle />
           </div>
-          </div>
-          </div>
-        </div>
+    </div>
 
 
     {/* Block 3 */}
@@ -284,13 +284,13 @@ onClick={() => {
     </div>
 
     {/* Block 4 */}
-  <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-2xl overflow-hidden border border-neutral-400/20">
+  <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-4 rounded-2xl overflow-hidden border border-neutral-400/20">
   <div className="h-full w-full p-4 flex flex-col items-left">
         <div>
           <h2 className="mb-4 text-2xl font-bold text-left">Microinteraction</h2>
         </div>
-        <p className="pb-6 text-neutral-400 text-sm">I designed this microinteraction with a smooth hover and press animation to give users instant feedback and make the button feel more responsive. By using Framer Motion, I created fluid transitions that feel modern and polished, showing my focus on details and creating small moments of delight in the experience.</p>
-
+        <p className="pb-4 text-neutral-400 text-sm">I designed this microinteraction with a smooth hover and press animation to give users instant feedback and make the button feel more responsive. </p>
+        <p className="pb-6 text-neutral-400 text-sm">By using Framer Motion, I created fluid transitions that feel modern and polished, showing my focus on details and creating small moments of delight in the experience.</p>
         <motion.button
           whileHover={{
             scale: 1.00,
