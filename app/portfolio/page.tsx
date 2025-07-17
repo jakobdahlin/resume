@@ -1,6 +1,7 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
+import Sphere from "@/components/sphere"
 import { Image as ImageIcon } from "lucide-react"
 import { Github, ChevronDown, ChevronUp, Figma, ArrowDownToLine } from "lucide-react"
 import Image from "next/image"
@@ -81,6 +82,8 @@ useEffect(() => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleOpen = () => setIsOpen(!isOpen)
+
+  const [imageUrl] = useState("/placeholder.svg?height=512&width=512")
 
   return (
 <div className="bg-black z-[1]">
@@ -438,11 +441,11 @@ Used with color theory, these swatches support contrast, accessibility, and cons
 </section>
 
   {/* NEWS BANNER */}
-  <section className="w-full max-w-[1600px] mx-auto mb-4 ">
+  <section className="w-full max-w-[1600px] mx-auto mb-4">
   <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-12">
 
-{/* Block 2 */}
-<div
+    {/* Block 2 */}
+    <div
       className="
         relative
         aspect-[16/9]
@@ -462,17 +465,17 @@ Used with color theory, these swatches support contrast, accessibility, and cons
 
       {/* Static image for mobile */}
       {isMobile && (
-  <div className="absolute inset-0 z-0 aspect-[16/9]">
-    <Image
-      src="/newsbanner.jpg"
-      alt="news banner"
-      layout="fill"
-      objectFit="cover"
-      className="opacity-100"
-      priority
-    />
-  </div>
-)}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/newsbanner.jpg"
+            alt="news banner"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-100"
+            priority
+          />
+        </div>
+      )}
 
       {/* Video background for larger screens */}
       {!isMobile && (
@@ -500,55 +503,33 @@ Used with color theory, these swatches support contrast, accessibility, and cons
       )}
     </div>
 
-
-
     {/* Block 3 */}
-    <div className="
-      col-span-1 
-      sm:col-span-2 
-      lg:col-span-4
-      rounded-2xl 
-      overflow-hidden 
-      border border-neutral-400/20
-    ">
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
-        className="
-          rounded-2xl  
-          backdrop-blur-md 
-          p-4 
-          shadow-sm 
-          h-full
-        "
-      >
-        <h2 className="mb-4 text-2xl font-bold">Available 1</h2>
-        <div className="grid grid-cols-1 gap-4">
-        <div className="flex justify-center items-center h-full">
-  <motion.a
-    href="/jdresume.pdf"
-    target="_blank"
-    className="flex items-center gap-2 justify-center h-40 w-40 rounded-full bg-transparent border 
-      border-neutral-400/20 hover:border-white transition ease-in-out my-20
-      hover:shadow-lg hover:shadow-white/50 transform duration-300 
-      hover:bg-white/20 hover:text-white text-center"
-    whileHover={{ scale: 1.0 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    <div className="flex gap-2 justify-center items-center flex-col">
-      <ArrowDownToLine size={30} />
-      Resume PDF
-    </div>
-  </motion.a>
-</div>
+    <div
+  className="
+    relative
+    h-[500px]
+    sm:h-[300px]
+    md:h-full
+    col-span-1
+    sm:col-span-2
+    lg:col-span-4 
+    rounded-2xl
+    overflow-hidden
+    border border-neutral-400/20
+    "
+>
+      <h2 className="p-4 text-2xl font-bold relative z-30">
+        Rotating Sphere
+      </h2>
 
-        </div>
-      </motion.section>
+      <div className="absolute inset-0 flex items-center justify-center z-10 mt-10">
+      <Sphere imageUrl="/marstexture.jpg" rotationSpeed={0.2} />
+  </div>
     </div>
 
   </div>
 </section>
+
 
 
 
