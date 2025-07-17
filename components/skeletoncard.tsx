@@ -16,7 +16,7 @@ export default function SkeletonCard() {
   }, []);
 
   return (
-    <div className="my-auto w-full max-w-sm mx-auto p-4 border border-white/20 rounded-2xl bg-neutral-900 text-white shadow-lg h-[500px]">
+    <div className="w-full max-w-sm mx-auto mt-4 p-4 border border-white/20 rounded-2xl bg-neutral-900 text-white shadow-lg h-[500px]">
       <div className="w-full h-full flex flex-col">
         {loading ? (
           <div className="animate-pulse flex flex-col h-full">

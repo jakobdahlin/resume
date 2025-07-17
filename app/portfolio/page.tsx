@@ -9,15 +9,14 @@ import { motion } from "framer-motion"
 import Header from "@/components/header"
 import LoginCard from "@/components/logincard"
 import Navbar from "@/components/navbar"
-import { AppSidebar } from "@/components/sidebar"
-import { SidebarProvider } from "@/components/ui/sidebar"
 import Logotypes from "@/components/logotypes/logotypes"
 import ButtonDesign from "@/components/buttondesign"
 import Calculator  from "@/components/calculator"
 import Toggle  from "@/components/toggle"
 import FinancialDashboard from "@/components/financialdasboard"
 import { SeoAnalyticsDashboard } from "@/components/seo-analytics-dashboard"
-import SkeletonCard from "@/components/skeletoncard";
+import SkeletonCard from "@/components/skeletoncard"
+import NewsBanner from "@/components/news-banner"
 
 
 function customScrollToTop(speed: number) {
@@ -74,11 +73,11 @@ useEffect(() => {
   return (
 <div className="bg-black z-[1]">
   
- <main className="mx-auto max-w-7xl min-h-screen p-4 md:pt-10 sm:pt-10">
+ <main className="mx-auto max-w-[1600px] min-h-screen p-4 md:pt-10 sm:pt-10">
 <Header/>
 
 {/* LOGOTYPES --------------------------------------------------- */}
-<section className="w-full max-w-7xl mx-auto pb-4">
+<section className="w-full max-w-[1600px] mx-auto pb-4">
   <div className="grid grid-cols-1 gap-4">
     <div className="col-span-1 sm:col-span- md:col-span-4 lg:col-span-12 
        row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
@@ -90,14 +89,14 @@ useEffect(() => {
 </section>
 
 {/* BUTTON --------------------------------------------------- */}
-<section className="w-full max-w-7xl mx-auto pb-4">
+<section className="w-full max-w-[1600px] mx-auto pb-4">
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
-    <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 
+    <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-3 
       row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
              <h2 className="p-4 text-2xl font-bold">Button Design</h2>
           <div className="w-full p-4 flex items-center justify-center">
             
-            <div className=" animate-fade-in">
+            <div className="animate-fade-in">
             <ButtonDesign/>
             </div>
           </div>
@@ -106,7 +105,7 @@ useEffect(() => {
 
 {/* LOGIN --------------------------------------------------- */}
   <div 
-      className="relative col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 rounded-2xl border border-neutral-400/20  
+      className="relative col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-6 row-span-1 rounded-2xl border border-neutral-400/20  
         bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0 flex flex-col items-center justify-center"
     >
 
@@ -141,7 +140,7 @@ useEffect(() => {
 
 {/* LOGIN INFO --------------------------------------------------- */}
     <div 
-          className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-4 row-span-1 
+          className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-3 row-span-1 
           rounded-2xl overflow-hidden border border-neutral-400/20"
         ><div className="p-4 animate-fade-in">
     <h2 className="mb-4 text-2xl font-bold">Login Component</h2>
@@ -170,7 +169,7 @@ onClick={() => {
   setShowOverlay(true);
   setBgIndex((prev) => (prev + 1) % bgImages.length);
 }}
-        className="relative z-20 mt-4 w-full mx-auto max-w-md text-white bg-white/10 border border-white/20 rounded-xl 
+        className="relative z-20 mt-4 w-full mx-auto text-white bg-white/10 border border-white/20 rounded-xl 
         hover:border-white hover:bg-white/20 
         hover:shadow-lg hover:shadow-white/50 transition duration-300 py-2 flex items-center justify-center gap-2"
       >
@@ -183,7 +182,7 @@ onClick={() => {
   target="_blank"
   rel="noopener noreferrer"
   href="https://github.com/jakobdahlin/resume/blob/3caf6cea255b524d466abd3d828ec35dfdba9bad/components/logincard.tsx"
-  className="mt-4 w-full max-w-md"
+  className="mt-4 w-full"
 >
   <motion.div
     className="flex items-center w-full justify-center gap-2 py-2 rounded-xl 
@@ -206,7 +205,7 @@ onClick={() => {
 </section>
 
 {/* NAVBAR --------------------------------------------------- */}
-<section className="w-full max-w-7xl mx-auto pb-4">
+<section className="w-full max-w-[1600px] mx-auto pb-4">
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
     <div 
           className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-12 row-span-1 
@@ -221,7 +220,7 @@ onClick={() => {
 </section>
 
     {/* SECTION UNDER NAVBAR */}
-<section className="w-full max-w-7xl mx-auto mb-4">
+<section className="w-full max-w-[1600px] mx-auto mb-4">
 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4">
     
     {/* Block 0 */}
@@ -240,10 +239,10 @@ onClick={() => {
     {/* Image */}
     <Image
       src="/card3.png"
-      alt="palette2"
+      alt="card3"
       width={0}
       height={0}
-      className="rounded-xl w-full h-auto object-cover backdrop-blur-md animate-pulse"
+      className="rounded-xl w-full h-auto object-cover backdrop-blur-md animate-pulse-slow"
     />
 
     {/* Text overlay (inside image) */}
@@ -265,16 +264,16 @@ onClick={() => {
 </div>
 
     {/* Block 1 */}
-    <div className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-4 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
+    <div className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-5 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
     <h2 className="mb-4 text-2xl font-bold text-left p-4">Toggles</h2>
-          <div className="w-full p-4 flex items-center justify-center animate-fade-in">
+          <div className="mx-auto flex justify-center animate-fade-in">
         <Toggle />
           </div>
     </div>
 
 
     {/* Block 3 */}
-    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
+    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
     <div className="h-full w-full p-4 flex">
     <div className="h-full w-full flex flex-col">
   <h2 className="mb-4 text-2xl font-bold text-left">Loading States</h2>
@@ -296,7 +295,7 @@ onClick={() => {
             scale: 1.00,
             backgroundColor: "#ffffff20",
             color: "#ffffff",
-            transition: { duration: 0.15, ease: "easeOut" },
+            transition: { duration: 0.05, ease: "easeOut" },
           }}
           whileTap={{
             scale: 0.95,
@@ -314,13 +313,27 @@ onClick={() => {
   </div>
 </section>
 
+{/* NAVBAR --------------------------------------------------- */}
+<section className="w-full max-w-[1600px] mx-auto pb-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
+    <div 
+          className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-12 row-span-1 
+          rounded-2xl overflow-hidden border border-neutral-400/20 bg-cover bg-center 
+          bg-[url('/Galaxy.png')]"
+        >             <h2 className="p-4 text-2xl font-bold">Navbar</h2>
+          <div className="mx-auto p-4 flex items-center justify-center animate-fade-in">
+          <Navbar/>
+          </div>
+        </div>
+  </div>
+</section>
 
 {/* COLOR PALETTESs --------------------------------------------------- */}
-<section className="w-full max-w-7xl mx-auto mb-4">
+<section className="w-full max-w-[1600px] mx-auto mb-4">
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4">
     
     {/* Block 1 */}
-    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-5 rounded-2xl
+    <div className="col-span-1 sm:col-span-2 md:col-span-6 lg:col-span-4 rounded-2xl
   overflow-hidden border border-neutral-400/20">
 <h2 className="p-4 text-2xl font-bold">Ad Design Concept</h2>
 <div className="animate-fade-in">
@@ -342,14 +355,14 @@ onClick={() => {
     {/* Block 2 */}
     <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
     <h2 className="p-4 text-2xl font-bold">Calculator</h2>
-    <div className="px-4 my-4 animate-fade-in">
+    <div className="px-4 animate-fade-in">
       <p className="pb-4 text-neutral-400 text-sm">A calculator built with the button design showcased above, highlighting how the component integrates into a functional interface. When active, the AC button turns into a backspace button until result is given.</p>
     <Calculator/>
     </div>
     </div>
 
     {/* Block 3 */}
-    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3 md:row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
+    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
     <motion.section
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -412,6 +425,90 @@ Used with color theory, these swatches support contrast, accessibility, and cons
   </div>
 </section>
 
+  {/* NEWS BANNER */}
+  <section className="w-full max-w-[1600px] mx-auto mb-4 ">
+  <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-12">
+
+{/* Block 2 */}
+<div className="
+  relative
+  aspect-[16/9]               // 🔥 Forces 3:2 ratio
+  bg-neutral-900
+  col-span-1
+  sm:col-span-2
+  lg:col-span-8
+  rounded-2xl
+  overflow-hidden
+  border border-neutral-400/20
+">
+  <h2 className="p-4 text-2xl font-bold relative z-30">News Banner</h2>
+
+  {/* Video background */}
+  <div className="absolute inset-0 z-0">
+    <video
+      className="h-full w-full object-cover opacity-70"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src="marsorbit.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  {/* Optional overlay */}
+  <div className="absolute inset-0 z-10 bg-cover bg-center opacity-100" />
+
+  {/* NewsBanner pinned to bottom */}
+  <div className="absolute bottom-0 left-0 right-0 z-20 p-4">
+    <NewsBanner />
+  </div>
+</div>
+
+
+    {/* Block 3 */}
+    <div className="
+      col-span-1 
+      sm:col-span-2 
+      lg:col-span-4
+      rounded-2xl 
+      overflow-hidden 
+      border border-neutral-400/20
+    ">
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}
+        className="
+          rounded-2xl 
+          border border-white/40   
+          backdrop-blur-md 
+          p-4 
+          shadow-sm 
+          h-full
+        "
+      >
+        <h2 className="mb-4 text-2xl font-bold">Available 1</h2>
+        <div className="grid grid-cols-1 gap-4">
+          <div>
+            <Image
+              src="/pal2.png"
+              alt="palette2"
+              width={0}
+              height={0}
+              className="rounded-lg w-full h-auto object-cover"
+            />
+          </div>
+
+        </div>
+      </motion.section>
+    </div>
+
+  </div>
+</section>
+
+
+
 
 {/* FINANCIAL DASHBOARD DEMO --------------------------------------------------- */}
       <section className="pb-4">
@@ -466,7 +563,7 @@ Used with color theory, these swatches support contrast, accessibility, and cons
             </div>
           )}
         </div>
-      </section>
+   </section>
 
   </main>
 </div>

@@ -1,14 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Bell, Moon, Shield, Wifi, Zap } from "lucide-react"
 
 export default function Component() {
   const [toggles, setToggles] = useState({
     notifications: false,
-    darkMode: true,
+    darkMode: false,
     security: false,
-    wifi: true,
+    wifi: false,
     performance: false,
   })
 
@@ -17,8 +16,8 @@ export default function Component() {
   }
 
   return (
-    <div className="bg-black w-full">
-      <div className="max-w-md space-y-4">
+    <div className="bg-black w-full mx-auto justify-center flex">
+      <div className="space-y-4 w-full max-w-lg">
 
         {/* Toggle 1: Basic Slide Toggle - Notifications */}
         <div className="flex items-center justify-between p-4 bg-neutral-950 md:hover:bg-neutral-900 transition-colors duration-200 rounded-lg border border-neutral-900">

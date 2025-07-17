@@ -10,7 +10,7 @@ const LoginCard: React.FC = () => {
         
 
         <div className="flex items-center bg-white/10 rounded-full p-3 mb-4
-          border-2 border-white/10 hover:border-white/20 transition duration-200">
+          border-2 border-white/10 hover:border-white/40 transition duration-200">
           <User className="text-white mr-3" />
           <input
             type="text"
@@ -21,7 +21,7 @@ const LoginCard: React.FC = () => {
 
 
         <div className="flex items-center bg-white/10 rounded-full p-3
-          border-2 border-white/10 hover:border-white/20 transition duration-200">
+          border-2 border-white/10 hover:border-white/40 transition duration-200">
           <Lock className="text-white mr-3" />
           <input
             type="password"
