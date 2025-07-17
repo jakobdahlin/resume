@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Image as ImageIcon } from "lucide-react"
-import { Github, ChevronDown, ChevronUp, Figma } from "lucide-react"
+import { Github, ChevronDown, ChevronUp, Figma, ArrowDownToLine } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -17,6 +17,7 @@ import FinancialDashboard from "@/components/financialdasboard"
 import { SeoAnalyticsDashboard } from "@/components/seo-analytics-dashboard"
 import SkeletonCard from "@/components/skeletoncard"
 import NewsBanner from "@/components/news-banner"
+
 
 
 function customScrollToTop(speed: number) {
@@ -43,7 +44,18 @@ function customScrollToTop(speed: number) {
 }
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false)
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640)
+    }
+
+    handleResize() // run on mount
+    window.addEventListener("resize", handleResize)
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
 useEffect(() => {
   window.scrollTo(0, 0);
@@ -367,7 +379,7 @@ onClick={() => {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 3 }}
-    className="col-span-12 lg:col-span-6 rounded-2xl border border-white/40   
+    className="col-span-12 lg:col-span-6 rounded-2xl  
     backdrop-blur-md p-4 shadow-sm h-full"
   >
 
@@ -430,40 +442,64 @@ Used with color theory, these swatches support contrast, accessibility, and cons
   <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 lg:grid-cols-12">
 
 {/* Block 2 */}
-<div className="
-  relative
-  aspect-[16/9]               // 🔥 Forces 3:2 ratio
-  bg-neutral-900
-  col-span-1
-  sm:col-span-2
-  lg:col-span-8
-  rounded-2xl
-  overflow-hidden
-  border border-neutral-400/20
-">
-  <h2 className="p-4 text-2xl font-bold relative z-30">News Banner</h2>
-
-  {/* Video background */}
-  <div className="absolute inset-0 z-0">
-    <video
-      className="h-full w-full object-cover opacity-70"
-      autoPlay
-      loop
-      muted
-      playsInline
+<div
+      className="
+        relative
+        aspect-[16/9]
+        bg-neutral-900
+        col-span-1
+        sm:col-span-2
+        lg:col-span-8
+        rounded-2xl
+        overflow-hidden
+        border border-neutral-400/20
+      "
     >
-      <source src="marsorbit.mp4" type="video/mp4" />
-    </video>
-  </div>
+      {/* Top-left title */}
+      <h2 className="p-4 text-2xl font-bold relative z-30">
+        News Banner
+      </h2>
 
-  {/* Optional overlay */}
-  <div className="absolute inset-0 z-10 bg-cover bg-center opacity-100" />
-
-  {/* NewsBanner pinned to bottom */}
-  <div className="absolute bottom-0 left-0 right-0 z-20 p-4">
-    <NewsBanner />
+      {/* Static image for mobile */}
+      {isMobile && (
+  <div className="absolute inset-0 z-0 aspect-[16/9]">
+    <Image
+      src="/newsbanner.jpg"
+      alt="news banner"
+      layout="fill"
+      objectFit="cover"
+      className="opacity-100"
+      priority
+    />
   </div>
-</div>
+)}
+
+      {/* Video background for larger screens */}
+      {!isMobile && (
+        <div className="absolute inset-0 z-0">
+          <video
+            className="h-full w-full object-cover opacity-70"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="marsorbit.mp4" type="video/mp4" />
+          </video>
+        </div>
+      )}
+
+      {/* Optional overlay */}
+      <div className="absolute inset-0 z-10 bg-cover bg-center opacity-100" />
+
+      {/* NewsBanner pinned to bottom */}
+      {!isMobile && (
+        <div className="absolute bottom-0 left-0 right-0 z-20 p-4">
+          <NewsBanner />
+        </div>
+      )}
+    </div>
+
 
 
     {/* Block 3 */}
@@ -480,8 +516,7 @@ Used with color theory, these swatches support contrast, accessibility, and cons
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
         className="
-          rounded-2xl 
-          border border-white/40   
+          rounded-2xl  
           backdrop-blur-md 
           p-4 
           shadow-sm 
@@ -490,15 +525,23 @@ Used with color theory, these swatches support contrast, accessibility, and cons
       >
         <h2 className="mb-4 text-2xl font-bold">Available 1</h2>
         <div className="grid grid-cols-1 gap-4">
-          <div>
-            <Image
-              src="/pal2.png"
-              alt="palette2"
-              width={0}
-              height={0}
-              className="rounded-lg w-full h-auto object-cover"
-            />
-          </div>
+        <div className="flex justify-center items-center h-full">
+  <motion.a
+    href="/jdresume.pdf"
+    target="_blank"
+    className="flex items-center gap-2 justify-center h-40 w-40 rounded-full bg-transparent border 
+      border-neutral-400/20 hover:border-white transition ease-in-out my-20
+      hover:shadow-lg hover:shadow-white/50 transform duration-300 
+      hover:bg-white/20 hover:text-white text-center"
+    whileHover={{ scale: 1.0 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <div className="flex gap-2 justify-center items-center flex-col">
+      <ArrowDownToLine size={30} />
+      Resume PDF
+    </div>
+  </motion.a>
+</div>
 
         </div>
       </motion.section>
