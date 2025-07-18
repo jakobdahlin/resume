@@ -1,9 +1,8 @@
 "use client"
 
-import { useState, useEffect, Suspense } from "react"
-import Sphere from "@/components/sphere"
+import { useState, useEffect } from "react"
 import { Image as ImageIcon } from "lucide-react"
-import { Github, ChevronDown, ChevronUp, Figma, ArrowDownToLine } from "lucide-react"
+import { Github, ChevronDown, ChevronUp, Figma } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -518,13 +517,20 @@ Used with color theory, these swatches support contrast, accessibility, and cons
     border border-neutral-400/20
     "
 >
-      <h2 className="p-4 text-2xl font-bold relative z-30">
-        Rotating Sphere
-      </h2>
-
-      <div className="absolute inset-0 flex items-center justify-center z-10 mt-10">
-      <Sphere imageUrl="/marstexture.jpg" rotationSpeed={0.2} />
-  </div>
+      <div className="p-4 text-2xl font-bold relative z-30">
+        <p className="text-2xl font-bold">ESB Photo Contest Finalist</p>
+        <p className="text-sm font-normal">On display in Empire State Building Lobby</p>
+      </div>
+      <div className="absolute inset-0 z-0">
+          <Image
+            src="/ESB.jpg"
+            alt="news banner"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-100"
+            priority
+          />
+        </div>
     </div>
 
   </div>
