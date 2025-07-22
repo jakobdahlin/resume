@@ -25,6 +25,12 @@ const config = {
       },
     },
     extend: {
+      boxShadow: {
+        "inner-sm": "inset 0 1px 2px rgba(0, 0, 0, 0.05)",
+        "inner-md": "inset 0 2px 6px rgba(0, 0, 0, 0.1)",
+        "inner-lg": "inset 0 4px 10px rgba(0, 0, 0, 0.15)",
+        "inner-xl": "inset 0 8px 20px rgba(0, 0, 0, 0.2)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

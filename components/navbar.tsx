@@ -16,7 +16,7 @@ export default function Navbar() {
   const [active, setActive] = useState("Dashboard")
 
   return (
-    <header className="flex justify-center pb-6">
+    <header className="flex max-w-[1600px] justify-center pb-6">
       <div className="relative flex items-center border border-sky-300/30 rounded-full p-2 bg-black/20 backdrop-blur-md">
         <div className="w-8 h-8 mx-4 hover:rotate-12 transition duration-200">
           <img src="/JD_ID.png" alt="Logo" className="w-full h-full object-contain" />

@@ -14,10 +14,10 @@ export default function Footer() {
   }
 
   return (
-    <footer className="col-span-12 my-4 sm:my-0">
+    <footer className="col-span-12 sm:my-0">
       <div className="w-full mx-auto flex items-center gap-4">
         <Button asChild variant="outline" className="gap-2 w-full px-6 py-2 rounded-xl 
-          bg-transparent border border-neutral-400/60 hover:border-white 
+          bg-transparent border border-neutral-800 hover:border-white 
           hover:shadow-lg hover:shadow-white/50 backdrop-blur-sm
           transition-all ease-in-out duration-300 hover:bg-white/20 hover:text-white hover:backdrop-blur-sm">
           <Link href="https://github.com/jakobdahlin" target="_blank" rel="noopener noreferrer">
@@ -27,7 +27,7 @@ export default function Footer() {
         </Button>
 
         <Button asChild variant="outline" className="gap-2 w-full px-6 py-2 rounded-xl 
-          bg-transparent border border-neutral-400/60 hover:border-white
+          bg-transparent border border-neutral-800 hover:border-white
           hover:shadow-lg hover:shadow-white/50 backdrop-blur-sm
           transition-all ease-in-out duration-300 hover:bg-white/20 hover:text-white hover:backdrop-blur-sm">
           <Link href="https://www.linkedin.com/in/jakobdahlin/" target="_blank" rel="noopener noreferrer">
@@ -38,7 +38,7 @@ export default function Footer() {
       </div>
 
       <Button asChild variant="outline" className="gap-2 mt-4 w-full px-6 py-2 rounded-xl 
-        bg-transparent border border-neutral-400/60 hover:border-white
+        bg-transparent border border-neutral-800 hover:border-white
         hover:shadow-lg hover:shadow-white/50 backdrop-blur-sm
         transition-all ease-in-out duration-300 hover:bg-white/20 hover:text-white hover:backdrop-blur-sm">
         <Link href="mailto:jakob@jakobdahlin.com">

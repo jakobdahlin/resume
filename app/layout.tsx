@@ -1,9 +1,8 @@
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import Navigation from "@/components/navigation";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react"
-import  DynamicBackground from "@/components/dynamicbackground"
 import { Kumbh_Sans } from 'next/font/google';
 
 const kumbhSans = Kumbh_Sans({
@@ -13,7 +12,7 @@ const kumbhSans = Kumbh_Sans({
 
 export const metadata = {
   title: "Jakob Dahlin Resume",
-  description: "Jakob Dahlin's resume featuring web development skills, UI/UX design & SEO experience",
+  description: "Jakob Dahlin's resume featuring modern web development skills, UI/UX design & SEO experience",
   icons: '/JD_ID.png',
 };
 
@@ -28,8 +27,8 @@ export default function RootLayout({
     <>
       <Head>
       <Analytics/>
-        <title>"Jakob Dahlin Resume | Web Development, UI/UX & SEO Experience</title>
-        <meta name="description" content="Portfolio showcasing architectural photography and web development work" />
+        <title>"Jakob Dahlin | Product Designer & UX Engineer</title>
+        <meta name="description" content="Portfolio showcasing modern web development skills & UI/UX design" />
         <meta name="generator" />
       </Head>
       <html lang="en">
@@ -42,7 +41,7 @@ export default function RootLayout({
 </div>
 
 {/* Your content scrolls on top of that one fullscreen image */}
-<div className="relative z-10">
+<div className="relative z-10 ">
   <Navigation />
   <main className="min-h-screen">{children}</main>
 </div>

@@ -35,11 +35,11 @@ export default function Navigation() {
   return (
 <header
   className={cn(
-    "fixed top-0 left-0 w-full z-50 py-2 transition-all duration-500 ease-in-out",
+    "fixed top-0 left-0 flex justify-center items-center w-full mx-auto z-50 py-2 transition-all duration-500 ease-in-out",
     isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
   )}
 >
-  <div className="container mx-auto max-w-7xl px-4 flex justify-between items-center">
+  <div className="container mx-auto max-w-[1600px] px-4 flex justify-between items-center">
     <div className="flex items-center justify-between w-full py-2">
 
 

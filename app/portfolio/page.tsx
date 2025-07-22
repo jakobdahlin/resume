@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Image as ImageIcon } from "lucide-react"
-import { Github, ChevronDown, ChevronUp, Figma } from "lucide-react"
+import { Github, ChevronDown, ChevronUp, Figma, ArrowUp } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -17,6 +17,7 @@ import FinancialDashboard from "@/components/financialdasboard"
 import { SeoAnalyticsDashboard } from "@/components/seo-analytics-dashboard"
 import SkeletonCard from "@/components/skeletoncard"
 import NewsBanner from "@/components/news-banner"
+import Footer from "@/components/footer"
 
 
 
@@ -43,7 +44,7 @@ function customScrollToTop(speed: number) {
   requestAnimationFrame(scrollStep);
 }
 
-export default function Home() {
+export default function Portfolio() {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -86,7 +87,7 @@ useEffect(() => {
 
   return (
 <div className="bg-black z-[1]">
-  
+<div id="top"></div>
  <main className="mx-auto max-w-[1600px] min-h-screen p-4 md:pt-10 sm:pt-10">
 <Header/>
 
@@ -515,23 +516,30 @@ Used with color theory, these swatches support contrast, accessibility, and cons
     rounded-2xl
     overflow-hidden
     border border-neutral-400/20
-    "
+"
 >
-      <div className="p-4 text-2xl font-bold relative z-30">
-        <p className="text-2xl font-bold">ESB Photo Contest Finalist</p>
-        <p className="text-sm font-normal">On display in Empire State Building Lobby</p>
+  {/* Text Container */}
+  <div className="flex flex-col items-end text-right p-4 relative z-30">
+    <div className="w-32">
+      <p className="text-2xl font-bold">ESB Photo Contest Finalist</p>
       </div>
-      <div className="absolute inset-0 z-0">
-          <Image
-            src="/ESB.jpg"
-            alt="news banner"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-100"
-            priority
-          />
-        </div>
-    </div>
+      <div className="w-40">
+      <p className="text-sm font-normal mt-1">On display at Empire State Building</p>
+      </div>
+  </div>
+
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="/ESB.jpg"
+      alt="news banner"
+      layout="fill"
+      objectFit="cover"
+      className="opacity-100"
+      priority
+    />
+  </div>
+</div>
 
   </div>
 </section>
@@ -594,6 +602,28 @@ Used with color theory, these swatches support contrast, accessibility, and cons
           )}
         </div>
    </section>
+
+{/* FOOTER  --------------------------------------------------- */}
+   <section className="mx-auto max-w-[1600px]">
+    <Footer />
+
+{/* BACK TO TOP BUTTON */}
+<div className="col-span-12 w-full">
+<motion.button
+onClick={() => {
+customScrollToTop(2000); 
+}}
+className="w-full text-center justify-center mt-4 hover:bg-white/20
+mb-20 border border-neutral-800 bg-black/0 backdrop-blur-md p-4 shadow-sm 
+mx-auto flex items-center gap-2 px-4 py-4 text-white/80
+rounded-2xl hover:text-white hover:border-white transition"
+>
+<ArrowUp size={18} className="animate-bounce" />
+Back to Top
+</motion.button>
+
+      </div>
+      </section>
 
   </main>
 </div>

@@ -38,13 +38,13 @@ function customScrollToTop(speed: number) {
 
 export default function Home() {
   return (
-    <div className="bg-black z-[1]">
+    <div className="bg-black z-[1] mx-auto max-w-[1600px]">
     <main className="min-h-screen p-4 md:pt-10 sm:pt-10">
       <div id="top" />
       <Header />
 
       {/* Bento Grid Layout with card animation */}
-      <div className="mx-auto max-w-7xl flex flex-col gap-4 md:grid md:grid-cols-12">
+      <div className="mx-auto max-w-[1600px] flex flex-col gap-4 md:grid md:grid-cols-12">
 
         {/* Experience Section - Spans 8 columns on desktop */}
         <motion.section
@@ -184,7 +184,7 @@ export default function Home() {
       </div>
 
 {/* FOOTER */}
-<section className="my-4 mx-auto max-w-7xl">
+<section className="my-4 mx-auto max-w-[1600px]">
     <Footer />
 
 {/* BACK TO TOP BUTTON */}
