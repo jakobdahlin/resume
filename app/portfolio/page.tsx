@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react"
 import { Image as ImageIcon } from "lucide-react"
 import { Github, ChevronDown, ChevronUp, Figma, ArrowUp } from "lucide-react"
+import SVGFilters from "@/components/svg";
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Header from "@/components/header"
 import LoginCard from "@/components/logincard"
 import Navbar from "@/components/navbar"
+import GlassButton from "@/components/glassbutton"
 import Logotypes from "@/components/logotypes/logotypes"
 import ButtonDesign from "@/components/buttondesign"
 import Calculator  from "@/components/calculator"
@@ -120,7 +122,7 @@ useEffect(() => {
 
 {/* LOGIN --------------------------------------------------- */}
   <div 
-      className="relative col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-6 row-span-1 rounded-2xl border border-neutral-400/20  
+      className="relative col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-6 row-span-1 rounded-2xl border border-neutral-800 
         bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0 flex flex-col items-center justify-center"
     >
 
@@ -224,12 +226,16 @@ onClick={() => {
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
     <div 
           className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-12 row-span-1 
-          rounded-2xl overflow-hidden border border-neutral-400/20 bg-cover bg-center 
-          bg-[url('/Galaxy.png')]"
-        >             <h2 className="p-4 text-2xl font-bold">Navbar</h2>
-          <div className="mx-auto p-4 flex items-center justify-center animate-fade-in">
-          <Navbar/>
-          </div>
+          rounded-2xl overflow-hidden border border-neutral-800 bg-cover bg-center 
+          bg-[url('/BG5.jpeg')]"
+        >             <h2 className="p-4 text-2xl font-bold">SVG Filter Glass Effect</h2>
+    <div>
+      {/* Load filters globally */}
+      <SVGFilters />
+
+      {/* Render the glass button */}
+      <GlassButton />
+    </div>
         </div>
   </div>
 </section>
