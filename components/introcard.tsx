@@ -69,7 +69,7 @@ export default function IntroCard() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 2 }} 
-                  className="flex flex-col w-full text-center text-neutral-400 rounded-full">
+                  className="flex flex-col w-full text-md text-center text-neutral-400 rounded-full">
             <p>Product Designer</p>
             <p>UX Engineer</p>
             </motion.span>
@@ -97,7 +97,7 @@ export default function IntroCard() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 3, delay: 1 }}
-          className="text-neutral-400 text-center text-sm px-2 pb-10 mx-4">
+          className="text-neutral-400 text-center text-md px-2 pb-10 mx-4">
           Designing and building digital products with 10+ years of web
           development experience and expertise in UX engineering. Creating
           responsive, accessible interfaces that balance clean design, usability,
@@ -131,7 +131,7 @@ transition={{ duration: 1, delay: 2 }}className="flex flex-col md:flex-row justi
 </Link>
 
   <a
-    href="/jdresume.pdf"
+    href="/JDResume2025.pdf"
     target="_blank"
     className="flex w-full items-center justify-center px-4 gap-2
   py-2 rounded-lg border border-neutral-400/20 hover:border-white
