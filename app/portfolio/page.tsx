@@ -20,8 +20,7 @@ import { SeoAnalyticsDashboard } from "@/components/seo-analytics-dashboard"
 import SkeletonCard from "@/components/skeletoncard"
 import NewsBanner from "@/components/news-banner"
 import Footer from "@/components/footer"
-
-
+import Aurora from "@/components/aurora"
 
 function customScrollToTop(speed: number) {
   const topEl = document.getElementById("top");
@@ -217,25 +216,6 @@ onClick={() => {
 </Link>
 </div>
         </div>
-        </div>
-  </div>
-</section>
-
-{/* NAVBAR --------------------------------------------------- */}
-<section className="w-full max-w-[1600px] mx-auto pb-4">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
-    <div 
-          className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-12 row-span-1 
-          rounded-2xl overflow-hidden border border-neutral-800 bg-cover bg-center 
-          bg-[url('/BG5.jpeg')]"
-        >             <h2 className="p-4 text-2xl font-bold">SVG Filter Glass Effect</h2>
-    <div>
-      {/* Load filters globally */}
-      <SVGFilters />
-
-      {/* Render the glass button */}
-      <GlassButton />
-    </div>
         </div>
   </div>
 </section>
@@ -445,6 +425,30 @@ Used with color theory, these swatches support contrast, accessibility, and cons
 
   </div>
 </section>
+
+
+{/* Aurora --------------------------------------------------- */}
+<section
+      className="relative overflow-hidden rounded-2xl border border-neutral-800 bg-black/40 mb-4
+                 w-full max-w-[1600px] mx-auto h-[480px] flex flex-col items-center justify-center text-center"
+    >
+
+        <div className="absolute inset-0 z-0">
+          <Aurora colorStops={['#682a8f', '#afd589', '#4d6c2e']} amplitude={1.2} blend={0.6} speed={0.8}/>
+        </div>
+
+        <div className="relative z-10 px-6">
+          <h1 className="text-3xl font-bold text-white mb-4">Aurora Effect — Real-Time Shader Animation</h1>
+          <p className="text-md text-white/50 max-w-4xl mb-2">
+          A custom-built visual that uses WebGL and GLSL shaders to merge design and GPU-level programming.
+This experiment recreates a living aurora borealis through mathematical noise and dynamic color blending.</p>
+<p className="text-md text-white/50 max-w-4xl">
+The effect shows my ability to bridge creative design and real-time rendering.
+It creates experiences that feel immersive and alive.
+I use React, OGL, and custom GLSL shaders, and the result runs fully on the GPU at a smooth 60 FPS across modern browsers.
+</p>
+        </div>
+    </section>
 
   {/* NEWS BANNER */}
   <section className="w-full max-w-[1600px] mx-auto mb-4">

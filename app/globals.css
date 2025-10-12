@@ -110,3 +110,7 @@ body {
 body {
   overflow-y: scroll;
 }
+
+html, body, #__next {
+  isolation: isolate;
+}

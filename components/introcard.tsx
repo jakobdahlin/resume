@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react";
+import ShinyText from './ShinyText';
 
 export default function IntroCard() {
 
@@ -97,12 +98,18 @@ export default function IntroCard() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 3, delay: 1 }}
-          className="text-neutral-400 text-center text-md px-2 pb-10 mx-4">
-          Designing and building digital products with 10+ years of web
+        className="text-neutral-400 text-center text-md px-2 pb-10 mx-4">
+        <ShinyText 
+        text="Designing and building digital products with 10+ years of web
           development experience and expertise in UX engineering. Creating
           responsive, accessible interfaces that balance clean design, usability,
-          SEO optimization, and scalable code.
+          SEO optimization, and scalable code." 
+          disabled={false} 
+          speed={3} 
+          className='custom-class' 
+          />
         </motion.p>
+        
 
 <motion.div 
 initial={{ opacity: 0, y: 20 }}

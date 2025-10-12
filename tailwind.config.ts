@@ -91,12 +91,17 @@ const config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        shine: {
+          "0%": { 'background-position': '100%' },
+          "100%": { 'background-position': '-100%' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pulse-slow": "pulse-slow 4s ease-in-out infinite",
         "fade-in": "fade-in 2s ease-in-out forwards",
+        shine: 'shine 10s linear infinite',
       },
     },
   },

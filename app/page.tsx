@@ -10,7 +10,7 @@ import IntroCard from "@/components/introcard";
 export default function Home() {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <DynamicBackground /> {/* Your moving stars background */}
+      <DynamicBackground />
 
       <IntroCard />
     </div>

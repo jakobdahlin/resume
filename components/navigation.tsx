@@ -35,7 +35,7 @@ export default function Navigation() {
   return (
 <header
   className={cn(
-    "fixed top-0 left-0 flex justify-center items-center w-full mx-auto z-50 py-2 transition-all duration-500 ease-in-out",
+    "fixed top-0 left-0 flex justify-center items-center w-full mx-auto z-[1001] py-2 transition-all duration-500 ease-in-out",
     isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
   )}
 >

@@ -20,7 +20,7 @@ const skills: SkillProps[] = [
   { name: "Next.js", category: "core", className: "border-neutral-400/60 hover:bg-white/20 hover:border-white hover:shadow-white/70" },
 
   // Styling & Animation
-  { name: "Tailwind CSS", category: "styling", className: "border-neutral-400/60 hover:bg-teal-300/20 hover:border-teal-300 hover:shadow-teal-400/70" },
+  { name: "Tailwind CSS", category: "styling", className: "border-neutral-400/60 hover:bg-sky-300/20 hover:border-sky-300 hover:shadow-teal-400/50" },
   { name: "CSS Modules", category: "styling", className: "border-neutral-400/60 hover:bg-sky-400/20 hover:border-sky-400 hover:shadow-sky-700/70" },
   { name: "Framer Motion", category: "styling", className: "border-neutral-400/60 hover:bg-blue-400/20 hover:border-blue-400 hover:shadow-purple-700/70" },
 
@@ -34,6 +34,11 @@ const skills: SkillProps[] = [
   { name: "Rapidweaver", category: "code", className: "border-neutral-400/60 hover:bg-violet-300/20 hover:border-violet-300 hover:shadow-indigo-600/70" },
   { name: "CodePen", category: "code", className: "border-neutral-400/60 hover:bg-white/20 hover:border-white hover:shadow-white/70" },
   { name: "Wordpress", category: "code", className: "border-neutral-400/60 hover:bg-cyan-100/20 hover:border-cyan-100/70 hover:shadow-cyan-700/70" },
+  
+  // AI-Assisted Design & Development
+  { name: "v0", category: "aidesign", className: "border-neutral-400/60 hover:bg-teal-400/20 hover:border-teal-500 hover:shadow-teal-400/40" },
+  { name: "ChatGPT", category: "aidesign", className: "border-neutral-400/60 hover:bg-white/20 hover:border-white hover:shadow-white/40" },
+  { name: "Sora", category: "aidesign", className: "border-neutral-400/60 hover:bg-sky-500/20 hover:border-sky-600 hover:shadow-sky-600/40" },
 ];
 
 export function SkillsSection() {
@@ -41,6 +46,7 @@ export function SkillsSection() {
   const stylingSkills = skills.filter((skill) => skill.category === "styling");
   const vcdepSkills = skills.filter((skill) => skill.category === "VC & deploy");
   const codingSkills = skills.filter((skill) => skill.category === "code");
+  const aidesignSkills = skills.filter((skill) => skill.category === "aidesign");
 
   const ref = useRef(null);
   const inView = useInView(ref, { margin: "-100px" });
@@ -116,6 +122,27 @@ export function SkillsSection() {
           ))}
         </div>
       </div>
+
+
+      <div>
+        <h3 className="mb-3 text-lg font-medium">AI-Assisted Design & Development</h3>
+        <div className="flex flex-wrap gap-3">
+          {aidesignSkills.map((skill) => (
+            <div
+              key={skill.name}
+              className={`p-[1px] rounded-xl border border-neutral-400/60 
+                hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-600/70 
+                transform duration-200 ease-in-out ${skill.className}`} // Apply custom className
+            >
+              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
+                {skill.name}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
     </div>
   );
 }
