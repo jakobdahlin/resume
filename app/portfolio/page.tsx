@@ -21,6 +21,7 @@ import SkeletonCard from "@/components/skeletoncard"
 import NewsBanner from "@/components/news-banner"
 import Footer from "@/components/footer"
 import Aurora from "@/components/aurora"
+import DynamicBackground from "@/components/dynamicbackground";
 
 function customScrollToTop(speed: number) {
   const topEl = document.getElementById("top");
@@ -426,14 +427,15 @@ Used with color theory, these swatches support contrast, accessibility, and cons
   </div>
 </section>
 
-
 {/* Aurora --------------------------------------------------- */}
 <section
       className="relative overflow-hidden rounded-2xl border border-neutral-800 bg-black/40 mb-4
                  w-full max-w-[1600px] mx-auto h-[480px] flex flex-col items-center justify-center text-center"
     >
-
         <div className="absolute inset-0 z-0">
+        <DynamicBackground />
+        </div>
+        <div className="absolute inset-0 z-3 opacity-90">
           <Aurora colorStops={['#682a8f', '#afd589', '#4d6c2e']} amplitude={1.2} blend={0.6} speed={0.8}/>
         </div>
 
