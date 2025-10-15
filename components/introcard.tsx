@@ -71,9 +71,10 @@ export default function IntroCard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 2 }} 
                   className="flex flex-col w-full text-md text-center text-neutral-400 rounded-full">
-            <p>Product Designer</p>
-            <p>UX Engineer</p>
-            </motion.span>
+            Product Designer
+            -
+            UX Engineer
+        </motion.span>
         </div>
 
 

@@ -10,7 +10,6 @@ import { motion } from "framer-motion"
 import Header from "@/components/header"
 import LoginCard from "@/components/logincard"
 import Navbar from "@/components/navbar"
-import GlassButton from "@/components/glassbutton"
 import Logotypes from "@/components/logotypes/logotypes"
 import ButtonDesign from "@/components/buttondesign"
 import Calculator  from "@/components/calculator"
@@ -220,6 +219,7 @@ onClick={() => {
         </div>
   </div>
 </section>
+
 
     {/* SECTION UNDER NAVBAR */}
 <section className="w-full max-w-[1600px] mx-auto mb-4">
@@ -432,7 +432,7 @@ Used with color theory, these swatches support contrast, accessibility, and cons
       className="relative overflow-hidden rounded-2xl border border-neutral-800 bg-black/40 mb-4
                  w-full max-w-[1600px] mx-auto h-[480px] flex flex-col items-center justify-center text-center"
     >
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 pointer-events-none">
         <DynamicBackground />
         </div>
         <div className="absolute inset-0 z-3 opacity-90">
