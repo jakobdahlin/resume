@@ -16,7 +16,7 @@ export default function Component() {
   }
 
   return (
-    <div className="bg-black w-full mx-auto justify-center flex">
+    <div className="bg-black w-full mx-auto justify-center flex px-4">
       <div className="space-y-4 w-full max-w-lg">
 
         {/* Toggle 1: Basic Slide Toggle - Notifications */}

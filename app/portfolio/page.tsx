@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Image as ImageIcon } from "lucide-react"
-import { Github, ChevronDown, ChevronUp, Figma, ArrowUp } from "lucide-react"
-import SVGFilters from "@/components/svg";
+import { Github, Figma, ArrowUp } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -14,8 +13,6 @@ import Logotypes from "@/components/logotypes/logotypes"
 import ButtonDesign from "@/components/buttondesign"
 import Calculator  from "@/components/calculator"
 import Toggle  from "@/components/toggle"
-import FinancialDashboard from "@/components/financialdasboard"
-import { SeoAnalyticsDashboard } from "@/components/seo-analytics-dashboard"
 import SkeletonCard from "@/components/skeletoncard"
 import NewsBanner from "@/components/news-banner"
 import Footer from "@/components/footer"
@@ -244,7 +241,7 @@ onClick={() => {
       alt="card3"
       width={0}
       height={0}
-      className="rounded-xl w-full h-auto object-cover backdrop-blur-md animate-pulse-slow"
+      className="rounded-xl max-w-[600px] mx-auto w-full h-auto object-cover backdrop-blur-md animate-pulse-slow"
     />
 
     {/* Text overlay (inside image) */}
@@ -266,7 +263,7 @@ onClick={() => {
 </div>
 
     {/* Block 1 */}
-    <div className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-5 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
+    <div className="col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-4 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
     <h2 className="mb-4 text-2xl font-bold text-left p-4">Toggles</h2>
           <div className="mx-auto flex justify-center animate-fade-in">
         <Toggle />
@@ -275,7 +272,7 @@ onClick={() => {
 
 
     {/* Block 3 */}
-    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
+    <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 md:row-span-2 rounded-2xl overflow-hidden border border-neutral-400/20">
     <div className="h-full w-full p-4 flex">
     <div className="h-full w-full flex flex-col">
   <h2 className="mb-4 text-2xl font-bold text-left">Loading States</h2>
@@ -556,64 +553,6 @@ I use React, OGL, and custom GLSL shaders, and the result runs fully on the GPU 
   </div>
 </section>
 
-
-
-
-
-{/* FINANCIAL DASHBOARD DEMO --------------------------------------------------- */}
-      <section className="pb-4">
-        <div
-          className="rounded-2xl overflow-hidden border border-neutral-800
-          bg-cover bg-center bg-[url('/ambient.jpg')]"
-        >
-          <div className="flex justify-between items-center p-4">
-            <h1 className="text-2xl font-bold">Financial Dashboard</h1>
-            <button
-              onClick={() => toggleSection("financial")}
-              className="text-white hover:text-gray-300 transition animate-bounce"
-            >
-              {activeSection === "financial" ? (
-                <ChevronUp className="w-8 h-8" />
-              ) : (
-                <ChevronDown className="w-8 h-8" />
-              )}
-            </button>
-          </div>
-
-          {activeSection === "financial" && (
-            <div className="mx-auto flex items-center justify-center">
-              <FinancialDashboard />
-            </div>
-          )}
-        </div>
-      </section>
-
-{/* SEO ANALYTICS DASHBOARD  --------------------------------------------------- */}
-<section className="pb-4">
-        <div
-          className="rounded-2xl overflow-hidden border border-neutral-400/20"
-        >
-          <div className="flex justify-between items-center p-4">
-            <h1 className="text-2xl font-bold">SEO Analytics Dashboard</h1>
-            <button
-              onClick={() => toggleSection("seo")}
-              className="text-white hover:text-gray-300 transition animate-bounce"
-            >
-              {activeSection === "seo" ? (
-                <ChevronUp className="w-8 h-8" />
-              ) : (
-                <ChevronDown className="w-8 h-8" />
-              )}
-            </button>
-          </div>
-
-          {activeSection === "seo" && (
-            <div className="mx-auto flex items-center justify-center pb-4">
-              <SeoAnalyticsDashboard />
-            </div>
-          )}
-        </div>
-   </section>
 
 {/* FOOTER  --------------------------------------------------- */}
    <section className="mx-auto max-w-[1600px]">
