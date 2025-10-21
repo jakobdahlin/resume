@@ -26,7 +26,8 @@ export function ExperienceTimeline() {
             <h3 className="text-xl font-semibold">
               Founder, Photographer & Product Designer
             </h3>
-            <span className="inline-block rounded-full p-[1px] text-white border border-white animate-pulse-slow shadow-lg shadow-white/50">
+            <span className="inline-block rounded-full p-[1px] text-white animate-pulse-slow shadow-lg 
+            border border-sky-200  bg-sky-400/30 shadow-blue-500/50">
               <span className="block rounded-full px-2.5 py-0.5 text-xs font-medium text-primary text-white">
                 Current
               </span>

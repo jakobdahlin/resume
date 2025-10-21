@@ -39,7 +39,7 @@ export default function IntroCard() {
         transition={{ duration: 1 }}
         className="relative w-full max-w-2xl h-auto
         rounded-3xl flex flex-col justify-between backdrop-blur-sm
-        p-2 z-10 border border-neutral-700/50 mx-4"
+        p-2 z-10 border border-neutral-500/50 mx-4"
       >
 
 <motion.div
@@ -48,9 +48,9 @@ export default function IntroCard() {
         transition={{ duration: 0.5 }}
         className="relative max-w-2xl
         rounded-2xl flex flex-col justify-between
-        px-2 z-10 border border-neutral-700/50"
+        px-2 z-10 border border-neutral-500/50"
       >
-        <div className="flex justify-between p-2 text-neutral-700 uppercase text-sm w-full">
+        <div className="flex justify-between p-2 text-neutral-500 uppercase text-sm w-full">
           <motion.span
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -65,12 +65,12 @@ export default function IntroCard() {
           </motion.span>
         </div>
 
-        <div className="flex justify-between p-2 text-neutral-700 uppercase text-sm w-full">
+        <div className="flex justify-between p-2 text-neutral-500 uppercase text-sm w-full">
         <motion.span
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 2 }} 
-                  className="flex flex-col w-full text-md text-center text-neutral-400 rounded-full">
+                  className="flex flex-col w-full text-md text-center text-neutral-500 rounded-full">
             Product Designer
             -
             UX Engineer
@@ -90,7 +90,7 @@ export default function IntroCard() {
       alt="card3"
       width={0}
       height={0}
-      className="rounded-xl w-full max-w-xs mb-4 justify-center items-center flex mx-auto h-auto object-cover"
+      className="rounded-xl w-full max-w-xs mb-4 px-10 justify-center items-center flex mx-auto h-auto object-cover"
     />
           </motion.div>
           </div>
@@ -119,7 +119,7 @@ transition={{ duration: 1, delay: 2 }}className="flex flex-col md:flex-row justi
   <Link
   href="/portfolio"
   className="flex w-full items-center justify-center px-4 gap-2 flex-row
-  py-2 rounded-lg border border-neutral-400/20 hover:border-white
+  py-2 rounded-xl border border-neutral-500/50 hover:border-white
   hover:shadow-lg hover:shadow-white/50 
   transition hover:bg-white/20 hover:text-white duration-500"
 >
@@ -130,7 +130,7 @@ transition={{ duration: 1, delay: 2 }}className="flex flex-col md:flex-row justi
 <Link
   href="/resume"
   className="flex w-full items-center justify-center px-4 gap-2
-  py-2 rounded-lg border border-neutral-400/20 hover:border-white
+  py-2 rounded-xl border border-neutral-500/50 hover:border-white
   hover:shadow-lg hover:shadow-white/50 
   transition duration-500 hover:bg-white/20 hover:text-white"
 >
@@ -142,7 +142,7 @@ transition={{ duration: 1, delay: 2 }}className="flex flex-col md:flex-row justi
     href="/JDResume2025.pdf"
     target="_blank"
     className="flex w-full items-center justify-center px-4 gap-2
-  py-2 rounded-lg border border-neutral-400/20 hover:border-white
+  py-2 rounded-xl border border-neutral-500/50 hover:border-white
   hover:shadow-lg hover:shadow-white/50 
   transition duration-500 hover:bg-white/20 hover:text-white"
   >
