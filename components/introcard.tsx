@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { ArrowDownToLine, GalleryVertical, File } from "lucide-react"
+import { ArrowDownToLine, GalleryVertical, File, Link2 } from "lucide-react"
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -112,43 +112,55 @@ export default function IntroCard() {
         </motion.p>
         
 
-<motion.div 
-initial={{ opacity: 0, y: 20 }}
-animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 1, delay: 2 }}className="flex flex-col md:flex-row justify-center items-center mx-auto px-2 gap-4 w-full mb-4">
+        <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 2 }}
+  className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl mx-auto mb-4 px-2"
+>
   <Link
-  href="/portfolio"
-  className="flex w-full items-center justify-center px-4 gap-2 flex-row
-  py-2 rounded-xl border border-neutral-500/50 hover:border-white
-  hover:shadow-lg hover:shadow-white/50 
-  transition hover:bg-white/20 hover:text-white duration-500"
->
-  <GalleryVertical size={16} />
-  Design Portfolio
-</Link>
+    href="/portfolio"
+    className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
+    border border-neutral-500/50 hover:border-white hover:shadow-lg hover:shadow-white/50 
+    transition duration-500 hover:bg-white/20 hover:text-white"
+  >
+    <GalleryVertical size={16} />
+    Design Portfolio
+  </Link>
 
-<Link
-  href="/resume"
-  className="flex w-full items-center justify-center px-4 gap-2
-  py-2 rounded-xl border border-neutral-500/50 hover:border-white
-  hover:shadow-lg hover:shadow-white/50 
-  transition duration-500 hover:bg-white/20 hover:text-white"
->
-  <File size={16} />
-  Resume
-</Link>
+  <Link
+    href="/resume"
+    className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
+    border border-neutral-500/50 hover:border-white hover:shadow-lg hover:shadow-white/50 
+    transition duration-500 hover:bg-white/20 hover:text-white"
+  >
+    <File size={16} />
+    Resume
+  </Link>
 
   <a
     href="/JDResume2025.pdf"
     target="_blank"
-    className="flex w-full items-center justify-center px-4 gap-2
-  py-2 rounded-xl border border-neutral-500/50 hover:border-white
-  hover:shadow-lg hover:shadow-white/50 
-  transition duration-500 hover:bg-white/20 hover:text-white"
+    className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
+    border border-neutral-500/50 hover:border-white hover:shadow-lg hover:shadow-white/50 
+    transition duration-500 hover:bg-white/20 hover:text-white"
   >
     <ArrowDownToLine size={16} />
     Resume PDF
   </a>
+
+  <Button
+    asChild
+    variant="outline"
+    className="gap-2 px-4 py-2 rounded-xl bg-transparent border border-neutral-400/30 hover:border-sky-200 
+    hover:shadow-lg hover:shadow-blue-600/50 transition ease-in-out duration-300 
+    hover:bg-sky-400/20 hover:text-white hover:backdrop-blur-sm"
+  >
+    <Link href="https://jakobdahlin.com">
+      <Link2 size={18} />
+      jakobdahlin.com
+    </Link>
+  </Button>
 </motion.div>
 
 

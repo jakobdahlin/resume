@@ -144,18 +144,18 @@ export default function Home() {
   <ProjectCard
     className="grayscale hover:grayscale-0"
     title="Glöd Restaurant"
-    tags={["TypeScript", "Next.js", "Next.js API Routes", "Tailwind CSS", "React"]}
+    tags={["TypeScript", "Next.js", "Next.js API Routes", "Tailwind CSS", "React", "Vercel"]}
     imageUrl="/glod.png"
     demoUrl="https://glod-liard.vercel.app"
     githubUrl="https://github.com/jakobdahlin/glodrestaurant"
   />
     <ProjectCard
     className="grayscale hover:grayscale-0"
-    title="Bento Box Generator"
-    tags={["TypeScript", "Next.js", "Tailwind CSS", "React"]}
-    imageUrl="/bentoboxgenerator.png"
-    demoUrl="https://bentoboxgenerator.vercel.app"
-    githubUrl="https://github.com/jakobdahlin/bentoboxgenerator"
+    title="Alida UI - Open-Source npm"
+    tags={["TypeScript", "Next.js", "Tailwind CSS", "React", "npm", "Vercel"]}
+    imageUrl="/alida.png"
+    demoUrl="https://alidaui.vercel.app"
+    githubUrl="https://github.com/jakobdahlin/alidaui"
   />
 </div>
 

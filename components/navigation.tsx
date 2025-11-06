@@ -55,19 +55,6 @@ export default function Navigation() {
             <Button
               asChild
               variant="outline"
-              className="gap-2 px-4 py-2 rounded-xl bg-transparent border border-neutral-400/30 hover:border-sky-200 
-              hover:shadow-lg hover:shadow-blue-600/50 transition ease-in-out 
-              duration-300 hover:bg-sky-400/20 hover:text-white hover:backdrop-blur-sm"
-            >
-              <Link href="https://jakobdahlin.com">
-                <Link2 size={18} />
-                jakobdahlin.com
-              </Link>
-            </Button>
-
-            <Button
-              asChild
-              variant="outline"
               className="gap-2 px-4 py-2 rounded-xl bg-transparent border border-neutral-400/30 hover:border-white 
               hover:shadow-lg hover:shadow-white/50 transition ease-in-out 
               duration-300 hover:bg-white/20 hover:text-white hover:backdrop-blur-sm"

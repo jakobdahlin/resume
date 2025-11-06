@@ -85,13 +85,13 @@
 }
 
 ::selection {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 ::-moz-selection {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 /* Chrome, Edge, Safari */
