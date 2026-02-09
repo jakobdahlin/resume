@@ -116,6 +116,11 @@ export default function DynamicBackground() {
   }, [])
 
   return (
-    <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full -z-10" style={{ backgroundColor: "#000000" }} />
+    <canvas
+      id="bg-canvas"
+      ref={canvasRef}
+      className="fixed top-0 left-0 w-full h-full -z-10"
+      style={{ backgroundColor: "#000000" }}
+    />
   )
 }

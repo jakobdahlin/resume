@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import LiquidGlassSurface from "@/components/liquidglass/liquidglasssurface";
 
 const stockSymbols = [
     "AAPL", "GOOGL", "MSFT", "NVDA", "NFLX",

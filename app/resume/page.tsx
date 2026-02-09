@@ -139,20 +139,20 @@ export default function Home() {
         transition={{ duration: 3 }} className="col-span-8 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border 
         border-neutral-400/60  bg-black/0 
         backdrop-blur-md p-4 shadow-sm">
-          <h2 className="mb-4 text-2xl font-bold">Demo Projects</h2>
+          <h2 className="mb-4 text-2xl font-bold">Web Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
   <ProjectCard
     className="grayscale hover:grayscale-0"
-    title="Glöd Restaurant"
-    tags={["TypeScript", "Next.js", "Next.js API Routes", "Tailwind CSS", "React", "Vercel"]}
-    imageUrl="/glod.png"
-    demoUrl="https://glod-liard.vercel.app"
-    githubUrl="https://github.com/jakobdahlin/glodrestaurant"
+    title="Jakob Dahlin"
+    tags={["TypeScript", "Next.js", "Tailwind CSS", "Stripe", "Vercel"]}
+    imageUrl="/jd-demo.png"
+    demoUrl="https://jakobdahlin.com"
+    githubUrl={undefined}
   />
     <ProjectCard
     className="grayscale hover:grayscale-0"
     title="Alida UI - Open-Source npm"
-    tags={["TypeScript", "Next.js", "Tailwind CSS", "React", "npm", "Vercel"]}
+    tags={["TypeScript", "Next.js", "Tailwind CSS", "npm", "Vercel"]}
     imageUrl="/alida.png"
     demoUrl="https://alidaui.vercel.app"
     githubUrl="https://github.com/jakobdahlin/alidaui"

@@ -12,7 +12,7 @@ interface ProjectCardProps {
   tags: string[]
   imageUrl: string
   demoUrl: string
-  githubUrl: string
+  githubUrl?: string
 }
 
 export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: ProjectCardProps) {
@@ -58,22 +58,35 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
             >
               <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-5 w-5" />
-                Demo
+                View
               </Link>
             </Button>
 
-            <Button
-              asChild
-              size="sm"
-              className="w-full gap-1 px-6 py-2 rounded-xl 
-              bg-transparent border border-neutral-400/60 hover:border-white
-              transition ease-in-out hover:shadow-lg hover:shadow-white/50 transform duration-200 hover:bg-white/20 hover:text-white"
-            >
-              <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5" />
-                Code
-              </Link>
-            </Button>
+            {githubUrl ? (
+  <Button
+    asChild
+    size="sm"
+    className="w-full gap-1 px-6 py-2 rounded-xl 
+    bg-transparent border border-neutral-400/60 hover:border-white
+    transition ease-in-out hover:shadow-lg hover:shadow-white/50 
+    duration-200 hover:bg-white/20 hover:text-white"
+  >
+    <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+      <Github className="h-5 w-5" />
+      Code
+    </Link>
+  </Button>
+) : (
+  <Button
+    size="sm"
+    disabled
+    className="w-full gap-1 px-6 py-2 rounded-xl 
+    bg-transparent border border-neutral-400/40 text-neutral-400 cursor-not-allowed"
+  >
+    <Github className="h-5 w-5" />
+    Available Upon Request
+  </Button>
+)}
           </CardFooter>
 
         </div>

@@ -8,6 +8,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react";
 import ShinyText from './ShinyText';
+import LiquidGlassSurface from "@/components/liquidglass/liquidglasssurface";
 
 export default function IntroCard() {
 
@@ -33,14 +34,12 @@ export default function IntroCard() {
   }, []);
 
   return (
-<motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-        className="relative w-full max-w-2xl h-auto
-        rounded-3xl flex flex-col justify-between backdrop-blur-sm
-        p-2 z-10 border border-neutral-500/50 mx-4"
-      >
+    <LiquidGlassSurface
+  radius={24}
+  refraction={0.012}
+  blur={1.6}
+  className="w-full max-w-2xl h-auto rounded-3xl p-2 z-10 border border-neutral-500/50 mx-4"
+>
 
 <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -48,7 +47,7 @@ export default function IntroCard() {
         transition={{ duration: 0.5 }}
         className="relative max-w-2xl
         rounded-2xl flex flex-col justify-between
-        px-2 z-10 border border-neutral-500/50"
+        px-2 z-10"
       >
         <div className="flex justify-between p-2 text-neutral-500 uppercase text-sm w-full">
           <motion.span
@@ -166,6 +165,6 @@ export default function IntroCard() {
 
 
         </motion.div> 
-      </motion.div> 
+      </LiquidGlassSurface>
   )
 }
