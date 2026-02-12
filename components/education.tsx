@@ -3,14 +3,10 @@
 import { motion, AnimatePresence, Variants } from "framer-motion"
 import {
   School,
-  ShieldCheck,
   MapPin,
   CalendarDays,
-  GraduationCap,
   BookCheck,
   Check,
-  BookOpen,
-  ArrowDownToLine,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -28,19 +24,6 @@ export function Education() {
 
   return (
     <div className="space-y-10">
-      {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="text-left"
-      >
-        <p className="text-white/60 max-w-2xl">
-          My educational background combines creativity, structure, and discipline —
-          from media and design to military service.
-        </p>
-      </motion.div>
 
       {/* --- Swedish Armed Forces --- */}
       <motion.section
@@ -65,14 +48,6 @@ export function Education() {
             </div>
             <p className="text-neutral-400">Military Service</p>
             <span className="text-neutral-400">Field Operations & Culinary Training</span>
-          </motion.div>
-
-          <motion.div variants={fadeUp} custom={2} className="space-y-2">
-            <div className="flex items-center gap-1 mb-1">
-              <GraduationCap className="h-4 w-4 text-white" />
-              <span className="text-white font-bold">Degree:</span>
-            </div>
-            <p className="text-neutral-400">Diploma & Service Medal</p>
           </motion.div>
 
           <motion.div variants={fadeUp} custom={3} className="space-y-2">
@@ -127,14 +102,6 @@ export function Education() {
               <span className="text-white font-bold">Major:</span>
             </div>
             <p className="text-neutral-400">Media Communication</p>
-          </motion.div>
-
-          <motion.div variants={fadeUp} custom={8} className="space-y-2">
-            <div className="flex items-center gap-1 mb-1">
-              <GraduationCap className="h-4 w-4 text-white" />
-              <span className="text-white font-bold">Degree:</span>
-            </div>
-            <p className="text-neutral-400">Upper Secondary Diploma</p>
           </motion.div>
 
           <motion.div variants={fadeUp} custom={9} className="space-y-2">

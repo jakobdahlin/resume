@@ -50,12 +50,12 @@ export function ExperienceTimeline() {
             variants={fadeUp}
             transition={{ delay: 0.2 }}
           >
-            I run a multidisciplinary business under my own name where I work
-            end-to-end across every branch of both digital product development
-            and photography. That includes everything from finance, marketing,
-            and client management to UX, engineering, branding, and content.
-            Whether I'm building software or photographing buildings, I handle
-            every part of the process myself—from concept to execution.
+            Product Designer & UX Engineer with 15+ years of experience across 
+            digital design, frontend development, and visual systems. I run an 
+            independent UX/UI and frontend practice, building products from 
+            concept to launch in Next.js and React while iterating primarily in code. 
+            In parallel, I operate a high-end architectural photography business 
+            serving leading residential and commercial real estate clients in New York.
           </motion.p>
 
           {/* Product Designer & UX Engineer */}
@@ -74,25 +74,14 @@ export function ExperienceTimeline() {
               <span className="text-neutral-400">New York, NY (Remote)</span>
             </div>
 
-            <p className="text-neutral-400 pb-4">
-              I design and build responsive, accessible websites and digital
-              products that combine clean UX with strong visual design. My
-              background in architectural photography sharpens my focus on
-              structure, layout, and hierarchy. I work across all product
-              functions—design, research, product management, engineering, and
-              content design—to create functional and scalable experiences.
-            </p>
-
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Design web and mobile products end-to-end, from wireframe to ship</li>
-              <li>Build responsive, mobile-first websites and apps with React, Next.js, and Tailwind CSS</li>
-              <li>Design and build reusable UI components directly in React and Tailwind CSS</li>
-              <li>Focus on accessibility, layout, typography, and visual hierarchy</li>
-              <li>Develop interactive tools and websites with clean, scalable code</li>
-              <li>Design directly in code, iterating live and refining with feedback</li>
-              <li>Optimize websites for SEO with clean structure and performance</li>
-              <li>Manage e-commerce tracking, affiliate tools, and analytics</li>
-              <li>Create logos, branding, icons, motion graphics, and print assets</li>
+              <li>Design and ship web products end-to-end, from concept to production</li>
+              <li>Build responsive applications with Next.js, React, TypeScript, and Tailwind CSS</li>
+              <li>Develop scalable component libraries and UI systems in code</li>
+              <li>Translate product and UX decisions into maintainable frontend architecture</li>
+              <li>Ensure accessibility, performance, and strong typographic hierarchy</li>
+              <li>Structure applications for SEO, speed, and long-term scalability</li>
+              <li>Launch, test, and iterate products independently</li>
             </ul>
 
             {/* Photographer */}
@@ -104,12 +93,12 @@ export function ExperienceTimeline() {
               <span className="text-neutral-400">New York, NY (Hybrid)</span>
             </div>
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Document major architectural projects for real estate, design, and global brands</li>
-              <li>Photographed Empire State Building, The Woolworth Building, The Refinery at Domino, and more</li>
-              <li>Work featured on Bravo’s <i>Million Dollar Listing: New York</i> and published via IKEA</li>
-              <li>Cover design and culture events across New York City</li>
-              <li>Built an archive of 200,000+ images from U.S. cities and abroad</li>
-              <li>Specialize in clean, editorial-style photography for architecture and interiors</li>
+              <li>Serve leading NYC real estate agencies, developers, and property owners</li>
+              <li>Produce architectural photography for marketing, branding, and publication</li>
+              <li>Photographed landmark properties including the Empire State Building and The Woolworth Building</li>
+              <li>Featured on Bravo’s Million Dollar Listing New York and licensed by global brands including IKEA</li>
+              <li>Built and manage a 200,000+ image architectural archive</li>
+              <li>Recognized for clean, editorial architecture and interior photography</li>
             </ul>
           </motion.div>
         </div>
@@ -117,20 +106,15 @@ export function ExperienceTimeline() {
 
       {/* Other Experience */}
       <motion.div
-        className="space-y-4"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
+            className="mt-1 text-white"
+            variants={fadeUp}
+            transition={{ delay: 0.1 }}
+          >
+            <div className="flex items-center gap-1">
+              <Building className="h-4 w-4 text-white" />
+              <h3 className="text-xl font-semibold">Örebro Municipality</h3>
+            </div>
         <div>
-          <div className="flex items-center gap-2">
-            <h3 className="text-2xl font-semibold">Other Experience</h3>
-          </div>
-
-          <div className="mt-1 text-white">
-            <h3 className="text-xl font-semibold">Örebro Municipality</h3>
-          </div>
 
           <div className="border-l m-4 px-4">
             <h4 className="text-lg font-semibold text-white mt-6">Childcare Worker</h4>
@@ -140,11 +124,12 @@ export function ExperienceTimeline() {
               <MapPin className="h-4 w-4 text-white ml-4" />
               <span className="text-neutral-400">Örebro, Sweden (On-Site)</span>
             </div>
-            <p className="w-full text-neutral-400 text-md">
-              Planned activities, managed documentation, communicated with parents,
-              and handled digital tasks such as organizing lists and creating
-              marketing and social media materials.
-            </p>
+            <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
+              <li>Planned structured programs and managed daily operations</li>
+              <li>Created digital documentation systems and organized internal workflows</li>
+              <li>Designed communication materials and managed social media presence</li>
+              <li>Developed visual and marketing assets for parents and community outreach</li>
+            </ul>
 
             <h4 className="text-lg font-semibold text-white mt-6">System Administrator</h4>
             <div className="flex items-center gap-1 mb-3">
@@ -153,13 +138,12 @@ export function ExperienceTimeline() {
               <MapPin className="h-4 w-4 text-white ml-4" />
               <span className="text-neutral-400">Örebro, Sweden (On-Site)</span>
             </div>
-            <p className="w-full text-neutral-400 text-md">
-              Managed the website, social media, and marketing materials for a
-              project that connected job seekers with companies through a
-              custom-built platform. Interviewed candidates and supported
-              recruitment to help match companies with the best possible
-              applicants.
-            </p>
+            <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
+              <li>Managed website, digital infrastructure, and social media presence</li>
+              <li>Designed marketing materials and user-facing communication assets</li>
+              <li>Supported a custom-built recruitment platform connecting job seekers and employers</li>
+              <li>Conducted interviews and helped optimize candidate-company matching workflows</li>
+            </ul>
           </div>
         </div>
       </motion.div>
