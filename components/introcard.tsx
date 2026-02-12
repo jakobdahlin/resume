@@ -138,7 +138,7 @@ export default function IntroCard() {
   </Link>
 
   <a
-    href="/JDResume2025.pdf"
+    href="/JDResume2026.pdf"
     target="_blank"
     className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
     border border-neutral-500/50 hover:border-white hover:shadow-lg hover:shadow-white/50 
