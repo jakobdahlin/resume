@@ -4,7 +4,6 @@
       "./types",
       "./node_modules/@types"
     ],
-    
     "lib": [
       "dom",
       "dom.iterable",
@@ -20,7 +19,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "types": [
       "react"
     ],
@@ -41,7 +40,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "react-three-fiber-jsx.d.ts"
+    "react-three-fiber-jsx.d.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
