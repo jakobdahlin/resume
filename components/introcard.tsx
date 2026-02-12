@@ -100,10 +100,9 @@ export default function IntroCard() {
         transition={{ duration: 3, delay: 1 }}
         className="text-neutral-400 text-center text-md px-2 pb-10 mx-4">
         <ShinyText 
-        text="Designing and building digital products with 10+ years of web
-          development experience and expertise in UX engineering. Creating
-          responsive, accessible interfaces that balance clean design, usability,
-          SEO optimization, and scalable code." 
+        text="Designing and building digital products with 15+ years of experience across visual design, 
+        frontend development, and UX engineering. I create responsive, accessible interfaces that balance 
+        clean design, usability, SEO, and scalable architecture." 
           disabled={false} 
           speed={3} 
           className='custom-class' 
