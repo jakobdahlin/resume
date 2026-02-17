@@ -52,8 +52,11 @@ export default function SkeletonCard() {
             </div>
             <button
               onClick={simulateLoading}
-              className="mt-auto px-4 py-2 border border-white/20 hover:border-white/10 
-              hover:bg-white/10 hover:scale-95 rounded-xl transition"
+              className="flex items-center justify-center gap-2 py-2 rounded-lg
+            bg-transparent border
+            border-neutral-400/60 hover:border-white transition ease-in-out
+            hover:shadow-lg hover:shadow-white/50 transform duration-300
+            hover:bg-white/20 hover:text-white text-center cursor-pointer"
             >
               Reload
             </button>

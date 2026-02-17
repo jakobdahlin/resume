@@ -19,7 +19,7 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
   return (
     <div className="h-full">
       <Card className="flex flex-col h-full overflow-hidden transition-all 
-      hover:shadow-md bg-transparent border border-neutral-400/50 duration-200 w-full">
+      hover:shadow-md bg-transparent border border-neutral-400/30 duration-200 w-full">
         
         {/* Top image */}
         <div className="relative w-full h-64">
@@ -48,12 +48,12 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
             </div>
           </CardContent>
 
-          <CardFooter className="flex flex-wrap sm:flex-row justify-between gap-2 p-4 pt-0">
+          <CardFooter className="flex flex-wrap sm:flex-grow col-span-2 justify-between gap-2 p-4 pt-0">
             <Button
               asChild
               size="sm"
-              className="w-full gap-1 px-6 py-2 rounded-xl
-              bg-transparent border border-neutral-400/60 hover:border-white 
+              className="w-full gap-1 px-6 py-2 rounded-sm
+              bg-transparent border border-neutral-400/30 hover:border-white 
               transition ease-in-out hover:shadow-lg hover:shadow-white/50 transform duration-200 hover:bg-white/20 hover:text-white"
             >
               <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
@@ -66,8 +66,8 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
   <Button
     asChild
     size="sm"
-    className="w-full gap-1 px-6 py-2 rounded-xl 
-    bg-transparent border border-neutral-400/60 hover:border-white
+    className="w-full gap-1 px-6 py-2 rounded-sm 
+    bg-transparent border border-neutral-400/30 hover:border-white
     transition ease-in-out hover:shadow-lg hover:shadow-white/50 
     duration-200 hover:bg-white/20 hover:text-white"
   >
@@ -80,11 +80,11 @@ export function ProjectCard({ title, tags, imageUrl, demoUrl, githubUrl }: Proje
   <Button
     size="sm"
     disabled
-    className="w-full gap-1 px-6 py-2 rounded-xl 
+    className="w-full gap-1 px-6 py-2 rounded-sm 
     bg-transparent border border-neutral-400/40 text-neutral-400 cursor-not-allowed"
   >
     <Github className="h-5 w-5" />
-    Available Upon Request
+    Request Only
   </Button>
 )}
           </CardFooter>

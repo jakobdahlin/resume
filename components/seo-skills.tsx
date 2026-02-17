@@ -76,7 +76,7 @@ export function SeoSkills() {
   {contentSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
+    className="p-[1px] rounded-xl border border-neutral-400/30 hover:border-white hover:bg-white/20
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div
@@ -95,7 +95,7 @@ export function SeoSkills() {
   {strategySkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
+    className="p-[1px] rounded-xl border border-neutral-400/30 hover:border-white hover:bg-white/20
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div
@@ -114,7 +114,7 @@ export function SeoSkills() {
   {inttrackSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
+    className="p-[1px] rounded-xl border border-neutral-400/30 hover:border-white hover:bg-white/20
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div
@@ -133,7 +133,7 @@ export function SeoSkills() {
   {commerceSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
+    className="p-[1px] rounded-xl border border-neutral-400/30 hover:border-white hover:bg-white/20
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div
@@ -152,7 +152,7 @@ export function SeoSkills() {
   {optimizationSkills.map((skill) => (
     <div
     key={skill.name}
-    className="p-[1px] rounded-xl border border-neutral-400/60 hover:border-white hover:bg-white/20
+    className="p-[1px] rounded-xl border border-neutral-400/30 hover:border-white hover:bg-white/20
     hover:shadow-lg hover:shadow-white/50 transform duration-200 ease-in-out"
   >
     <div

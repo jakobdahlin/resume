@@ -60,7 +60,7 @@ export function ExperienceTimeline() {
 
           {/* Product Designer & UX Engineer */}
           <motion.div
-            className="border-l m-4 px-4"
+            className="border-l border-neutral-400/50 m-4 px-4"
             variants={fadeUp}
             transition={{ delay: 0.3 }}
           >
@@ -116,7 +116,7 @@ export function ExperienceTimeline() {
             </div>
         <div>
 
-          <div className="border-l m-4 px-4">
+          <div className="border-l border-neutral-400/50 m-4 px-4">
             <h4 className="text-lg font-semibold text-white mt-6">Childcare Worker</h4>
             <div className="flex items-center gap-1 mb-3">
               <CalendarDays className="h-4 w-4 text-white" />

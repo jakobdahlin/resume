@@ -93,7 +93,7 @@ useEffect(() => {
 <section className="w-full max-w-[1600px] mx-auto pb-4">
   <div className="grid grid-cols-1 gap-4">
     <div className="col-span-1 sm:col-span- md:col-span-4 lg:col-span-12 
-       row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
+       row-span-1 rounded-2xl overflow-hidden border border-neutral-400/30">
           <div className="h-full w-full p-4 flex items-center justify-center">
             <Logotypes/>
           </div>
@@ -105,7 +105,7 @@ useEffect(() => {
 <section className="w-full max-w-[1600px] mx-auto pb-4">
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4">
     <div className="bg-neutral-900 col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-3 
-      row-span-1 rounded-2xl overflow-hidden border border-neutral-400/20">
+      row-span-1 rounded-2xl overflow-hidden border border-neutral-400/30">
              <h2 className="p-4 text-2xl font-bold">Button Design</h2>
           <div className="w-full p-4 flex items-center justify-center">
             
@@ -118,7 +118,7 @@ useEffect(() => {
 
 {/* LOGIN --------------------------------------------------- */}
   <div 
-      className="relative col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-6 row-span-1 rounded-2xl border border-neutral-800 
+      className="relative col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-6 row-span-1 rounded-2xl border border-neutral-400/30
         bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0 flex flex-col items-center justify-center"
     >
 
@@ -154,7 +154,7 @@ useEffect(() => {
 {/* LOGIN INFO --------------------------------------------------- */}
     <div 
           className="col-span-1 sm:col-span-2 md:col-span-4 lg:col-span-3 row-span-1 
-          rounded-2xl overflow-hidden border border-neutral-400/20"
+          rounded-2xl overflow-hidden border border-neutral-400/30"
         ><div className="p-4 animate-fade-in">
     <h2 className="mb-4 text-2xl font-bold">Login Component</h2>
     <p className="text-sm text-neutral-400">A soft-glow login form made for dark interfaces, 
@@ -182,9 +182,11 @@ onClick={() => {
   setShowOverlay(true);
   setBgIndex((prev) => (prev + 1) % bgImages.length);
 }}
-        className="relative z-20 mt-4 w-full mx-auto text-white bg-white/10 border border-white/20 rounded-xl 
-        hover:border-white hover:bg-white/20 
-        hover:shadow-lg hover:shadow-white/50 transition duration-300 py-2 flex items-center justify-center gap-2"
+        className="relative z-20 mt-4 w-full mx-auto text-white flex items-center justify-center gap-2 py-2 rounded-lg 
+            bg-transparent border
+            border-neutral-400/60 hover:border-white transition ease-in-out
+            hover:shadow-lg hover:shadow-white/50 transform duration-300
+            hover:bg-white/20 hover:text-white text-center cursor-pointer"
       >
         <ImageIcon size={18} />
         Change Background
@@ -198,11 +200,11 @@ onClick={() => {
   className="mt-4 w-full"
 >
   <motion.div
-    className="flex items-center w-full justify-center gap-2 py-2 rounded-xl 
-    bg-white/10 border
-    border-white/20 hover:border-white transition ease-in-out z-800
-    hover:shadow-lg hover:shadow-white/50 transform duration-300
-    hover:bg-white/20 hover:text-white text-center cursor-pointer"
+    className="flex items-center justify-center gap-2 py-2 rounded-lg 
+            bg-transparent border
+            border-neutral-400/60 hover:border-white transition ease-in-out
+            hover:shadow-lg hover:shadow-white/50 transform duration-300
+            hover:bg-white/20 hover:text-white text-center cursor-pointer"
     whileHover={{ scale: 1.0 }}
     whileTap={{ scale: 0.95 }}
   >
@@ -300,8 +302,11 @@ onClick={() => {
             scale: 0.95,
             borderRadius: "30px",
           }}
-          className="px-10 py-3 w-1/2 rounded-xl border border-white/20 hover:border-white/20 text-white 
-          font-medium transition-colors"
+          className="flex items-center justify-center gap-2 py-2 rounded-lg 
+            bg-transparent border
+            border-neutral-400/60 hover:border-white transition ease-in-out
+            hover:shadow-lg hover:shadow-white/50 transform duration-300
+            hover:bg-white/20 hover:text-white text-center cursor-pointer"
         >
           Preview
         </motion.button>

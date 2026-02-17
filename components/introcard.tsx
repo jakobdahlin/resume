@@ -34,19 +34,21 @@ export default function IntroCard() {
   }, []);
 
   return (
-    <LiquidGlassSurface
-  radius={24}
-  refraction={0.012}
-  blur={1.6}
-  className="w-full max-w-2xl h-auto rounded-3xl p-2 z-10 border border-neutral-500/50 mx-4"
->
+    <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    className="relative max-w-2xl border border-white/20
+    rounded-2xl flex flex-col justify-between p-2
+    px-2 z-10"
+  >
 
 <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative max-w-2xl
-        rounded-2xl flex flex-col justify-between
+        className="relative max-w-2xl border border-white/20
+        rounded-lg flex flex-col justify-between
         px-2 z-10"
       >
         <div className="flex justify-between p-2 text-neutral-500 uppercase text-sm w-full">
@@ -164,6 +166,6 @@ export default function IntroCard() {
 
 
         </motion.div> 
-      </LiquidGlassSurface>
+        </motion.div> 
   )
 }

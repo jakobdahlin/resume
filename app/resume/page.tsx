@@ -51,7 +51,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
-        className="col-span-9 mb-4 rounded-2xl border border-neutral-400/60
+        className="col-span-9 mb-4 rounded-2xl border border-neutral-400/30
         bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
           <h2 className="mb-4 text-2xl font-bold">Experience</h2>
           <ExperienceTimeline />
@@ -62,7 +62,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }} 
-                className="col-span-3 mb-4 rounded-2xl border border-neutral-400/60  
+                className="col-span-3 mb-4 rounded-2xl border border-neutral-400/30  
                 bg-black/0 backdrop-blur-md p-4 shadow-sm md:mb-0">
           <h2 className="mb-4 text-2xl font-bold">Education</h2>
           <Education />
@@ -74,7 +74,7 @@ export default function Home() {
   animate={{ opacity: 1 }}
   transition={{ duration: 3 }}
   className="col-span-4 rounded-2xl border 
-  border-neutral-400/60 bg-black/0 
+  border-neutral-400/30 bg-black/0 
   backdrop-blur-md p-4 shadow-sm mb-4 lg:mb-0 md:mb-0"
 >
   <h2 className="mb-4 text-2xl font-bold">Languages</h2>
@@ -98,7 +98,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }} className="col-span-4 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border 
-        border-neutral-400/60  bg-black/0 
+        border-neutral-400/30  bg-black/0 
         backdrop-blur-md p-4 shadow-sm">
  <div className="flex gap-2 mb-4 items-center">
   <ShieldCheck className="h-5 w-5 text-white" />
@@ -110,8 +110,8 @@ export default function Home() {
 <div className="flex mt-4">
 <Link
     href="/certificate"
-    className="flex items-center gap-2 px-6 py-2 rounded-xl bg-transparent border 
-    border-neutral-400/20 hover:border-white transition ease-in-out
+    className="flex items-center gap-2 px-6 py-2 rounded-md bg-transparent border 
+    border-neutral-400/30 hover:border-white transition ease-in-out
     hover:shadow-lg hover:shadow-white/50 transform duration-300 
     hover:bg-white/20 hover:text-white text-center"
   >
@@ -127,7 +127,7 @@ export default function Home() {
 <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3 }} className="col-span-4 row-span-2 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-400/60 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        transition={{ duration: 3 }} className="col-span-4 row-span-2 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-400/30 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Web Development Skills</h2>
           <SkillsSection />
         </motion.section>
@@ -137,10 +137,10 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }} className="col-span-8 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border 
-        border-neutral-400/60  bg-black/0 
+        border-neutral-400/30  bg-black/0 
         backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Web Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
   <ProjectCard
     className="grayscale hover:grayscale-0"
     title="Jakob Dahlin"
@@ -157,6 +157,14 @@ export default function Home() {
     demoUrl="https://alidaui.vercel.app"
     githubUrl="https://github.com/jakobdahlin/alidaui"
   />
+  <ProjectCard
+    className="grayscale hover:grayscale-0"
+    title="Tivemrark's Recipes"
+    tags={["TypeScript", "Next.js", "Tailwind CSS", "Vercel"]}
+    imageUrl="/tivemarksrecept.jpg"
+    demoUrl="https://tivemarksrecept.vercel.app"
+    githubUrl="https://github.com/jakobdahlin/tivemarksrecept"
+  />
 </div>
 
         </motion.section>
@@ -168,7 +176,7 @@ export default function Home() {
         <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3 }} className="col-span-6 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-400/60 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        transition={{ duration: 3 }} className="col-span-6 mb-4 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-400/30 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">SEO Skills</h2>
           <SeoSkills />
         </motion.section>
@@ -177,7 +185,7 @@ export default function Home() {
         <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3 }} className="col-span-6 mb-2 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-400/60 bg-black/0 backdrop-blur-md p-4 shadow-sm">
+        transition={{ duration: 3 }} className="col-span-6 mb-2 lg:mb-0 md:mb-0 sm:mb-4 rounded-2xl border border-neutral-400/30 bg-black/0 backdrop-blur-md p-4 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold">Design Skills</h2>
           <GraphicDesignSection />
         </motion.section>

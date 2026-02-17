@@ -208,12 +208,12 @@ useEffect(() => {
 
     setTimeout(() => {
       setActiveSkill(null);
-    }, 800); // glow duration
+    }, 1000); // glow duration
 
     timeout = setTimeout(triggerFlash, 1500); // delay between flashes
   };
 
-  timeout = setTimeout(triggerFlash, 4500);
+  timeout = setTimeout(triggerFlash, 500);
 
   return () => clearTimeout(timeout);
 }, [inView]);
@@ -226,7 +226,7 @@ useEffect(() => {
           {coreSkills.map((skill) => (
             <div
               key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/60 transform duration-1000 ease-in-out
+              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
                 ${skill.hoverClasses}
                 ${activeSkill === skill.name ? skill.activeClasses : ""}
               `}
@@ -245,7 +245,7 @@ useEffect(() => {
           {stylingSkills.map((skill) => (
             <div
               key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/60 transform duration-1000 ease-in-out
+              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
                 ${skill.hoverClasses}
                 ${activeSkill === skill.name ? skill.activeClasses : ""}
               `}
@@ -264,7 +264,7 @@ useEffect(() => {
           {vcdepSkills.map((skill) => (
             <div
               key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/60 transform duration-1000 ease-in-out
+              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
                 ${skill.hoverClasses}
                 ${activeSkill === skill.name ? skill.activeClasses : ""}
               `}
@@ -283,7 +283,7 @@ useEffect(() => {
           {codingSkills.map((skill) => (
             <div
               key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/60 transform duration-1000 ease-in-out
+              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
                 ${skill.hoverClasses}
                 ${activeSkill === skill.name ? skill.activeClasses : ""}
               `}
@@ -303,7 +303,7 @@ useEffect(() => {
           {aidesignSkills.map((skill) => (
             <div
               key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/60 transform duration-1000 ease-in-out
+              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
                 ${skill.hoverClasses}
                 ${activeSkill === skill.name ? skill.activeClasses : ""}
               `}

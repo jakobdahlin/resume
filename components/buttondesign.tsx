@@ -80,7 +80,7 @@ interface CardProps {
       <Link target="_blank" rel="noopener noreferrer" 
       href="https://github.com/jakobdahlin/resume/blob/main/components/buttondesign.tsx">
           <div
-            className="flex items-center justify-center gap-2 py-2 rounded-xl 
+            className="flex items-center justify-center gap-2 py-2 rounded-lg 
             bg-transparent border
             border-neutral-400/60 hover:border-white transition ease-in-out
             hover:shadow-lg hover:shadow-white/50 transform duration-300
