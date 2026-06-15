@@ -11,7 +11,7 @@ const kumbhSans = Kumbh_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Jakob Dahlin | Product Designer & UX Engineer",
+  title: "Jakob Dahlin | Design Engineer",
   description:
     "Jakob Dahlin resume. Modern web development, UI/UX design, and SEO.",
   icons: { icon: "/JD_ID.png" },

@@ -1,13 +1,14 @@
 import { CalendarDays, Building, MapPin } from "lucide-react"
 import { motion, Variants } from "framer-motion"
+import Image from "next/image"
 
 export function ExperienceTimeline() {
   const fadeUp: Variants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.6, ease: "easeOut" } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     },
   }
 
@@ -24,7 +25,7 @@ export function ExperienceTimeline() {
         <div>
           <div className="flex items-center gap-2">
             <h3 className="text-xl font-semibold">
-              Founder, Photographer & Product Designer
+              Founder, Design Engineer & Architectural Photographer
             </h3>
             <span className="inline-block rounded-full p-[1px] text-white animate-pulse-slow shadow-lg 
             border border-sky-200  bg-sky-400/30 shadow-blue-500/50">
@@ -39,9 +40,13 @@ export function ExperienceTimeline() {
             variants={fadeUp}
             transition={{ delay: 0.1 }}
           >
-            <div className="flex items-center gap-1">
-              <Building className="h-4 w-4 text-white" />
-              <h3 className="text-lg font-semibold pl-2">Jakob Dahlin</h3>
+            <div className="flex items-center gap-3">
+              <img
+                src="/jdlogo.png"
+                alt="Jakob Dahlin logo"
+                className="h-6 w-6 object-contain hover:scale-150 transition duration-200"
+              />
+              <h3 className="text-lg font-semibold">Jakob Dahlin</h3>
             </div>
           </motion.div>
 
@@ -50,12 +55,12 @@ export function ExperienceTimeline() {
             variants={fadeUp}
             transition={{ delay: 0.2 }}
           >
-            Product Designer & UX Engineer with 15+ years of experience across 
-            digital design, frontend development, and visual systems. I run an 
-            independent UX/UI and frontend practice, building products from 
-            concept to launch in Next.js and React while iterating primarily in code. 
-            In parallel, I operate a high-end architectural photography business 
-            serving leading residential and commercial real estate clients in New York.
+            Design Engineer with 15+ years of experience designing and building customer-facing
+            products across frontend development, visual design, and digital experiences.
+            I build customer facing products in React, Next.js, and TypeScript, with a focus on
+            usability, performance, accessibility, and visual craftsmanship. As the founder of an
+            independent product and creative business, I designed and developed a proprietary
+            image licensing platform that supports search, ecommerce, licensing, and digital asset delivery.
           </motion.p>
 
           {/* Product Designer & UX Engineer */}
@@ -65,7 +70,7 @@ export function ExperienceTimeline() {
             transition={{ delay: 0.3 }}
           >
             <h4 className="text-lg font-semibold text-white mt-6">
-              Product Designer & UX Engineer
+              Design  Engineer
             </h4>
             <div className="flex items-center gap-1 mb-3">
               <CalendarDays className="h-4 w-4 text-white" />
@@ -75,17 +80,17 @@ export function ExperienceTimeline() {
             </div>
 
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Design and ship web products end-to-end, from concept to production</li>
-              <li>Build responsive applications with Next.js, React, TypeScript, and Tailwind CSS</li>
-              <li>Develop scalable component libraries and UI systems in code</li>
-              <li>Translate product and UX decisions into maintainable frontend architecture</li>
-              <li>Ensure accessibility, performance, and strong typographic hierarchy</li>
-              <li>Structure applications for SEO, speed, and long-term scalability</li>
-              <li>Launch, test, and iterate products independently</li>
+              <li>Designed and developed digital products from concept through production using React, Next.js,
+                TypeScript, and Tailwind CSS</li>
+              <li>Built and operate a proprietary photography licensing platform supporting image discovery,
+                ecommerce, licensing, and digital asset delivery</li>
+              <li>Develop scalable frontend architectures, design systems, and reusable React component libraries</li>
+              <li>Translate UX and product requirements into performant, accessible, production-ready interfaces</li>
+              <li>Manage platform infrastructure, analytics, SEO, deployment, and product growth</li>
             </ul>
 
             {/* Photographer */}
-            <h4 className="text-lg font-semibold text-white mt-6">Principal Photographer</h4>
+            <h4 className="text-lg font-semibold text-white mt-6">Architectural Photographer</h4>
             <div className="flex items-center gap-1 mb-3">
               <CalendarDays className="h-4 w-4 text-white" />
               <span className="text-neutral-400">2016 - Present</span>
@@ -94,11 +99,10 @@ export function ExperienceTimeline() {
             </div>
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
               <li>Serve leading NYC real estate agencies, developers, and property owners</li>
+              <li>Built and manage a 200,000+ image architectural archive</li>
               <li>Produce architectural photography for marketing, branding, and publication</li>
               <li>Photographed landmark properties including the Empire State Building and The Woolworth Building</li>
-              <li>Featured on Bravo’s Million Dollar Listing New York and licensed by global brands including IKEA</li>
-              <li>Built and manage a 200,000+ image architectural archive</li>
-              <li>Recognized for clean, editorial architecture and interior photography</li>
+              <li>Featured on Bravo's Million Dollar Listing New York and licensed by global brands including IKEA</li>
             </ul>
           </motion.div>
         </div>
@@ -106,13 +110,17 @@ export function ExperienceTimeline() {
 
       {/* Other Experience */}
       <motion.div
-            className="mt-1 text-white"
-            variants={fadeUp}
-            transition={{ delay: 0.1 }}
-          >
-            <div className="flex items-center gap-1">
-              <Building className="h-4 w-4 text-white" />
-              <h3 className="text-xl font-semibold">Örebro Municipality</h3>
+        className="mt-1 text-white"
+        variants={fadeUp}
+        transition={{ delay: 0.1 }}
+      >
+            <div className="flex items-center gap-3">
+              <img
+                src="/okommun.png"
+                alt="Örebro Municipality logo"
+                className="h-6 w-6 object-contain hover:scale-150 transition duration-200"
+              />
+              <h3 className="text-lg font-semibold">Örebro Municipality</h3>
             </div>
         <div>
 

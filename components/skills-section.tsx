@@ -213,110 +213,139 @@ useEffect(() => {
     timeout = setTimeout(triggerFlash, 1500); // delay between flashes
   };
 
-  timeout = setTimeout(triggerFlash, 500);
+  timeout = setTimeout(triggerFlash, 1000);
 
   return () => clearTimeout(timeout);
 }, [inView]);
 
-  return (
-    <div ref={ref} className="space-y-6">
-      <div>
-        <h3 className="mb-3 text-lg font-medium">Core Technologies</h3>
-        <div className="flex flex-wrap gap-3">
-          {coreSkills.map((skill) => (
+return (
+  <div ref={ref} className="space-y-6">
+    <div>
+      <h3 className="mb-3 text-lg font-medium">Core Technologies</h3>
+      <div className="flex flex-wrap gap-3">
+        {coreSkills.map((skill) => (
+          <div
+            key={skill.name}
+            className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
+              ${skill.hoverClasses}
+              ${activeSkill === skill.name ? skill.activeClasses : ""}
+            `}
+          >
             <div
-              key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
-                ${skill.hoverClasses}
-                ${activeSkill === skill.name ? skill.activeClasses : ""}
-              `}
+              className={`px-2 py-1 rounded-xl transition-colors duration-200 ${
+                activeSkill === skill.name
+                  ? "text-white"
+                  : "text-neutral-400 hover:text-white"
+              }`}
             >
-              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
-                {skill.name}
-              </div>
+              {skill.name}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-
-      <div>
-        <h3 className="mb-3 text-lg font-medium">Styling & Animation</h3>
-        <div className="flex flex-wrap gap-3">
-          {stylingSkills.map((skill) => (
-            <div
-              key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
-                ${skill.hoverClasses}
-                ${activeSkill === skill.name ? skill.activeClasses : ""}
-              `}
-            >
-              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
-                {skill.name}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <h3 className="mb-3 text-lg font-medium">Version Control & Deployment</h3>
-        <div className="flex flex-wrap gap-3">
-          {vcdepSkills.map((skill) => (
-            <div
-              key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
-                ${skill.hoverClasses}
-                ${activeSkill === skill.name ? skill.activeClasses : ""}
-              `}
-            >
-              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
-                {skill.name}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <h3 className="mb-3 text-lg font-medium">IDE & Development Tools</h3>
-        <div className="flex flex-wrap gap-3">
-          {codingSkills.map((skill) => (
-            <div
-              key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
-                ${skill.hoverClasses}
-                ${activeSkill === skill.name ? skill.activeClasses : ""}
-              `}
-            >
-              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
-                {skill.name}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-
-      <div>
-        <h3 className="mb-3 text-lg font-medium">AI-Assisted Design & Development</h3>
-        <div className="flex flex-wrap gap-3">
-          {aidesignSkills.map((skill) => (
-            <div
-              key={skill.name}
-              className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
-                ${skill.hoverClasses}
-                ${activeSkill === skill.name ? skill.activeClasses : ""}
-              `}
-            >
-              <div className="px-2 py-1 rounded-xl text-neutral-400 hover:text-white transition-colors duration-200">
-                {skill.name}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-
     </div>
-  );
+
+    <div>
+      <h3 className="mb-3 text-lg font-medium">Styling & Animation</h3>
+      <div className="flex flex-wrap gap-3">
+        {stylingSkills.map((skill) => (
+          <div
+            key={skill.name}
+            className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
+              ${skill.hoverClasses}
+              ${activeSkill === skill.name ? skill.activeClasses : ""}
+            `}
+          >
+            <div
+              className={`px-2 py-1 rounded-xl transition-colors duration-200 ${
+                activeSkill === skill.name
+                  ? "text-white"
+                  : "text-neutral-400 hover:text-white"
+              }`}
+            >
+              {skill.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h3 className="mb-3 text-lg font-medium">Version Control & Deployment</h3>
+      <div className="flex flex-wrap gap-3">
+        {vcdepSkills.map((skill) => (
+          <div
+            key={skill.name}
+            className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
+              ${skill.hoverClasses}
+              ${activeSkill === skill.name ? skill.activeClasses : ""}
+            `}
+          >
+            <div
+              className={`px-2 py-1 rounded-xl transition-colors duration-200 ${
+                activeSkill === skill.name
+                  ? "text-white"
+                  : "text-neutral-400 hover:text-white"
+              }`}
+            >
+              {skill.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h3 className="mb-3 text-lg font-medium">IDE & Development Tools</h3>
+      <div className="flex flex-wrap gap-3">
+        {codingSkills.map((skill) => (
+          <div
+            key={skill.name}
+            className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
+              ${skill.hoverClasses}
+              ${activeSkill === skill.name ? skill.activeClasses : ""}
+            `}
+          >
+            <div
+              className={`px-2 py-1 rounded-xl transition-colors duration-200 ${
+                activeSkill === skill.name
+                  ? "text-white"
+                  : "text-neutral-400 hover:text-white"
+              }`}
+            >
+              {skill.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h3 className="mb-3 text-lg font-medium">
+        AI-Assisted Design & Development
+      </h3>
+      <div className="flex flex-wrap gap-3">
+        {aidesignSkills.map((skill) => (
+          <div
+            key={skill.name}
+            className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
+              ${skill.hoverClasses}
+              ${activeSkill === skill.name ? skill.activeClasses : ""}
+            `}
+          >
+            <div
+              className={`px-2 py-1 rounded-xl transition-colors duration-200 ${
+                activeSkill === skill.name
+                  ? "text-white"
+                  : "text-neutral-400 hover:text-white"
+              }`}
+            >
+              {skill.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+);
 }

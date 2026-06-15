@@ -26,24 +26,24 @@ export default function IntroCard() {
       });
       setTime(`${month} ${day}, ${timePart}`);
     };
-  
+
     updateTime(); // Run immediately
     const interval = setInterval(updateTime, 1000); // Update every second
-  
+
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
   return (
     <motion.div
-    initial={{ opacity: 0, scale: 0.9 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.5 }}
-    className="relative max-w-2xl border border-white/20
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="relative max-w-2xl border border-white/20
     rounded-2xl flex flex-col justify-between p-2
     px-2 z-10"
-  >
+    >
 
-<motion.div
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -53,119 +53,126 @@ export default function IntroCard() {
       >
         <div className="flex justify-between p-2 text-neutral-500 uppercase text-sm w-full">
           <motion.span
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: 2 }}
-                  >{time}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 2 }}
+          >{time}
           </motion.span>
           <motion.span
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: 2 }}
-                  >New York, NY
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 2 }}
+          >New York, NY
           </motion.span>
         </div>
 
         <div className="flex justify-between p-2 text-neutral-500 uppercase text-sm w-full">
-        <motion.span
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 2 }} 
-                  className="flex flex-col w-full text-md text-center text-neutral-500 rounded-full">
+          <motion.span
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2 }}
+            className="flex flex-col w-full text-md text-center text-neutral-500 rounded-full">
             Product Designer
             -
             UX Engineer
-        </motion.span>
+          </motion.span>
         </div>
 
 
 
         <div className="text-center mt-2 py-2 mx-12">
-        <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 3, delay: 1 }} 
-        className="flex flex-col mx-auto justify-center gap-2">
-          <Image
-      src="/JAKOBDW.png"
-      alt="card3"
-      width={0}
-      height={0}
-      className="rounded-xl w-full max-w-xs mb-4 px-10 justify-center items-center flex mx-auto h-auto object-cover"
-    />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 3, delay: 1 }}
+            className="flex flex-col mx-auto justify-center gap-2">
+            <Image
+              src="/JAKOBDW.png"
+              alt="card3"
+              width={0}
+              height={0}
+              className="rounded-xl w-full max-w-xs mb-4 px-10 justify-center items-center flex mx-auto h-auto object-cover"
+            />
           </motion.div>
-          </div>
-      
-        <motion.p 
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 3, delay: 1 }}
-        className="text-neutral-400 text-center text-md px-2 pb-10 mx-4">
-        <ShinyText 
-        text="Designing and building digital products with 15+ years of experience across visual design, 
-        frontend development, and UX engineering. I create responsive, accessible interfaces that balance 
-        clean design, usability, SEO, and scalable architecture." 
-          disabled={false} 
-          speed={3} 
-          className='custom-class' 
+        </div>
+
+        <motion.p
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 3, delay: 1 }}
+          className="text-neutral-400 text-center text-md px-2 pb-10 mx-4">
+          <ShinyText
+            text="Design Engineer with 15+ years of experience designing and building digital products. 
+            I develop responsive, accessible interfaces in React, Next.js, and TypeScript, 
+            translating design systems and product requirements into scalable, production 
+            ready experiences."
+            disabled={false}
+            speed={3}
+            className='custom-class'
           />
         </motion.p>
-        
+
 
         <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 2 }}
-  className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl mx-auto mb-4 px-2"
->
-  <Link
-    href="/portfolio"
-    className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 2 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl mx-auto mb-4 px-2"
+        >
+          <Link
+            href="/portfolio"
+            className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
     border border-neutral-500/50 hover:border-white hover:shadow-lg hover:shadow-white/50 
     transition duration-500 hover:bg-white/20 hover:text-white"
-  >
-    <GalleryVertical size={16} />
-    Design Portfolio
-  </Link>
+          >
+            <GalleryVertical size={16} />
+            Design Portfolio
+          </Link>
 
-  <Link
-    href="/resume"
-    className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
+          <Link
+            href="/resume"
+            className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
     border border-neutral-500/50 hover:border-white hover:shadow-lg hover:shadow-white/50 
     transition duration-500 hover:bg-white/20 hover:text-white"
-  >
-    <File size={16} />
-    Resume
-  </Link>
+          >
+            <File size={16} />
+            Resume
+          </Link>
 
-  <a
-    href="/JDResume2026.pdf"
-    target="_blank"
-    className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
+          <a
+            href="/JDResume2026.pdf"
+            target="_blank"
+            className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
     border border-neutral-500/50 hover:border-white hover:shadow-lg hover:shadow-white/50 
     transition duration-500 hover:bg-white/20 hover:text-white"
-  >
-    <ArrowDownToLine size={16} />
-    Resume PDF
-  </a>
+          >
+            <ArrowDownToLine size={16} />
+            Resume PDF
+          </a>
 
-  <Button
-    asChild
-    variant="outline"
-    className="gap-2 px-4 py-2 rounded-xl bg-transparent border border-neutral-400/30 hover:border-sky-200 
+          <Button
+            asChild
+            variant="outline"
+            className="gap-2 px-4 py-2 rounded-xl bg-transparent border border-neutral-400/30 hover:border-sky-200 
     hover:shadow-lg hover:shadow-blue-600/50 transition ease-in-out duration-300 
     hover:bg-sky-400/20 hover:text-white hover:backdrop-blur-sm"
-  >
-    <Link href="https://jakobdahlin.com">
-      <Link2 size={18} />
-      jakobdahlin.com
-    </Link>
-  </Button>
-</motion.div>
+          >
+            <Link href="https://jakobdahlin.com">
+              <div className="flex items-center gap-3">
+                <img
+                  src="/jdlogo.png"
+                  alt="Jakob Dahlin logo"
+                  className="h-6 w-6 object-contain"
+                />
+                <h3 className="text-lg font-normal">jakobdahlin.com</h3>
+              </div>
+            </Link>
+          </Button>
+        </motion.div>
 
 
 
-        </motion.div> 
-        </motion.div> 
+      </motion.div>
+    </motion.div>
   )
 }
