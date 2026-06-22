@@ -144,6 +144,7 @@ export default function Home() {
   <ProjectCard
     className="grayscale hover:grayscale-0"
     title="Jakob Dahlin"
+    description="Professional Photography Licensing Platform"
     tags={["TypeScript", "Next.js", "Tailwind CSS", "Stripe", "Vercel"]}
     imageUrl="/jd-demo.png"
     demoUrl="https://jakobdahlin.com"
@@ -151,15 +152,17 @@ export default function Home() {
   />
     <ProjectCard
     className="grayscale hover:grayscale-0"
-    title="Alida UI - Open-Source npm"
+    title="Cognosco"
+    description="Real Estate Intelligence Platform"
     tags={["TypeScript", "Next.js", "Tailwind CSS", "npm", "Vercel"]}
-    imageUrl="/alida.png"
-    demoUrl="https://alidaui.vercel.app"
-    githubUrl="https://github.com/jakobdahlin/alidaui"
+    imageUrl="/cognosco-web.png"
+    demoUrl="https://cognosco.vercel.app"
+    githubUrl={undefined}
   />
   <ProjectCard
     className="grayscale hover:grayscale-0"
     title="Tivemrark's Recipes"
+    description="Modern Recipe and Cooking Platform"
     tags={["TypeScript", "Next.js", "Tailwind CSS", "Vercel"]}
     imageUrl="/tivemarksrecept.jpg"
     demoUrl="https://tivemarksrecept.vercel.app"
