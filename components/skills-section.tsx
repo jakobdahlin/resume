@@ -62,6 +62,48 @@ const skills: SkillProps[] = [
       "bg-white/20 border-white shadow-white/70 shadow-lg",
   },
 
+  // Engineering Practices
+  {
+    name: "Responsive Design",
+    category: "practices",
+    hoverClasses:
+      "hover:bg-white/20 hover:border-white hover:shadow-white/40 shadow-lg",
+    activeClasses:
+      "bg-white/20 border-white shadow-white/40 shadow-lg",
+  },
+  {
+    name: "Accessibility",
+    category: "practices",
+    hoverClasses:
+      "hover:bg-white/20 hover:border-white hover:shadow-white/40 shadow-lg",
+    activeClasses:
+      "bg-white/20 border-white shadow-white/40 shadow-lg",
+  },
+  {
+    name: "SEO",
+    category: "practices",
+    hoverClasses:
+      "hover:bg-white/20 hover:border-white hover:shadow-white/40 shadow-lg",
+    activeClasses:
+      "bg-white/20 border-white shadow-white/40 shadow-lg",
+  },
+  {
+    name: "Component Libraries",
+    category: "practices",
+    hoverClasses:
+      "hover:bg-white/20 hover:border-white hover:shadow-white/40 shadow-lg",
+    activeClasses:
+      "bg-white/20 border-white shadow-white/40 shadow-lg",
+  },
+  {
+    name: "Design Systems",
+    category: "practices",
+    hoverClasses:
+      "hover:bg-white/20 hover:border-white hover:shadow-white/40 shadow-lg",
+    activeClasses:
+      "bg-white/20 border-white shadow-white/40 shadow-lg",
+  },
+
   // Styling & Animation
   {
     name: "Tailwind CSS",
@@ -105,6 +147,14 @@ const skills: SkillProps[] = [
     activeClasses:
       "bg-white/20 border-white shadow-white/40 shadow-lg",
   },
+  {
+    name: "npm",
+    category: "VC & deploy",
+    hoverClasses:
+      "hover:bg-white/20 hover:border-white hover:shadow-white/40 shadow-lg",
+    activeClasses:
+      "bg-white/20 border-white shadow-white/40 shadow-lg",
+  },
 
   // Coding & Deployment Tools
   {
@@ -114,30 +164,6 @@ const skills: SkillProps[] = [
       "hover:bg-sky-300/20 hover:border-sky-300 hover:shadow-blue-600/70 shadow-lg",
     activeClasses:
       "bg-sky-300/20 border-sky-300 shadow-blue-600/70 shadow-lg",
-  },
-  {
-    name: "Adobe Dreamweaver",
-    category: "code",
-    hoverClasses:
-      "hover:bg-fuchsia-400/20 hover:border-fuchsia-400 hover:shadow-fuchsia-800/70 shadow-lg",
-    activeClasses:
-      "bg-fuchsia-400/20 border-fuchsia-400 shadow-fuchsia-800/70 shadow-lg",
-  },
-  {
-    name: "Rapidweaver",
-    category: "code",
-    hoverClasses:
-      "hover:bg-violet-300/20 hover:border-violet-300 hover:shadow-indigo-600/70 shadow-lg",
-    activeClasses:
-      "bg-violet-300/20 border-violet-300 shadow-indigo-600/70 shadow-lg",
-  },
-  {
-    name: "CodePen",
-    category: "code",
-    hoverClasses:
-      "hover:bg-white/20 hover:border-white hover:shadow-white/70 shadow-lg",
-    activeClasses:
-      "bg-white/20 border-white shadow-white/70 shadow-lg",
   },
   {
     name: "Wordpress",
@@ -165,19 +191,12 @@ const skills: SkillProps[] = [
     activeClasses:
       "bg-white/20 border-white shadow-white/40 shadow-lg",
   },
-  {
-    name: "Sora",
-    category: "aidesign",
-    hoverClasses:
-      "hover:bg-sky-500/20 hover:border-sky-600 hover:shadow-sky-600/40 shadow-lg",
-    activeClasses:
-      "bg-sky-500/20 border-sky-600 shadow-sky-600/40 shadow-lg",
-  },
 ];
 
 export function SkillsSection() {
   const coreSkills = skills.filter((skill) => skill.category === "core");
   const stylingSkills = skills.filter((skill) => skill.category === "styling");
+  const practicesSkills = skills.filter((skill) => skill.category === "practices");
   const vcdepSkills = skills.filter((skill) => skill.category === "VC & deploy");
   const codingSkills = skills.filter((skill) => skill.category === "code");
   const aidesignSkills = skills.filter((skill) => skill.category === "aidesign");
@@ -271,6 +290,31 @@ return (
     </div>
 
     <div>
+      <h3 className="mb-3 text-lg font-medium">Engineering Practices</h3>
+      <div className="flex flex-wrap gap-3">
+        {practicesSkills.map((skill) => (
+          <div
+            key={skill.name}
+            className={`p-[1px] rounded-xl border border-neutral-400/30 transform duration-500 ease-in-out
+              ${skill.hoverClasses}
+              ${activeSkill === skill.name ? skill.activeClasses : ""}
+            `}
+          >
+            <div
+              className={`px-2 py-1 rounded-xl transition-colors duration-200 ${
+                activeSkill === skill.name
+                  ? "text-white"
+                  : "text-neutral-400 hover:text-white"
+              }`}
+            >
+              {skill.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
       <h3 className="mb-3 text-lg font-medium">Version Control & Deployment</h3>
       <div className="flex flex-wrap gap-3">
         {vcdepSkills.map((skill) => (
@@ -294,6 +338,8 @@ return (
         ))}
       </div>
     </div>
+
+
 
     <div>
       <h3 className="mb-3 text-lg font-medium">IDE & Development Tools</h3>
