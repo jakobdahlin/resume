@@ -72,9 +72,9 @@ export default function IntroCard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2 }}
             className="flex flex-col w-full text-md text-center text-neutral-500 rounded-full">
-            Product Designer
+            Design Engineer
             -
-            UX Engineer
+            Architectural Photographer
           </motion.span>
         </div>
 
@@ -102,7 +102,7 @@ export default function IntroCard() {
           transition={{ duration: 3, delay: 1 }}
           className="text-neutral-400 text-center text-md px-2 pb-10 mx-4">
           <ShinyText
-            text="Design Engineer with 15+ years of experience designing and building digital products. 
+            text="Design Engineer and Architectural Photorapher with 15+ years of experience designing and building digital products. 
             I develop responsive, accessible interfaces in React, Next.js, and TypeScript, 
             translating design systems and product requirements into scalable, production 
             ready experiences."
