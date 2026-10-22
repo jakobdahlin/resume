@@ -437,7 +437,7 @@ export default function Portfolio() {
 
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <video
-              src="/designloop.mp4"
+              src="/Designloop.mp4"
               autoPlay
               loop
               muted
