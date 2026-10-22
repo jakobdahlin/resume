@@ -25,7 +25,7 @@ export function ExperienceTimeline() {
         <div>
           <div className="flex items-center gap-2">
             <h3 className="text-xl font-semibold">
-              Founder, Design Engineer & Architectural Photographer
+            Design Engineer, Architectural Photographer & Artist
             </h3>
             <span className="inline-block rounded-full p-[1px] text-white animate-pulse-slow shadow-lg 
             border border-sky-200  bg-sky-400/30 shadow-blue-500/50">
@@ -55,20 +55,37 @@ export function ExperienceTimeline() {
             variants={fadeUp}
             transition={{ delay: 0.2 }}
           >
-            Design Engineer with 15+ years of experience designing and building customer-facing
-            products across frontend development, visual design, and digital experiences.
-            I build customer facing products in React, Next.js, and TypeScript, with a focus on
-            usability, performance, accessibility, and visual craftsmanship. As the founder of an
-            independent product and creative business, I designed and developed a proprietary
-            image licensing platform that supports search, ecommerce, licensing, and digital asset delivery.
+            Design Engineer with 15+ years of experience in frontend development, 
+            visual design, and digital products. Specializing in React, Next.js, 
+            and TypeScript, with a focus on usability, performance, and visual 
+            craftsmanship. Also work professionally across architectural 
+            photography and original digital artwork.
           </motion.p>
 
-          {/* Product Designer & UX Engineer */}
-          <motion.div
+                    {/* Product Designer & UX Engineer */}
+                    <motion.div
             className="border-l border-neutral-400/50 m-4 px-4"
             variants={fadeUp}
             transition={{ delay: 0.3 }}
           >
+            <h4 className="text-lg font-semibold text-white mt-6">
+              Digital Artist
+            </h4>
+            <div className="flex items-center gap-1 mb-3">
+              <CalendarDays className="h-4 w-4 text-white" />
+              <span className="text-neutral-400">2026 - Present</span>
+              <MapPin className="h-4 w-4 text-white ml-4" />
+              <span className="text-neutral-400">New York, NY (Hybrid)</span>
+            </div>
+
+            <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
+              <li>Launched a commercial digital art collection after nearly a decade of creative and technical development</li>
+              <li>Create original abstract artworks and continuous animations through custom JavaScript, WebGL, and GLSL systems</li>
+              <li>Develop digital artworks for architectural and commercial environments</li>
+            </ul>
+
+          {/* Product Designer & UX Engineer */}
+
             <h4 className="text-lg font-semibold text-white mt-6">
               Design  Engineer
             </h4>
@@ -80,13 +97,9 @@ export function ExperienceTimeline() {
             </div>
 
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Designed and developed digital products from concept through production using React, Next.js,
-                TypeScript, and Tailwind CSS</li>
-              <li>Built and operate a proprietary photography licensing platform supporting image discovery,
-                ecommerce, licensing, and digital asset delivery</li>
-              <li>Develop scalable frontend architectures, design systems, and reusable React component libraries</li>
-              <li>Translate UX and product requirements into performant, accessible, production-ready interfaces</li>
-              <li>Manage platform infrastructure, analytics, SEO, deployment, and product growth</li>
+              <li>Design and develop digital products using React, Next.js, TypeScript, and Tailwind CSS</li>
+              <li>Built and maintain a proprietary photography licensing platform with search, ecommerce, and digital asset delivery</li>
+              <li>Develop scalable frontend systems, reusable components, and accessible interfaces, with responsibility for performance, SEO, and deployment</li>
             </ul>
 
             {/* Photographer */}
@@ -98,11 +111,9 @@ export function ExperienceTimeline() {
               <span className="text-neutral-400">New York, NY (Hybrid)</span>
             </div>
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Serve leading NYC real estate agencies, developers, and property owners</li>
-              <li>Built and manage a 200,000+ image architectural archive</li>
-              <li>Produce architectural photography for marketing, branding, and publication</li>
-              <li>Photographed landmark properties including the Empire State Building and The Woolworth Building</li>
-              <li>Featured on Bravo's Million Dollar Listing New York and licensed by global brands including IKEA</li>
+              <li>Provide architectural photography for NYC developers, property owners, and real estate agencies</li>
+              <li>Built and maintain an architectural photography archive of over 200,000 images, with work that includes landmark properties such as the Empire State Building and Woolworth Building, as well as projects for RXR, Brookfield Properties, Douglas Elliman, Compass, Sotheby's International Realty, PR agencies, and creative studios</li>
+              <li>Featured on Bravo's Million Dollar Listing New York, with photography licensed by international brands such as IKEA</li>
             </ul>
           </motion.div>
         </div>

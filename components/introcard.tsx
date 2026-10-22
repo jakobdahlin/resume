@@ -72,6 +72,8 @@ export default function IntroCard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2 }}
             className="flex flex-col w-full text-md text-center text-neutral-500 rounded-full">
+            Artist
+            -
             Design Engineer
             -
             Architectural Photographer
@@ -140,7 +142,7 @@ export default function IntroCard() {
           </Link>
 
           <a
-            href="/JDResume2026.pdf"
+            href="/JDResume.pdf"
             target="_blank"
             className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
     border border-neutral-500/50 hover:border-white hover:shadow-lg hover:shadow-white/50 
