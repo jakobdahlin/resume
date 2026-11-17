@@ -25,7 +25,7 @@ export function ExperienceTimeline() {
         <div>
           <div className="flex items-center gap-2">
             <h3 className="text-xl font-semibold">
-            Design Engineer, Architectural Photographer & Artist
+              Design Engineer | Frontend Developer | Artist
             </h3>
             <span className="inline-block rounded-full p-[1px] text-white animate-pulse-slow shadow-lg 
             border border-sky-200  bg-sky-400/30 shadow-blue-500/50">
@@ -50,41 +50,13 @@ export function ExperienceTimeline() {
             </div>
           </motion.div>
 
-          <motion.p
-            className="text-neutral-400"
-            variants={fadeUp}
-            transition={{ delay: 0.2 }}
-          >
-            Design Engineer with 15+ years of experience in frontend development, 
-            visual design, and digital products. Specializing in React, Next.js, 
-            and TypeScript, with a focus on usability, performance, and visual 
-            craftsmanship. Also work professionally across architectural 
-            photography and original digital artwork.
-          </motion.p>
-
-                    {/* Product Designer & UX Engineer */}
-                    <motion.div
+          {/* Product Designer & UX Engineer */}          <motion.div
             className="border-l border-neutral-400/50 m-4 px-4"
             variants={fadeUp}
             transition={{ delay: 0.3 }}
           >
-            <h4 className="text-lg font-semibold text-white mt-6">
-              Digital Artist
-            </h4>
-            <div className="flex items-center gap-1 mb-3">
-              <CalendarDays className="h-4 w-4 text-white" />
-              <span className="text-neutral-400">2026 - Present</span>
-              <MapPin className="h-4 w-4 text-white ml-4" />
-              <span className="text-neutral-400">New York, NY (Hybrid)</span>
-            </div>
 
-            <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Launched a commercial digital art collection after nearly a decade of creative and technical development</li>
-              <li>Create original abstract artworks and continuous animations through custom JavaScript, WebGL, and GLSL systems</li>
-              <li>Develop digital artworks for architectural and commercial environments</li>
-            </ul>
-
-          {/* Product Designer & UX Engineer */}
+            {/* Design Engineer */}
 
             <h4 className="text-lg font-semibold text-white mt-6">
               Design  Engineer
@@ -97,9 +69,26 @@ export function ExperienceTimeline() {
             </div>
 
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Design and develop digital products using React, Next.js, TypeScript, and Tailwind CSS</li>
-              <li>Built and maintain a proprietary photography licensing platform with search, ecommerce, and digital asset delivery</li>
-              <li>Develop scalable frontend systems, reusable components, and accessible interfaces, with responsibility for performance, SEO, and deployment</li>
+              <li>Design and develop websites and applications with React, Next.js, TypeScript, and Tailwind CSS, with a focus on UX, accessibility, performance, and responsive design.</li>
+              <li>Built jakobdahlin.com, a custom photography and art platform with product galleries, e-commerce integrations, licensing functionality, and digital asset delivery.</li>
+              <li>Created Cognosco, a real estate intelligence application that provides access to NYC property information through interactive interfaces, property reports, and public data integrations.</li>
+            </ul>
+
+            {/* Design Engineer */}
+
+            <h4 className="text-lg font-semibold text-white mt-6">
+              Artist & Creative Developer
+            </h4>
+            <div className="flex items-center gap-1 mb-3">
+              <CalendarDays className="h-4 w-4 text-white" />
+              <span className="text-neutral-400">2026 - Present</span>
+              <MapPin className="h-4 w-4 text-white ml-4" />
+              <span className="text-neutral-400">New York, NY (Hybrid)</span>
+            </div>
+
+            <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
+              <li>Create original digital artwork and animations based on JavaScript, WebGL, and GLSL through a custom built application.</li>
+              <li>Develop limited edition artwork for online sale and unique commissions for commercial property owners, hospitality spaces, corporate interiors, and private collectors.</li>
             </ul>
 
             {/* Photographer */}
@@ -111,9 +100,9 @@ export function ExperienceTimeline() {
               <span className="text-neutral-400">New York, NY (Hybrid)</span>
             </div>
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Provide architectural photography for NYC developers, property owners, and real estate agencies</li>
-              <li>Built and maintain an architectural photography archive of over 200,000 images, with work that includes landmark properties such as the Empire State Building and Woolworth Building, as well as projects for RXR, Brookfield Properties, Douglas Elliman, Compass, Sotheby's International Realty, PR agencies, and creative studios</li>
-              <li>Featured on Bravo's Million Dollar Listing New York, with photography licensed by international brands such as IKEA</li>
+              <li>Provide architectural photography for real estate developers, property owners, architects, brokerages, and hospitality clients across New York City.</li>
+              <li>Photograph commercial and residential properties, architecture, interiors, construction projects, and landmark buildings for marketing, editorial, and corporate use.</li>
+              <li>Captured approximately 250,000 photographs across architectural and real estate assignments in New York City since 2016. Clients include RXR and Brookfield Properties, with separate work licensed to IKEA through UK art publisher Rosenstiel's.</li>
             </ul>
           </motion.div>
         </div>
@@ -125,14 +114,14 @@ export function ExperienceTimeline() {
         variants={fadeUp}
         transition={{ delay: 0.1 }}
       >
-            <div className="flex items-center gap-3">
-              <img
-                src="/okommun.png"
-                alt="Örebro Municipality logo"
-                className="h-6 w-6 object-contain hover:scale-150 transition duration-200"
-              />
-              <h3 className="text-lg font-semibold">Örebro Municipality</h3>
-            </div>
+        <div className="flex items-center gap-3">
+          <img
+            src="/okommun.png"
+            alt="Örebro Municipality logo"
+            className="h-6 w-6 object-contain hover:scale-150 transition duration-200"
+          />
+          <h3 className="text-lg font-semibold">Örebro Municipality</h3>
+        </div>
         <div>
 
           <div className="border-l border-neutral-400/50 m-4 px-4">
@@ -144,10 +133,7 @@ export function ExperienceTimeline() {
               <span className="text-neutral-400">Örebro, Sweden (On-Site)</span>
             </div>
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Planned structured programs and managed daily operations</li>
-              <li>Created digital documentation systems and organized internal workflows</li>
-              <li>Designed communication materials and managed social media presence</li>
-              <li>Developed visual and marketing assets for parents and community outreach</li>
+              <li>Managed daily activities, digital documentation, communication materials, and social media content.</li>
             </ul>
 
             <h4 className="text-lg font-semibold text-white mt-6">System Administrator</h4>
@@ -158,10 +144,7 @@ export function ExperienceTimeline() {
               <span className="text-neutral-400">Örebro, Sweden (On-Site)</span>
             </div>
             <ul className="list-disc pl-6 space-y-1 marker:text-white text-neutral-400">
-              <li>Managed website, digital infrastructure, and social media presence</li>
-              <li>Designed marketing materials and user-facing communication assets</li>
-              <li>Supported a custom-built recruitment platform connecting job seekers and employers</li>
-              <li>Conducted interviews and helped optimize candidate-company matching workflows</li>
+              <li>Managed digital infrastructure, website content, marketing materials, and supported a recruitment platform that connected job seekers with employers.</li>
             </ul>
           </div>
         </div>

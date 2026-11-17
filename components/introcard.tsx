@@ -66,21 +66,37 @@ export default function IntroCard() {
           </motion.span>
         </div>
 
-        <div className="flex justify-between p-2 text-neutral-500 uppercase text-sm w-full">
+        <div className="flex p-2 text-neutral-500 uppercase text-sm justify-center">
           <motion.span
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2 }}
-            className="flex flex-col w-full text-md text-center text-neutral-500 rounded-full">
-            Artist
-            -
+            className="flex flex-col text-md text-center text-neutral-500 rounded-full">
             Design Engineer
-            -
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2 }}
+            className="flex flex-col pl-3 text-md text-center text-neutral-500 rounded-full">
+          | 
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2 }}
+            className="flex flex-col  px-3 text-md text-center text-neutral-500 rounded-full">
             Architectural Photographer
           </motion.span>
+          | 
+          <motion.span
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2 }}
+            className="flex flex-col text-md px-3 text-center text-neutral-500 rounded-full">
+            Artist
+          </motion.span>
         </div>
-
-
 
         <div className="text-center mt-2 py-2 mx-12">
           <motion.div
@@ -104,10 +120,10 @@ export default function IntroCard() {
           transition={{ duration: 3, delay: 1 }}
           className="text-neutral-400 text-center text-md px-2 pb-10 mx-4">
           <ShinyText
-            text="Design Engineer and Architectural Photorapher with 15+ years of experience designing and building digital products. 
-            I develop responsive, accessible interfaces in React, Next.js, and TypeScript, 
-            translating design systems and product requirements into scalable, production 
-            ready experiences."
+            text="My independent creative practice combines design engineering, architectural photography, 
+            and code based digital art. I develop custom websites and applications, provide professional 
+            photography for the real estate and architecture industries, and create original digital artworks 
+            for commercial spaces and private collectors."
             disabled={false}
             speed={3}
             className='custom-class'
@@ -142,7 +158,7 @@ export default function IntroCard() {
           </Link>
 
           <a
-            href="/JDResume.pdf"
+            href="/Jakob-Dahlin-Resume.pdf"
             target="_blank"
             className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl 
     border border-neutral-500/50 hover:border-white hover:shadow-lg hover:shadow-white/50 
@@ -171,8 +187,6 @@ export default function IntroCard() {
             </Link>
           </Button>
         </motion.div>
-
-
 
       </motion.div>
     </motion.div>
